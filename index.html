@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Reveal.js 3 Slide Demo</title>
+	<title>Thèse : Collaboration dans une fédération de consomateurs de données liées</title>
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/customize.css" id="theme">
 	<!--Add support for earlier versions of Internet Explorer -->
@@ -21,7 +21,7 @@
 			<!-- Each section element contains an individual slide -->
 
       <section class="title-slide">
-        <h2>Collaboration dans une fédération de consommateurs de données liées</h2>
+        <h1>Collaboration dans une fédération de <br> consommateurs de données liées</h1>
         <p>
           Pauline Folz <br>
           Thèse de doctorat soutenu le <br>
@@ -59,23 +59,95 @@
             <td><b>Hervé Jaigu</b>, Chargé de missions innovation, Nantes Métropole</td>
           </tr>
         </table>
+				<img src="./pictures/firstPage/ls2n.png" height="80px">
+				<img src="./pictures/firstPage/univNantes.png" height="80px">
+				<img src="./pictures/firstPage/nantesMetropole.jpg" height="80px">
       </section>
 
-			<section>
-				<h2>About My Product</h2>
-				<p>My product discussed here</p>
+
+
+			<section class="part-slide">
+				<h2>CyCLaDEs : Un cache collaboratif décentralisé pour les fragments TPF</h2>
 			</section>
 
-			<section id="show-a-link">
-				<h2>Show a live link</h2>
-				<p>Slide 2 discussed here</p>
-				<p>See <a href="http://www.htmlcheats.com">HTMLCheats.com</a><p>
+			<section class="content-slide">
+				<h2> Contexte </h2>
+				<p>Les clients TPF exécutent des requêtes SPARQL sur des serveurs TPF [1] :</p>
+				<table>
+					<tr>
+						<td>
+							<ul>
+								<li> <b>Minimise le traitement</b> côté serveur </li>
+								<li> <b>Jointures</b> exécutées du côté <b>clients</b> </li>
+							</ul>
+						</td>
+						<td>
+							<img src="./pictures/cyclades/main/tpfLogo.svg"/>
+						</td>
+					</tr>
+				</table>
+				<img src="./pictures/cyclades/main/tpfScale.png"/>
 			</section>
 
-			<section>
-				<h2>Slide 3</h1>
-				<p>How does one revisit an arbitrary slide in code?</p>
-				<p>Visit internal slide<a href="#/show-a-link"> 2</a>
+			<section class="content-slide">
+				<h2> Contexte </h2>
+				<p><b>Les caches</b> jouent un rôle important dans les <b>performances</b> de TPF :</p>
+				<table>
+					<tr>
+						<td>
+							<ul>
+								<li> Les caches contiennent des TPFs </li>
+								<li> Les TPFs sont suceptibles d'être réutilisé localement ou à travers les clients</li>
+							</ul>
+						</td>
+						<td>
+							<img src="./pictures/cyclades/main/tpfLogo.svg"/>
+						</td>
+					</tr>
+				</table>
+				<img src="./pictures/cyclades/main/tpfScale.png"/>
+			</section>
+
+			<section class="content-slide">
+				<h2> Fragment de triplets et caches </h2>
+				<div style="position:relative" >
+					<div class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0" data-fragment-index="1">
+							<p>
+								<img src="./pictures/cyclades/main/globalArchNum.png" height="492px" align="right"/>
+								152 Appels HTTP
+							</p>
+							<table style="font-size: 14px" align="left">
+								<tr>
+									<td> 0 </td>
+									<td> ?book <b>http://www.w3.org/1999/02/22-rdf-syntaxns#type</b> http:.../ontology/Book </td>
+								</tr>
+								<tr>
+									<td> 1 </td>
+									<td> ?book <b>http:.../ontology/author</b> ?author </td>
+								</tr>
+								<tr>
+									<td> 2 </td>
+									<td> http:.../resource/%22...And Ladies of the Club%22 <b>http:.../ontology/author</b> ?author </td>
+								</tr>
+								<tr>
+									<td> 3 </td>
+									<td> http:.../resource/%22A%22 Is for Alibi <b>http:.../ontology/author</b> ?author </td>
+								</tr>
+								<tr>
+									<td> 4 </td>
+									<td> http:.../resource/%22B%22 Is for Burglar <b>http:.../ontology/author</b> ?author </td>
+								</tr>
+							</table>
+					</div>
+        	<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+						<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
+        			<img src= "./pictures/cyclades/main/globalArchQuery.png" height="480px" align="right">
+						</span>
+					</span>
+        	<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+          	<img src="./pictures/cyclades/main/globalArchTpf.png" height="492px" align="right">
+        	</span>
+    		</div>
 			</section>
 
 			</div>

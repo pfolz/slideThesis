@@ -22,7 +22,7 @@ body {
   font-family: "Roboto", Helvetica, sans-serif;
   font-size: 42px;
   font-weight: normal;
-  color: #222; }
+  color: #46494D; }
 
 .reveal .title-slide {
   font-size: 20px;
@@ -61,6 +61,22 @@ body {
   text-shadow: none;
   word-wrap: break-word; }
 
+  .reveal .part-slide h1,
+  .reveal .part-slide h2,
+  .reveal .part-slide h3,
+  .reveal .part-slide h4,
+  .reveal .part-slide h5,
+  .reveal .part-slide h6 {
+    margin: 0 0 20px 0;
+    color: #fff;
+    background-color: #2a76dd;
+    font-family: "Roboto Slab", Helvetica, sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-shadow: none;
+    word-wrap: break-word; }
+
 .reveal h1 {
   font-size: 2.5em; }
 
@@ -90,7 +106,13 @@ body {
  *********************************************/
 .reveal p {
   margin: 20px 0;
-  line-height: 1.3; }
+  line-height: 1.3;
+}
+
+.reveal .content-slide p {
+  position: relative;
+  text-align: left;
+}
 
 /* Ensure certain elements are never larger than the slide itself */
 .reveal img,
@@ -98,6 +120,16 @@ body {
 .reveal iframe {
   max-width: 95%;
   max-height: 95%; }
+
+.reval .content-slide p img {
+  position: absolute;
+  right: 0;
+}
+
+.reval .content-slide ul img {
+  position: absolute;
+  right: 0;
+}
 
 .reveal strong,
 .reveal b {
@@ -111,7 +143,7 @@ body {
 .reveal ul {
   display: inline-block;
   text-align: left;
-  margin: 0 0 0 1em; }
+  margin: 0 0 0 1em;}
 
 .reveal ol {
   list-style-type: decimal; }
@@ -252,8 +284,8 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #222;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+  border: none;
+  box-shadow: none; }
 
 .reveal section img.plain {
   border: 0;
