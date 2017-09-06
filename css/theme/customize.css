@@ -92,18 +92,25 @@ body {
 .reveal h1 {
   text-shadow: none; }
 
-/**.reveal .title-slide h1,
-.reveal .title-slide h2,
-.reveal .title-slide h3,
-.reveal .title-slide h4,
-.reveal .title-slide h5,
-.reveal .title-slide h6 {
+.reveal .content-slide h1,
+.reveal .content-slide h2,
+.reveal .content-slide h3,
+.reveal .content-slide h4,
+.reveal .content-slide h5,
+.reveal .content-slide h6 {
   color: #fff;
-  background-color: #2a76dd; }**/
+  background-color: #2a76dd; }
 
 /*********************************************
  * OTHER
  *********************************************/
+.reveal my-citation {
+  display: inline-block;
+  font-size: 20px;
+  float: left;
+  text-align: left;
+}
+
 .reveal p {
   margin: 20px 0;
   line-height: 1.3;
@@ -112,6 +119,12 @@ body {
 .reveal .content-slide p {
   position: relative;
   text-align: left;
+}
+
+#question{
+  font-family: "Roboto Slab", Helvetica, sans-serif;
+  font-weight: bold;
+  color: #202224;
 }
 
 /* Ensure certain elements are never larger than the slide itself */
@@ -131,6 +144,11 @@ body {
   right: 0;
 }
 
+#side {
+  float: right;
+  vertical-align: middle;
+}
+
 .reveal strong,
 .reveal b {
   font-weight: bold; }
@@ -141,7 +159,8 @@ body {
 .reveal ol,
 .reveal dl,
 .reveal ul {
-  display: inline-block;
+  font-size: 34px;
+  color: #6B7177;
   text-align: left;
   margin: 0 0 0 1em;}
 
@@ -181,6 +200,9 @@ body {
   margin: 20px auto;
   padding: 5px;
   font-style: italic;
+  font-size: 1.3em;
+  font-family: "Roboto Slab", Helvetica, sans-serif;
+  color: #2a76dd;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
 

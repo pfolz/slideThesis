@@ -5,6 +5,8 @@
 	<title>Thèse : Collaboration dans une fédération de consomateurs de données liées</title>
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/customize.css" id="theme">
+	<script src="https://polygit.org/components/webcomponentsjs/webcomponents-loader.js"></script>
+    <link rel="import" href="./lib/script/myCitation.html">
 	<!--Add support for earlier versions of Internet Explorer -->
 	<!--[if lt IE 9]>
 	<script src="lib/js/html5shiv.js"></script>
@@ -73,38 +75,23 @@
 			<section class="content-slide">
 				<h2> Contexte </h2>
 				<p>Les clients TPF exécutent des requêtes SPARQL sur des serveurs TPF [1] :</p>
-				<table>
-					<tr>
-						<td>
-							<ul>
-								<li> <b>Minimise le traitement</b> côté serveur </li>
-								<li> <b>Jointures</b> exécutées du côté <b>clients</b> </li>
-							</ul>
-						</td>
-						<td>
-							<img src="./pictures/cyclades/main/tpfLogo.svg"/>
-						</td>
-					</tr>
-				</table>
+				<img src="./pictures/cyclades/main/tpfLogo.png"/ height="110px" style="float:right;"/>
+				<ul>
+						<li> <b>Minimise le traitement</b> côté serveur, grâce aux fragments </li>
+						<li> <b>Jointures</b> exécutées du côté <b>clients</b> </li>
+				</ul>
 				<img src="./pictures/cyclades/main/tpfScale.png"/>
+				<my-citation number="1" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
 			</section>
 
 			<section class="content-slide">
 				<h2> Contexte </h2>
 				<p><b>Les caches</b> jouent un rôle important dans les <b>performances</b> de TPF :</p>
-				<table>
-					<tr>
-						<td>
-							<ul>
-								<li> Les caches contiennent des TPFs </li>
-								<li> Les TPFs sont suceptibles d'être réutilisé localement ou à travers les clients</li>
-							</ul>
-						</td>
-						<td>
-							<img src="./pictures/cyclades/main/tpfLogo.svg"/>
-						</td>
-					</tr>
-				</table>
+				<img src="./pictures/cyclades/main/tpfLogo.svg" height="110px" style="float:right;"/>
+				<ul>
+					<li> Les caches contiennent des fragments </li>
+					<li> Les fragments sont suceptibles d'être réutilisés localement ou à travers les clients</li>
+				</ul>
 				<img src="./pictures/cyclades/main/tpfScale.png"/>
 			</section>
 
@@ -113,10 +100,10 @@
 				<div style="position:relative" >
 					<div class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0" data-fragment-index="1">
 							<p>
-								<img src="./pictures/cyclades/main/globalArchNum.png" height="492px" align="right"/>
+								<img id="side" src="./pictures/cyclades/main/globalArchNum.png" height="492px"/>
 								152 Appels HTTP
 							</p>
-							<table style="font-size: 14px" align="left">
+							<table style="font-size: 25px">
 								<tr>
 									<td> 0 </td>
 									<td> ?book <b>http://www.w3.org/1999/02/22-rdf-syntaxns#type</b> http:.../ontology/Book </td>
@@ -148,6 +135,48 @@
           	<img src="./pictures/cyclades/main/globalArchTpf.png" height="492px" align="right">
         	</span>
     		</div>
+			</section>
+
+			<section>
+				<blockquote>
+					Que se passe t'il si les clients collaborent ?
+				</blockquote>
+			</section>
+
+			<section class="content-slide">
+				<h2> Si les clients collaborent </h2>
+				<p>
+					<img id="side" height="492px" src="./pictures/cyclades/main/clientCollab.png"/>
+					Le cache local d'un client peut être <b> partagé </b> avec les autres :
+				</p>
+				<ul>
+					<li> Réduit la charge du serveur </li>
+				</ul>
+				<p>
+					<b>Défi </b> :
+				</p>
+				<ul>
+					<li> Réseau avec un million de clients </li>
+				</ul>
+				</p>
+				<p id="question">
+					Comment un client peut trouver rapidement un fragment chez un autre client ?
+				</p>
+			</section>
+
+			<section class="content-slide">
+				<h2> Travaux connexes </h2>
+				<p>
+
+					<b> DHT : </b> distibue le cache à travers les participants [2] :
+				</p>
+				<img id="side" height="300px" src="./pictures/cyclades/main/dht.png"/>
+				<ul>
+					<li>Trouve le framgent s'il existe</li>
+					<li>Une requête &#8594; 20 000 appels &#8594; 20 000 sauts <i>log(n)</i>, n:
+					nombre de pairs</li>
+				</ul>
+				<my-citation number="2" author="M. El Dick" title:"A hydrid p2p overlay for effecient query processing in cdn" conference="Proceedings of the 12th International Conference on Extending Database Technology: Advances in Database Technology" date="2009"></my-citation>
 			</section>
 
 			</div>

@@ -1,0 +1,23 @@
+<link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
+
+<dom-module id="my-citation">
+
+  <template>
+    <!-- bind to the "owner" property -->
+    [[[number]]] [[author]] <i>et al</i>. [[title]]. Dans <i>[[conference]]</i>, [[date]].
+  </template>
+
+  <script>
+    class MyCitation extends Polymer.Element {
+      static get is() { return "my-citation"; }
+      // configure owner property
+      static get properties() {
+        return {
+            number: String, author: String, title: String, conference: String, date: String
+        };
+      }
+    }
+    customElements.define(MyCitation.is, MyCitation);
+  </script>
+
+</dom-module>
