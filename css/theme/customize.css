@@ -20,7 +20,7 @@ body {
 
 .reveal {
   font-family: "Roboto", Helvetica, sans-serif;
-  font-size: 42px;
+  font-size: 34px;
   font-weight: normal;
   color: #46494D; }
 
@@ -75,7 +75,8 @@ body {
     line-height: 1.2;
     letter-spacing: normal;
     text-shadow: none;
-    word-wrap: break-word; }
+    word-wrap: break-word;
+    padding: 10px; }
 
 .reveal h1 {
   font-size: 2.5em; }
@@ -99,7 +100,9 @@ body {
 .reveal .content-slide h5,
 .reveal .content-slide h6 {
   color: #fff;
-  background-color: #2a76dd; }
+  background-color: #2a76dd;
+  padding: 10px;
+}
 
 /*********************************************
  * OTHER
@@ -125,6 +128,7 @@ body {
   font-family: "Roboto Slab", Helvetica, sans-serif;
   font-weight: bold;
   color: #202224;
+  font-size: 38px;
 }
 
 /* Ensure certain elements are never larger than the slide itself */

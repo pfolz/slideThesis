@@ -5,8 +5,9 @@
 	<title>Thèse : Collaboration dans une fédération de consomateurs de données liées</title>
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/customize.css" id="theme">
-	<script src="https://polygit.org/components/webcomponentsjs/webcomponents-loader.js"></script>
-    <link rel="import" href="./lib/script/myCitation.html">
+	<!--<script src="https://polygit.org/components/webcomponentsjs/webcomponents-loader.js"></script>-->
+	<script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+  <link rel="import" href="./lib/script/myCitation.html">
 	<!--Add support for earlier versions of Internet Explorer -->
 	<!--[if lt IE 9]>
 	<script src="lib/js/html5shiv.js"></script>
@@ -167,8 +168,7 @@
 			<section class="content-slide">
 				<h2> Travaux connexes </h2>
 				<p>
-
-					<b> DHT : </b> distibue le cache à travers les participants [2] :
+					<b> Table de hachage distribuées (DHT) : </b> distibue le cache à travers les participants [2] :
 				</p>
 				<img id="side" height="300px" src="./pictures/cyclades/main/dht.png"/>
 				<ul>
@@ -177,6 +177,126 @@
 					nombre de pairs</li>
 				</ul>
 				<my-citation number="2" author="M. El Dick" title:"A hydrid p2p overlay for effecient query processing in cdn" conference="Proceedings of the 12th International Conference on Extending Database Technology: Advances in Database Technology" date="2009"></my-citation>
+			</section>
+
+			<section class="content-slide">
+				<h2> Travaux connexes </h2>
+				<p> <b>Cache comportemental :</b> connecte un nombre fixe de nœuds similaires [3] :</p>
+				<img id="side" height="250px" src="./pictures/cyclades/main/behave.png"/>
+				<ul>
+					<li> Accès direct sans latence </li>
+					<li> Pas de garantie de trouver le fragment </li>
+					<li> Expérimenté avec des historiques de navigation Web </li>
+				</ul>
+				<p id="question">
+					Et si on utilisait les caches comportementaux pour des historiques de requêtes ?
+				</p>
+				<my-citation number="3" author="D. Frey" title="Behavioral cache for web content" conference="Ditributed Applications and Interoperable System" date="2014"></my-citation>
+			</section>
+
+			<section class="content-slide">
+				<h2> Approche de CyCLaDEs </h2>
+				<p>
+					<b> Hypothèse :</b> Les clients qui exécutent des <b> requêtes similaires </b> dans le <b> passé </b>
+						exécuteront des <b> requêtes similaires </b> dans le <b> futur </b> [4]
+				</p>
+				<p class="fragment fade-in" data-fragment-index="1">
+					<b> Approche :</b>
+				</p>
+				<ul class="fragment fade-in" data-fragment-index="1">
+					<li> Chaque client construit une vue fixe de voisins similaire avec un accès direct </li>
+					<li> Pour chaque appel 1) vérifier le cache local 2) verifier le cache des voisins en
+						parallèle 3) aller au serveur </li>
+				</ul>
+				<p id="question" class="fragment fade-in" data-fragment-index="2">
+					Combien d'accès aux caches des voisins peut-on obtenir ?
+				</p>
+				<my-citation number="4" author="M. D. Ekstrand" title="Collaborative filtering recommender systems" conference="Foundations and Trends in Human-Computer Interaction" date="2011"></my-citation>
+			</section>
+
+			<section class="content-slide">
+				<h2> Approche TPF </h2>
+				<p>
+					<img id="side" src="./pictures/cyclades/main/archTpf.png" />
+					Beaucoup de clients accèdent au serveur TPF de manière concurrente, mais
+					les <b>clients ne collaborent pas</b>.
+				</p>
+			</section>
+
+			<section class="content-slide">
+				<h2> Approche de CyCLaDEs </h2>
+				<p>
+					<img id="side" src="./pictures/cyclades/main/archCyclades.png"/>
+					Connecte les nœuds à travers un réseau d'échantillonage aléatoire
+					des pairs (RPS) :
+				</p>
+				<ul>
+					<li> Chaque nœud maitient une vue partielle du réseau </li>
+				</ul>
+				<p class="fragment fade-in" data-fragment-index="1">
+					Phases d'échange de voisins :</b>
+				</p>
+				<ul class="fragment fade-in" data-fragment-index="1">
+					<li> <b>renouvelle périodiquement les voisins</b></li>
+					<li> gère les arrivées et départs des nœuds et les partitions réseau</li>
+				</ul>
+				<p class="fragment fade-in" data-fragment-index="2">
+					Réseau implémenté par Cyclon [5]
+				</p>
+				<my-citation number="5" author="S. Voulgaris" title="Cyclon: Inexpensive membership managment for unstructured p2p overlay" conference="Journal of Network and Systems Managment" date="2005"></my-citation>
+			</section>
+
+			<section class="content-slide">
+				<h2> Approche de CyCLaDEs </h2>
+				<p>
+					<img id="side" height="480px" src="./pictures/cyclades/main/archCyclades2.png"/>
+					Le réseau RPS garantit la connectivité entre tous les clients
+				</p>
+				<p class="fragment fade-in" data-fragment-index="1">
+						C6 est connecté à C3 :
+				</p>
+				<ul class="fragment fade-in" data-fragment-index="1">
+					<li> C6 &#8594; DBpedia </li>
+					<li> C3 &#8594; DrugBank </li>
+					<li> C6 n'est pas <b> similaire </b> à C3 </li>
+				</ul>
+				<p class="fragment fade-in" data-fragment-index="2">
+					Nécessite un second réseau superposer pour gérer la <b> similarité </b>
+					comme proposé dans Gossple [6]
+				</p>
+				<my-citation number="6" author="M. Bertier" title="The gossple anonymous social network" conference="11th International Middleware Conference" date="2010"></my-citation>
+			</section>
+
+			<section class="content-slide">
+				<h2> Approche de CyCLaDEs </h2>
+				<p>
+					<img id="side" height="480px" src="./pictures/cyclades/main/archCyclades3.png"/>
+					Réseau superposé de similarité (CON) :
+				</p>
+				<ul>
+					<li> Chaque nœud à un <b> profil </b> basé sur l'historique des requêtes
+						qu'il a exécutées </li>
+				</ul>
+				<p class="fragment fade-in" data-fragment-index="1">
+					Les phases d'échange de voisins permettent d'obtenir des voisins plus similaires.
+				</p>
+				<p class="fragment fade-in" data-fragment-index="1">
+					Chaque nœud classe et sélectionne les <b> meilleurs voisins </b> selon la
+					similarité de leurs profils
+				</p>
+			</section>
+
+			<section class="content-slide">
+				<h2> Comment profiler les nœuds ? </h2>
+				<p>
+					Exécuter des requêtes produit un <b>flux de fragment</b>, le cache est
+					une <b>fenêtre</b> sur de <b>flux</b>.
+				</p>
+				<img id="side" height="200px" src="./pictures/cyclades/main/profil.png"/>
+				<p id="question" >
+					Profil = résumé du passé récent = fréquence des <i>k</i> derniers prédicats
+					utilisés
+				</p>
 			</section>
 
 			</div>
