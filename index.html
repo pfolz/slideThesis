@@ -8,6 +8,8 @@
 	<!--<script src="https://polygit.org/components/webcomponentsjs/webcomponents-loader.js"></script>-->
 	<script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
   <link rel="import" href="./lib/script/myCitation.html">
+	<link rel="stylesheet" href="./plugin/katex/katex.min.css">
+	<script src="./plugin/katex/katex.min.js"></script>
 	<!--Add support for earlier versions of Internet Explorer -->
 	<!--[if lt IE 9]>
 	<script src="lib/js/html5shiv.js"></script>
@@ -288,22 +290,260 @@
 
 			<section class="content-slide">
 				<h2> Comment profiler les nœuds ? </h2>
-				<p>
-					Exécuter des requêtes produit un <b>flux de fragment</b>, le cache est
-					une <b>fenêtre</b> sur de <b>flux</b>.
-				</p>
 				<img id="side" height="200px" src="./pictures/cyclades/main/profil.png"/>
+				<p style="padding:2em 0 4em 0">
+					Exécuter des requêtes produit un <b>flux de fragment</b>, le cache est
+					une <b>fenêtre</b> sur de <b>flux</b>
+				</p>
+
 				<p id="question" >
 					Profil = résumé du passé récent = fréquence des <i>k</i> derniers prédicats
 					utilisés
 				</p>
 			</section>
 
+			<section class="content-slide">
+				<h2> Algorithme de profilage </h2>
+				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
+					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="6">
+						<img src="./pictures/cyclades/main/algoCyclades_7.png"/>
+					</span>
+				</span>
+				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
+					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
+						<img src="./pictures/cyclades/main/algoCyclades_6.png"/>
+					</span>
+				</span>
+				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
+					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
+						<img src="./pictures/cyclades/main/algoCyclades_5.png"/>
+					</span>
+				</span>
+				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
+					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
+						<img src="./pictures/cyclades/main/algoCyclades_4.png"/>
+					</span>
+				</span>
+				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
+					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
+						<img src="./pictures/cyclades/main/algoCyclades_3.png"/>
+					</span>
+				</span>
+				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
+						<img src="./pictures/cyclades/main/algoCyclades_2.png"/>
+					</span>
+				</span>
+				<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+					<img src="./pictures/cyclades/main/algoCyclades_1.png"/>
+				</span>
+			</section>
+
+			<section class="content-slide">
+				<h2> Exemple - Algorithme de profilage </h2>
+				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="7">
+					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="8">
+						<img src="./pictures/cyclades/main/exAlgoCyclades_9.png"/>
+					</span>
+				</span>
+				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="6">
+					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="7">
+						<img src="./pictures/cyclades/main/exAlgoCyclades_8.png"/>
+					</span>
+				</span>
+				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
+					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="6">
+						<img src="./pictures/cyclades/main/exAlgoCyclades_7.png"/>
+					</span>
+				</span>
+				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
+					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
+						<img src="./pictures/cyclades/main/exAlgoCyclades_6.png"/>
+					</span>
+				</span>
+				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
+					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
+						<img src="./pictures/cyclades/main/exAlgoCyclades_5.png"/>
+					</span>
+				</span>
+				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
+					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
+						<img src="./pictures/cyclades/main/exAlgoCyclades_4.png"/>
+					</span>
+				</span>
+				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
+					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
+						<img src="./pictures/cyclades/main/exAlgoCyclades_3.png"/>
+					</span>
+				</span>
+				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
+						<img src="./pictures/cyclades/main/exAlgoCyclades_2.png"/>
+					</span>
+				</span>
+				<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+					<img src="./pictures/cyclades/main/exAlgoCyclades_1.png"/>
+				</span>
+			</section>
+
+			<section class="content-slide">
+				<h2> Comment comparer les voisins ? </h2>
+				<table style="float:right">
+					<th>
+						<td> <b>P1</b> </td> <td> <b>P2</b> </td> <td> <b>P3</b> </td>
+					</th>
+					<tr>
+						<td> <b>C5</b> </td> <td> 10 </td> <td> 6 </td> <td> 40 </td>
+					</tr>
+					<tr>
+						<td> <b>C9</b> </td> <td> 10 </td> <td> 20 </td> <td> 5 </td>
+					</tr>
+					<tr>
+						<td> <b>C8</b> </td> <td> 10 </td> <td> 2 </td> <td> 2 </td>
+					</tr>
+				</table>
+
+				<p>
+					Durant le classement les <b>nœuds</b> sont <b>comparés</b> grâce à leur <b>profil</b>
+				</p>
+
+				<p>
+					Les nœuds sont comparés avec le <b>coefficient de similarité Jaccard</b>
+				</p>
+
+				<span id="jaccard" style="float:left;padding:2em 0 0 0"></span>
+				<script>
+					katex.render("J(x,y) = \\dfrac{\\sum_{i} min(x_i,y_i)}{\\sum_{i}max(x_i,y_i)}", jaccard);
+				</script>
+				<ul style="padding:0 0 0 18em">
+					<li> J(C5,C9) = (10+6+5)/(10+20+40) = <b>0.3</b> </li>
+					<li> J(C5,C8) = 14/56 = <b>0.25</b> </li>
+				</ul>
+			</section>
+
+			<section class="content-slide">
+				<h2> Exemple - Echange de voisins </h2>
+				<p style="text-align:center">
+					Avant &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Après
+				</p>
+				<img height="380px" src="./pictures/cyclades/main/shuffle_1.png"/>
+			</section>
+
+			<section class="content-slide">
+				<h2> Exemple - Echange de voisins </h2>
+				<p style="text-align:center">
+					Avant &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Après
+				</p>
+				<img height="380px" src="./pictures/cyclades/main/shuffle_1.png"/>
+				<p style="text-align:right">
+					Pour C5 : C9 est plus similaire que C8 <br>
+					Pour C6 : C8 est plus similaire que C9
+				</p>
+			</section>
+
+			<section class="content-slide">
+				<h2> Exécuter une requête avec CyCLaDEs </h2>
+				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
+
+						<img id="side" height="480px" src="./pictures/cyclades/main/exQuery_4.png"/>
+
+				</span>
+				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
+					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
+						<img id="side" height="480px" src="./pictures/cyclades/main/exQuery_3.png"/>
+					</span>
+				</span>
+				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
+						<img id="side" height="480px" src="./pictures/cyclades/main/exQuery_2.png"/>
+					</span>
+				</span>
+				<img class="fragment fade-out" data-fragment-index="0" id="side" height="480px" src="./pictures/cyclades/main/exQuery_1.png"/>
+				<p>
+					C1 exécute Q1
+				</p>
+				<p>
+					Pour chaque triplet, essayé de résoudre le triplet dans :
+				</p>
+				<ol>
+					<li> Cache local </li>
+					<li> Cache des voisins </li>
+					<li> Cache HTTP </li>
+					<li> Serveur TPF </li>
+				</ol>
+			</section>
+
+			<section class="content-slide">
+				<h2> Expériences </h2>
+				<img id="side" height="480px" src="./pictures/cyclades/main/xp.png"/>
+				<p>
+					<b> Jeux de données : </b>
+					Berlin Benchmark (BSBM) [7], choisit pour la simulation d'applications Web
+				</p>
+				<p>
+					Un serveur TPF avec un cache HTTP hébergeant les jeux de données BSBM
+				</p>
+				<p>
+					Un réseau de clients TPF-CyCLaDEs exécutant des requêtes BSBM
+				</p>
+				<my-citation number="7" author="C. Bizer" title="The berlin benchmark" conference="International Journal on Semantic Web and Information Systems" date="2009"></my-citation>
+			</section>
+
+			<section class="content-slide">
+				<h2> Paramètres d'expérimentations </h2>
+				<img id="side" height="480px" src="./pictures/cyclades/main/xp.png"/>
+				<p>
+					Chaque <b>client</b> a un <b>emsemble de 25 requêtes</b> générées à partir
+					de <b>12 modèles</b> :
+				</p>
+				<ul>
+					<li> Phases d'échange de voisins : toutes les 10 secondes </li>
+					<li> Deux étapes : </li>
+					<ol>
+						<li> Initialisation </li>
+						<li> Mesures </li>
+				</ul>
+			</section>
+
+			<section class="content-slide">
+				<h3> Est-ce que le cache distribué passe à l'échelle ? </h3>
+				<figure style="float:left">
+					<img height="320px" src="./pictures/cyclades/xp/bsbm1M_TPF.png"/>
+					<figcaption> Sans CyCLaDEs </figcaption>
+				</figure>
+				<figure id="side">
+					<img id="side" height="320px" src="./pictures/cyclades/xp/bsbm1M_Cyclades.png"/>
+					<figcaption> Avec CyCLaDEs </figcaption>
+				</figure>
+				<p id="parameter">
+					Paramètre : BSBM 1M, cache = 1000, profil = 10, RPS(4,6,7), CON(9,15,20)
+				</p>
+				<p id="xp">
+					&#126; 20% des appels sont résolus par le cache décentralisé
+				</p>
+			</section>
+
+			<section class="content-slide">
+				<h3> Est-ce que la taille du jeux de données impacte le cache décentralisé ? </h3>
+				<img height="380px" src="./pictures/cyclades/xp/bsbmX_Cyclades.png"/>
+				<p id="parameter">
+					Paramètres : 10 clients, cache = 1000, RPS = 4, CON = 9
+				</p>
+				<p id="xp">
+					Le cache décentralisé résiste mieux que le cache local
+				</p>
+			</section>
+
+			<section class="content-slide">
+
+				
+			</section>
+
 			</div>
 	</div>
+
 	<script src="lib/js/head.min.js"></script>
 	<script src="js/reveal.js"></script>
-
 	<script>
 		// Required, even if empty.
 		Reveal.initialize({
@@ -311,6 +551,8 @@
 	     controls: false,
       // Display the page number of the current slide
 	     slideNumber: true,
+			// Push each slide change to the browser history
+			history: true,
 		});
 	</script>
 </body>

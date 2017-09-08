@@ -131,6 +131,16 @@ body {
   font-size: 38px;
 }
 
+#parameter{
+  font-size: 20px;
+  display:inline-block;
+  margin:0;
+}
+
+#xp{
+  display:inline-block;
+}
+
 /* Ensure certain elements are never larger than the slide itself */
 .reveal img,
 .reveal video,
