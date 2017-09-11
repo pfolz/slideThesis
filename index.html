@@ -69,6 +69,46 @@
 				<img src="./pictures/firstPage/nantesMetropole.jpg" height="80px">
       </section>
 
+			<section class="content-slide">
+				<h2> Les données liées </h2>
+				<table class="noRow">
+					<tr>
+						<td><b>Sujet</b></td>
+						<td><b>Prédicat</b></td>
+						<td><b>Objet</b></td>
+					</tr>
+					<tr>
+						<td>
+							<figure>
+								<img height="180px" src="./pictures/intro/venus.jpg"/>
+								<figcaption  style="font-size:14px">
+									<a  href="http://fr.dbpedia.org/page/La_Naissance_de_Vénus_(Botticelli)" target="_blank">
+										http://fr.dbpedia.org/page/La_Naissance_de_Vénus_(Botticelli)
+									</a>
+								</figcaption>
+							</figure>
+						</td>
+						<td>
+							<figure>
+								<img src="./pictures/intro/arrow.png"/>
+								<figcaption style="font-size:18px">
+									db:author
+								</figcaption>
+							</figure>
+						</td>
+						<td>
+							<figure>
+								<img height="180px" src="./pictures/intro/botticelli.jpg"/>
+								<figcaption style="font-size:14px">
+									<a href="http://fr.dbpedia.org/page/Sandro_Botticelli" target="_blank">
+										http://fr.dbpedia.org/page/Sandro_Botticelli
+									</a>
+								</figcaption>
+							</figure>
+						</td>
+					</tr>
+				</table>
+			</section>
 
 
 			<section class="part-slide">
@@ -595,8 +635,33 @@
       // Display the page number of the current slide
 	     slideNumber: true,
 			// Push each slide change to the browser history
-			history: true,
+				history: true,
 		});
 	</script>
+	<!--<style>
+			.reveal.slide .slides > section.content-slide, .reveal.slide .slides > section.content-slide > section {
+			  min-height: 100% !important;
+			  display: flex !important;
+			  flex-direction: column !important;
+			  justify-content: center !important;
+			  position: absolute !important;
+			  top: 0 !important;
+			  align-items: center !important;
+			}
+			section.content-slide > h1, section.content-slide > h2 {
+			  position: absolute !important;
+			  top: 0 !important;
+			  margin-left: auto !important;
+			  margin-right: auto !important;
+			  left: 0 !important;
+			  right: 0 !important;
+			  text-align: center !important;
+			}
+
+			.print-pdf .reveal.slide .slides > section, .print-pdf .reveal.slide .slides > section > section {
+			  min-height: 770px !important;
+			  position: relative !important;
+			}
+		</style>-->
 </body>
 </html>
