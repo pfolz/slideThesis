@@ -139,6 +139,7 @@ body {
 
 #xp{
   display:inline-block;
+  text-align: center;
 }
 
 /* Ensure certain elements are never larger than the slide itself */

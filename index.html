@@ -305,9 +305,7 @@
 			<section class="content-slide">
 				<h2> Algorithme de profilage </h2>
 				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
-					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="6">
 						<img src="./pictures/cyclades/main/algoCyclades_7.png"/>
-					</span>
 				</span>
 				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
 					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
@@ -342,9 +340,7 @@
 			<section class="content-slide">
 				<h2> Exemple - Algorithme de profilage </h2>
 				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="7">
-					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="8">
-						<img src="./pictures/cyclades/main/exAlgoCyclades_9.png"/>
-					</span>
+					<img src="./pictures/cyclades/main/exAlgoCyclades_9.png"/>
 				</span>
 				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="6">
 					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="7">
@@ -426,27 +422,22 @@
 				<p style="text-align:center">
 					Avant &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Après
 				</p>
-				<img height="380px" src="./pictures/cyclades/main/shuffle_1.png"/>
-			</section>
-
-			<section class="content-slide">
-				<h2> Exemple - Echange de voisins </h2>
-				<p style="text-align:center">
-					Avant &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Après
-				</p>
-				<img height="380px" src="./pictures/cyclades/main/shuffle_1.png"/>
-				<p style="text-align:right">
-					Pour C5 : C9 est plus similaire que C8 <br>
-					Pour C6 : C8 est plus similaire que C9
-				</p>
+				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+					<img height="380px" src="./pictures/cyclades/main/shuffle_2.png"/>
+					<p style="text-align:right">
+						Pour C5 : C9 est plus similaire que C8 <br>
+						Pour C6 : C8 est plus similaire que C9
+					</p>
+				</span>
+				<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+					<img height="380px" src="./pictures/cyclades/main/shuffle_1.png"/>
+				</span>
 			</section>
 
 			<section class="content-slide">
 				<h2> Exécuter une requête avec CyCLaDEs </h2>
 				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
-
 						<img id="side" height="480px" src="./pictures/cyclades/main/exQuery_4.png"/>
-
 				</span>
 				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
 					<span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
@@ -535,10 +526,62 @@
 			</section>
 
 			<section class="content-slide">
-
-				
+				<h3> CyCLaDEs avec deux communautés </h3>
+				<img id="side" height="380px" src="./pictures/cyclades/xp/exTwoCommunities.png"/>
+				<p>
+					Deux communautées accédent deux jeux de données BSBM <b> différents </b> sur le
+					même serveur
+				</p>
+				<p>
+					Les nœuds sont sur le même réseau aléatoire
+				</p>
+				<p id="question">
+					Est-ce que CyCLaDEs grâce aux profils va bien détecter les deux communautés ?
+				</p>
 			</section>
 
+			<section class="content-slide">
+				<h3> Est-ce que la précision du profil impacte la définition des communautés ? </h3>
+				<figure style="float:left">
+					<img height="300px" src="./pictures/cyclades/xp/k_5.png"/>
+					<figcaption> Taille du profil = 5 </figcaption>
+				</figure>
+				<figure id="side">
+					<img height="300px" src="./pictures/cyclades/xp/k_30.png"/>
+					<figcaption> Taille du profil = 30 </figcaption>
+				</figure>
+				<p id="parameter">
+					Paramètres : 2 BSBM 1M, 50 clients par jeu de données, cache = 1000
+				</p>
+				<p id="xp">
+					Dans le réseau superposé CON, CyCLaDEs contruit deux communautés distinctes :
+					BSBM1 et BSBM2
+				</p>
+			</section>
+
+			<section class="content-slide">
+				<h2> Conclusion </h2>
+				<p>
+					CyCLaDEs contruit un <b>cache décentralisé</b> pour les clients TPF
+				</p>
+				<p>
+					CyCLaDEs <b>réduit</b> le nombre d'appels au <b>serveur</b> dans le contexte
+					d'<b>applications Web</b>.
+				</p>
+			</section>
+
+			<section class="content-slide">
+				<h2> Travaux futur </h2>
+				<p>
+					Mesurer l'impact sur le <b> temps d'exécution </b>
+				</p>
+				<p>
+					CyCLaDEs <b>amène</b> les <b>données</b> aux <b>requêtes</b>
+				</p>
+				<p>
+					<b> Amener les requêtes </b> aux <b> données </b>
+				</p>
+			</section>
 			</div>
 	</div>
 
