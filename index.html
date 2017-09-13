@@ -35,10 +35,10 @@
         </p>
 
         <table>
-          <tr>
+          <!--<tr>
             <td><b> Président :</b></td>
             <td><b>Marc Gelgon</b>, Professeur, Université de Nantes</td>
-          </tr>
+          </tr>-->
           <tr>
             <td><b> Rappoteurs :</b></td>
             <td><b>Catherine Faron Zucker</b>, Maître de conférences, Sophia Antipolis</td>
@@ -51,17 +51,21 @@
             <td><b> Examinateur :</b></td>
             <td><b>Hubert Naacke</b>, Maître de conférences, Université Paris 6</td>
           </tr>
+					<tr>
+						<td></td>
+						<td><b>Marc Gelgon</b>, Professeur, Université de Nantes</td>
+					</tr>
+					<tr>
+            <td><b> Membre invité :</b></td>
+            <td><b>Hervé Jaigu</b>, Chargé de missions innovation, Nantes Métropole</td>
+          </tr>
           <tr>
             <td><b> Directeur :</b></td>
             <td><b>Pascal Molli</b>, Professeur, Université de Nantes</td>
           </tr>
           <tr>
             <td><b> Co-encadrante :</b></td>
-            <td><b>Hala Skaf-Molli</b>, Maître de conférecnes, Universté de Nantes</td>
-          </tr>
-          <tr>
-            <td><b> Membre invité :</b></td>
-            <td><b>Hervé Jaigu</b>, Chargé de missions innovation, Nantes Métropole</td>
+            <td><b>Hala Skaf-Molli</b>, Maître de conférences, Universté de Nantes</td>
           </tr>
         </table>
 				<img src="./pictures/firstPage/ls2n.png" height="80px">
@@ -81,7 +85,7 @@
 						<td>
 							<figure>
 								<img height="180px" src="./pictures/intro/venus.jpg"/>
-								<figcaption  style="font-size:14px">
+								<figcaption  style="font-size:18px">
 									<a  href="http://fr.dbpedia.org/page/La_Naissance_de_Vénus_(Botticelli)" target="_blank">
 										http://fr.dbpedia.org/page/La_Naissance_de_Vénus_(Botticelli)
 									</a>
@@ -92,14 +96,16 @@
 							<figure>
 								<img src="./pictures/intro/arrow.png"/>
 								<figcaption style="font-size:18px">
-									db:author
+									<a href="http://dbpedia.org/ontology/author" target="_blank">
+										http://dbpedia.org/ontology/author
+									</a>
 								</figcaption>
 							</figure>
 						</td>
 						<td>
 							<figure>
 								<img height="180px" src="./pictures/intro/botticelli.jpg"/>
-								<figcaption style="font-size:14px">
+								<figcaption style="font-size:18px">
 									<a href="http://fr.dbpedia.org/page/Sandro_Botticelli" target="_blank">
 										http://fr.dbpedia.org/page/Sandro_Botticelli
 									</a>
@@ -110,6 +116,61 @@
 				</table>
 			</section>
 
+			<section class="content-slide">
+				<h2> Extrait de graphe RDF </h2>
+					<img height="550px" src="./pictures/intro/botticelliGraph.png"/>
+			</section>
+
+			<section class="content-slide">
+				<h2> Requête SPARQL </h2>
+				<p id="query">
+					PREFIX dcterms: &#60;http://purl.org/dc/terms/> <br>
+					SELECT ?titre <br>
+					WHERE { <br>
+					&nbsp ?oeuvre dcterms:subject &#60;http://fr.dbpedia.org/resource/ <br>
+					&nbsp Catégorie:Œuvre_conservée_à_la_Galerie_des_Offices> . <br>
+					&nbsp ?oeuvre prop-fr:titre ?titre . <br>
+					&nbsp ?oeuvre dbpedia-owl:author dbpedia-fr:Sandro_Botticelli <br>
+					} <br>
+				</p>
+			</section>
+
+			<section class="content-slide">
+				<h2> Linked Open Data cloud </h2>
+				<figure>
+					<img  height="500px" src="./pictures/intro/lodResize.png"/>
+					<figcaption style="font-size:20px">
+						Diagramme du Linked Open Data cloud du 26 janvier 2017 (1146 jeux de données)
+					</figcaption>
+				</figure>
+			</section>
+
+			<section class="content-slide">
+				<h2> Interroger le Web des données </h2>
+				<p>
+					<b>Localisation des données :</b> tout le Web des données ou un sous-ensemble
+				</p>
+				<p class="fragment fade-in" data-fragment-index="0">
+					<b>Performances et passage à l'échelle :</b> compromis entre performance et disponibilité
+					des données
+				</p>
+				<p class="fragment fade-in" data-fragment-index="1">
+					<b>Hétérogénéité sémantique :</b> hétérogène entre les sources de données
+				</p>
+				<p class="fragment fade-in" data-fragment-index="2">
+					<b>Confiance :</b> choix des sources effectuer par l'utilisateur ?
+				</p>
+				<p class="fragment fade-in" data-fragment-index="3">
+					<b>Usage :</b> connu ou non par le producteur de données
+				</p>
+				<p class="fragment fade-in" data-fragment-index="4">
+					<b>Fraîcheur et cohérence des données :</b> réplicat ou non
+				</p>
+			</section>
+
+			<section class="content-slide">
+				<h2> Evaluer les requêtes SPARQL sur le Web des données </h2>
+			</section>
 
 			<section class="part-slide">
 				<h2>CyCLaDEs : Un cache collaboratif décentralisé pour les fragments TPF</h2>
