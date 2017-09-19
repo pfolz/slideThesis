@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Thèse : Collaboration dans une fédération de consomateurs de données liées</title>
+	<title>Thèse : Collaboration dans une fédération de consommateurs de données liées</title>
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/customize.css" id="theme">
 	<!--<script src="https://polygit.org/components/webcomponentsjs/webcomponents-loader.js"></script>-->
@@ -74,7 +74,8 @@
       </section>
 
 			<section class="content-slide">
-				<h2> Les données liées </h2>
+				<!--<h2>Introduction &mdash; Les données liées </h2>-->
+				<h2>Introduction | Les données liées </h2>
 				<table class="noRow">
 					<tr>
 						<td><b>Sujet</b></td>
@@ -116,27 +117,13 @@
 				</table>
 			</section>
 
-			<section class="content-slide">
+			<!--<section class="content-slide">
 				<h2> Extrait de graphe RDF </h2>
 					<img height="550px" src="./pictures/intro/botticelliGraph.png"/>
-			</section>
+			</section>-->
 
 			<section class="content-slide">
-				<h2> Requête SPARQL </h2>
-				<p id="query">
-					PREFIX dcterms: &#60;http://purl.org/dc/terms/> <br>
-					SELECT ?titre <br>
-					WHERE { <br>
-					&nbsp ?oeuvre dcterms:subject &#60;http://fr.dbpedia.org/resource/ <br>
-					&nbsp Catégorie:Œuvre_conservée_à_la_Galerie_des_Offices> . <br>
-					&nbsp ?oeuvre prop-fr:titre ?titre . <br>
-					&nbsp ?oeuvre dbpedia-owl:author dbpedia-fr:Sandro_Botticelli <br>
-					} <br>
-				</p>
-			</section>
-
-			<section class="content-slide">
-				<h2> Linked Open Data cloud </h2>
+				<h2> Introduction | Linked Open Data cloud </h2>
 				<figure>
 					<img  height="500px" src="./pictures/intro/lodResize.png"/>
 					<figcaption style="font-size:20px">
@@ -146,7 +133,21 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Interroger le Web des données </h2>
+				<h2> Introduction | Requête SPARQL </h2>
+				<p id="query">
+					<b>PREFIX</b> dcterms: &#60;http://purl.org/dc/terms/> <br>
+					<b>SELECT</b> ?titre <br>
+					<b>WHERE</b> { <br>
+					&nbsp ?oeuvre dcterms:subject &#60;http://fr.dbpedia.org/resource/ <br>
+					&nbsp Catégorie:Œuvre_conservée_à_la_Galerie_des_Offices> . <br>
+					&nbsp ?oeuvre prop-fr:titre ?titre . <br>
+					&nbsp ?oeuvre dbpedia-owl:author dbpedia-fr:Sandro_Botticelli <br>
+					} <br>
+				</p>
+			</section>
+
+			<section class="content-slide">
+				<h2> Introduction | Interroger le Web des données </h2>
 				<p>
 					<b>Localisation des données :</b> tout le Web des données ou un sous-ensemble
 				</p>
@@ -158,7 +159,7 @@
 					<b>Hétérogénéité sémantique :</b> hétérogène entre les sources de données
 				</p>
 				<p class="fragment fade-in" data-fragment-index="2">
-					<b>Confiance :</b> choix des sources effectuer par l'utilisateur ?
+					<b>Confiance :</b> sélection des sources effectuée par l'utilisateur ?
 				</p>
 				<p class="fragment fade-in" data-fragment-index="3">
 					<b>Usage :</b> connu ou non par le producteur de données
@@ -169,7 +170,101 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Evaluer les requêtes SPARQL sur le Web des données </h2>
+				<h2> Introduction | Evaluer les requêtes SPARQL sur le Web des données </h2>
+				<p> Plusieurs approches existent : </p>
+				<ul>
+					<li> Indexes centralisés </li>
+					<li> Entrepôt des données </li>
+					<li> Gestionnaire de données sur réseaux pair-à-pair </li>
+					<li> Médiateurs </li>
+				</ul>
+			</section>
+
+			<section class="content-slide">
+				<h2> Introduction | Indexes centralisés </h2>
+				<table id="side" class="noRow">
+					<tr><td>
+						<img height="100px" src="./pictures/intro/swoogle.png"/>
+					</tr></td>
+					<tr><td>
+						<img height="100px" src="./pictures/intro/waston.jpg"/>
+					</tr></td>
+					<tr><td>
+						<img height="100px" src="./pictures/intro/laundromat.png"/>
+					</tr></td>
+				</table>
+				<p>
+					Pacours (<i>crawler</i>) du Web des données
+				</p>
+				<p>
+					Recherche par mots clés
+				</p>
+				<p>
+					Sites Web proposant un index centralisé : Sindice, Swoogle, Waston ou
+					Laundromat
+				</p>
+			</section>
+
+			<section class="content-slide">
+				<h2> Parcours de liens </h2>
+			</section>
+
+			<section class="content-slide">
+				<h2> Introduction | Serveurs SPARQL </h2>
+				<p>
+					Avec autorité
+				</p>
+				<p>
+					Sans autorité
+				</p>
+			</section>
+
+			<section class="content-slide">
+				<h2> Introduction | Gestionnaire de données sur réseau pair-à-pair </h2>
+				<p>
+					Edutella, RdfPeers, Piazza,
+				</p>
+			</section>
+
+			<section class="content-slide">
+				<h2> Introduction | Approche médiateur et fédération de données </h2>
+				<p>
+					Médiateurs et bases de données fédérées, TPF
+				</p>
+			</section>
+
+			<section class="content-slide">
+				<h2> Introduction | Synthèse </h2>
+				<p> Sélection de l'approche <b> médiateur </b> :
+				<ol>
+					<li> Utilisation de <b>toute l'expressivité de SPARQL</b> </li>
+					<li> <b>Choix</b> des <b>sources</b> de données</li>
+					<li> Les producteurs de données ont <b>connaissance de l'usage de leurs données</b> </li>
+					<li> Ne nécessite <b>pas de collaboration</b> entre <b>producteurs de données</b> </li>
+					<li> Les principes des données liées <b>réduisent l'hétérogénéité</b> </li>
+					<li> Les principes des données liées permettent l'écriture de <b>médiateur compact</b> qui
+						peuvent être exécutée dans un navigateur Web </li>
+				</ol>
+			</section>
+
+			<section>
+				<blockquote>
+					Si les médiateurs collaborent en partageant leurs ressources en : espace disque,
+					capacité de calcul et bande passante ; est-il possible d’obtenir un meilleur compromis
+					entre performances et disponibilité des données ?
+				</blockquote>
+			</section>
+
+			<section class="content-slide">
+				<h2> Introduction | Contributions </h2>
+				<p>
+					<b>CyCLaDEs</b> : les médiateurs partagent leur <b>espace disque</b> et forment
+					un <b>cache décentralisé</b>
+				</p>
+				<p>
+					<b>Ladda</b> : les médiateurs partagent leur <b>capacité de calcul</b> et <b>bande
+					passante</b>, permettant de <b>déléguer des requêtes SPARQL</b> aux voisins libres
+				</p>
 			</section>
 
 			<section class="part-slide">
@@ -177,7 +272,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Contexte </h2>
+				<h2> CyCLaDEs | Contexte </h2>
 				<p>Les clients TPF exécutent des requêtes SPARQL sur des serveurs TPF [1] :</p>
 				<img src="./pictures/cyclades/main/tpfLogo.png"/ height="110px" style="float:right;"/>
 				<ul>
@@ -189,7 +284,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Contexte </h2>
+				<h2> CyCLaDEs | Contexte </h2>
 				<p><b>Les caches</b> jouent un rôle important dans les <b>performances</b> de TPF :</p>
 				<img src="./pictures/cyclades/main/tpfLogo.svg" height="110px" style="float:right;"/>
 				<ul>
@@ -200,7 +295,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Fragment de triplets et caches </h2>
+				<h2> CyCLaDEs | Fragment de triplets et caches </h2>
 				<div style="position:relative" >
 					<div class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0" data-fragment-index="1">
 							<p>
@@ -248,7 +343,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Si les clients collaborent </h2>
+				<h2> CyCLaDEs | Si les clients collaborent </h2>
 				<p>
 					<img id="side" height="492px" src="./pictures/cyclades/main/clientCollab.png"/>
 					Le cache local d'un client peut être <b> partagé </b> avec les autres :
@@ -269,7 +364,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Travaux connexes </h2>
+				<h2> CyCLaDEs | Travaux connexes </h2>
 				<p>
 					<b> Table de hachage distribuées (DHT) : </b> distibue le cache à travers les participants [2] :
 				</p>
@@ -283,7 +378,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Travaux connexes </h2>
+				<h2> CyCLaDEs | Travaux connexes </h2>
 				<p> <b>Cache comportemental :</b> connecte un nombre fixe de nœuds similaires [3] :</p>
 				<img id="side" height="250px" src="./pictures/cyclades/main/behave.png"/>
 				<ul>
@@ -298,7 +393,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Approche de CyCLaDEs </h2>
+				<h2> CyCLaDEs | Approche </h2>
 				<p>
 					<b> Hypothèse :</b> Les clients qui exécutent des <b> requêtes similaires </b> dans le <b> passé </b>
 						exécuteront des <b> requêtes similaires </b> dans le <b> futur </b> [4]
@@ -318,7 +413,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Approche TPF </h2>
+				<h2> CyCLaDEs | Approche TPF </h2>
 				<p>
 					<img id="side" src="./pictures/cyclades/main/archTpf.png" />
 					Beaucoup de clients accèdent au serveur TPF de manière concurrente, mais
@@ -327,7 +422,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Approche de CyCLaDEs </h2>
+				<h2> CyCLaDEs | Approche </h2>
 				<p>
 					<img id="side" src="./pictures/cyclades/main/archCyclades.png"/>
 					Connecte les nœuds à travers un réseau d'échantillonage aléatoire
@@ -350,7 +445,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Approche de CyCLaDEs </h2>
+				<h2> CyCLaDEs | Approche </h2>
 				<p>
 					<img id="side" height="480px" src="./pictures/cyclades/main/archCyclades2.png"/>
 					Le réseau RPS garantit la connectivité entre tous les clients
@@ -371,7 +466,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Approche de CyCLaDEs </h2>
+				<h2> CyCLaDEs | Approche </h2>
 				<p>
 					<img id="side" height="480px" src="./pictures/cyclades/main/archCyclades3.png"/>
 					Réseau superposé de similarité (CON) :
@@ -390,7 +485,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Comment profiler les nœuds ? </h2>
+				<h2> CyCLaDEs | Comment profiler les nœuds ? </h2>
 				<img id="side" height="200px" src="./pictures/cyclades/main/profil.png"/>
 				<p style="padding:2em 0 4em 0">
 					Exécuter des requêtes produit un <b>flux de fragment</b>, le cache est
@@ -404,7 +499,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Algorithme de profilage </h2>
+				<h2> CyCLaDEs | Algorithme de profilage </h2>
 				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
 						<img src="./pictures/cyclades/main/algoCyclades_7.png"/>
 				</span>
@@ -439,7 +534,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Exemple - Algorithme de profilage </h2>
+				<h2> CyCLaDEs | Exemple - Algorithme de profilage </h2>
 				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="7">
 					<img src="./pictures/cyclades/main/exAlgoCyclades_9.png"/>
 				</span>
@@ -484,7 +579,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Comment comparer les voisins ? </h2>
+				<h2> CyCLaDEs | Comment comparer les voisins ? </h2>
 				<table style="float:right">
 					<th>
 						<td> <b>P1</b> </td> <td> <b>P2</b> </td> <td> <b>P3</b> </td>
@@ -519,7 +614,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Exemple - Echange de voisins </h2>
+				<h2> CyCLaDEs | Exemple - Echange de voisins </h2>
 				<p style="text-align:center">
 					Avant &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Après
 				</p>
@@ -536,7 +631,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Exécuter une requête avec CyCLaDEs </h2>
+				<h2> CyCLaDEs | Exécuter une requête avec CyCLaDEs </h2>
 				<span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
 						<img id="side" height="480px" src="./pictures/cyclades/main/exQuery_4.png"/>
 				</span>
@@ -566,7 +661,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Expériences </h2>
+				<h2> CyCLaDEs | Expériences </h2>
 				<img id="side" height="480px" src="./pictures/cyclades/main/xp.png"/>
 				<p>
 					<b> Jeux de données : </b>
@@ -582,7 +677,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Paramètres d'expérimentations </h2>
+				<h2> CyCLaDEs | Paramètres d'expérimentations </h2>
 				<img id="side" height="480px" src="./pictures/cyclades/main/xp.png"/>
 				<p>
 					Chaque <b>client</b> a un <b>emsemble de 25 requêtes</b> générées à partir
@@ -598,7 +693,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h3> Est-ce que le cache distribué passe à l'échelle ? </h3>
+				<h3> CyCLaDEs | Est-ce que le cache distribué passe à l'échelle ? </h3>
 				<figure style="float:left">
 					<img height="320px" src="./pictures/cyclades/xp/bsbm1M_TPF.png"/>
 					<figcaption> Sans CyCLaDEs </figcaption>
@@ -616,7 +711,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h3> Est-ce que la taille du jeux de données impacte le cache décentralisé ? </h3>
+				<h3> CyCLaDEs | Est-ce que la taille du jeux de données impacte le cache décentralisé ? </h3>
 				<img height="380px" src="./pictures/cyclades/xp/bsbmX_Cyclades.png"/>
 				<p id="parameter">
 					Paramètres : 10 clients, cache = 1000, RPS = 4, CON = 9
@@ -627,7 +722,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h3> CyCLaDEs avec deux communautés </h3>
+				<h3> CyCLaDEs | CyCLaDEs avec deux communautés </h3>
 				<img id="side" height="380px" src="./pictures/cyclades/xp/exTwoCommunities.png"/>
 				<p>
 					Deux communautées accédent deux jeux de données BSBM <b> différents </b> sur le
@@ -642,7 +737,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h3> Est-ce que la précision du profil impacte la définition des communautés ? </h3>
+				<h3> CyCLaDEs | Est-ce que la précision du profil impacte la définition des communautés ? </h3>
 				<figure style="float:left">
 					<img height="300px" src="./pictures/cyclades/xp/k_5.png"/>
 					<figcaption> Taille du profil = 5 </figcaption>
@@ -661,7 +756,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Conclusion </h2>
+				<h2> CyCLaDEs | Conclusion </h2>
 				<p>
 					CyCLaDEs contruit un <b>cache décentralisé</b> pour les clients TPF
 				</p>
@@ -672,7 +767,7 @@
 			</section>
 
 			<section class="content-slide">
-				<h2> Travaux futur </h2>
+				<h2> CyCLaDEs | Travaux futur </h2>
 				<p>
 					Mesurer l'impact sur le <b> temps d'exécution </b>
 				</p>
@@ -683,6 +778,36 @@
 					<b> Amener les requêtes </b> aux <b> données </b>
 				</p>
 			</section>
+
+			<section class="part-slide">
+				<h2> Ladda : délégation de requête dans une fédération de consommateurs
+					de données liées </h2>
+			</section>
+
+			<section class="content-slide">
+				<h2> Ladda | Contexte </h2>
+				<img id="side" src="./pictures/ladda/main/archCyclades.png"/>
+				<p>
+					Fédération de consommateurs de données liées
+				</p>
+				<p>
+					Chaque consommateur de données :
+				</p>
+				<ul>
+					<li> est connecté à nombre fixe de <b>voisins</b> choisis aléatoirement ; </li>
+					<li> est <b> autonome </b> ; </li>
+					<li> est un <b>médiateur</b> ; </li>
+					<li> peut <b>partager ces ressources</b>. </li>
+				</ul>
+			</section>
+
+			<section>
+				<blockquote>
+					Que se passe-t'il si un consommateur de données peut partager ces capacités
+					d'exécution de requêtes SPARQL ?
+				</blockquote>
+			</section>
+
 			</div>
 	</div>
 
