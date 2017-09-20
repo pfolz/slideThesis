@@ -912,7 +912,7 @@
                   <h3> Ladda &#10097; Contexte </h3>
                   <img id="side" src="./pictures/ladda/main/archCyclades.png"/>
                   <p>
-                    Fédération de consommateurs de données liées
+                    <b>Fédération</b> de consommateurs de données liées
                   </p>
                   <p>
                     Chaque consommateur de données :
@@ -920,16 +920,76 @@
                   <ul>
                     <li> est connecté à nombre fixe de <b>voisins</b> choisis aléatoirement ; </li>
                     <li> est <b> autonome </b> ; </li>
-                    <li> est un <b>médiateur</b> ; </li>
-                    <li> peut <b>partager ces ressources</b>. </li>
+                    <li> est un <b>médiateur</b> TPF ; </li>
+                    <li> peut <b>partager ses ressources</b>. </li>
                   </ul>
                 </section>
 
                 <section>
                   <blockquote>
-                    Que se passe-t'il si un consommateur de données peut partager ces capacités
+                    Que se passe-t'il si un consommateur de données peut partager ses capacités
                     d'exécution de requêtes SPARQL ?
                   </blockquote>
+                </section>
+
+                <section class="content-slide">
+                  <h3> Ladda &#10097; Exécution de requêtes </h3>
+                  <table class="noRow">
+                    <tr> <td> <b>Exécution seul</b> </td> <td> <b>Exécution en collaboration</b> </td> </tr>
+                    <tr>
+                      <td> <img height="380px" src="./pictures/ladda/main/exBis1.png"/> </td>
+                      <td> <img height="380px" src="./pictures/ladda/main/exBis2.png"/> </td>
+                    </tr>
+                    <tr>
+                      <td> Fini à <b> T3 </b> </td>
+                      <td> Fini à <b> T2 </b> </td>
+                    </tr>
+                  </table>
+                </section>
+
+                <section class="content-slide">
+                  <h3> Ladda &#10097; Existe-t'il des clients libres ? </h3>
+                  <p> Analyse des journaux de DBpedia 3.8 sur 24 heures </p>
+                  <img src="./pictures/ladda/main/queryDistribution.png"/>
+                  <p> <b>Beaucoup</b> de clients exécutent <b>peu</b> de requêtes </p>
+                  <p> Il existe des clients <b>libres</b>, à condition qu'ils ne quittent pas
+                    immédiatement le réseau </p>
+                </section>
+
+                <section class="content-slide">
+                  <h3> Ladda &#10097; Modèle </h3>
+                  <p>
+                    <b>Fédération</b> : consommateurs de données {C<sub>1</sub>, ..., C<sub>n</sub>}
+                  </p>
+                  <p class="fragment fade-in" data-fragment-index="0">
+                    <b>Consommateur de données </b> <i>(C<sub>i</sub>)</i>: <span style="color:#009900"> Libre </span> &or;
+                    <span style="color:#cc0000"> Occupé </span>, des voisins <i>(K)</i>, des requêtes en attente <i>(W)</i>
+                  </p>
+                  <p class="fragment fade-in" data-fragment-index="1">
+                    <b> Requête </b> <i>(Q<sub>i</sub>)</i>: identifiant, description, temps d'arrivée <i>(at)</i>,
+                    temps d'exécution <i>(et)</i>, temps de réponse <i>(rt)</i>
+                  </p>
+                  <p class="fragment fade-in" data-fragment-index="2">
+                    <b> Allouer </b> : localement &or; à un voisin <span style="color:#009900"> Libre </span>
+                  </p>
+                  <p id="question" class="fragment fade-in" data-fragment-index="3">
+                    Comment minimiser le temps de réponse pour les consommateurs de données ?
+                  </p>
+                  <span id="ladda" style="float:left;padding:0 0 0 0" class="fragment fade-in" data-fragment-index="3"></span>
+                  <script>
+                  katex.render("\\forall C_i \\in F \\land \\forall Q_i \\in C_i.W~|~ \\Delta = (Q_i.rt -Q_i.at) \\textit{ est minimisé.}", ladda);
+                  </script>
+                </section>
+
+                <section class="content-slide">
+                  <h3>Ladda &#10097; Limite de parallélisation</h3>
+                  <p>Allocation de manière optimale LPT[x]</p>
+                  <img src="./pictures/ladda/main/gainParallelizationOptimal.png"/>
+                </section>
+
+                <section class="content-slide">
+                  <h3>Ladda &#10097; Algorithme</h3>
+                  <img style="float:left" height="380px" src="./pictures/ladda/main/algo.png"/>
                 </section>
 
               </div>
