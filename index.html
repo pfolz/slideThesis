@@ -397,14 +397,14 @@
 
         <section class="content-slide">
           <h3> CyCLaDEs &#10097; Contexte </h3>
-          <p>Les clients TPF exécutent des requêtes SPARQL sur des serveurs TPF [1] :</p>
+          <p>Les clients TPF exécutent des requêtes SPARQL sur des serveurs TPF [8] :</p>
           <img src="./pictures/cyclades/main/tpfLogo.png"/ height="110px" style="float:right;"/>
           <ul>
             <li> <b>Minimise le traitement</b> côté serveur, grâce aux fragments </li>
             <li> <b>Jointures</b> exécutées du côté <b>clients</b> </li>
           </ul>
           <img src="./pictures/cyclades/main/tpfScale.png"/>
-          <my-citation number="1" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
+          <my-citation number="8" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
         </section>
 
         <section class="content-slide">
@@ -490,7 +490,7 @@
       <section class="content-slide">
         <h3> CyCLaDEs &#10097; Travaux connexes </h3>
         <p>
-          <b> Table de hachage distribuées (DHT) : </b> distibue le cache à travers les participants [2] :
+          <b> Table de hachage distribuées (DHT) : </b> distibue le cache à travers les participants [9] :
         </p>
         <img id="side" height="300px" src="./pictures/cyclades/main/dht.png"/>
         <ul>
@@ -498,12 +498,12 @@
           <li>Une requête &#8594; 20 000 appels &#8594; 20 000 sauts <i>log(n)</i>, n:
             nombre de pairs</li>
           </ul>
-          <my-citation number="2" author="M. El Dick" title:"A hydrid p2p overlay for effecient query processing in cdn" conference="Proceedings of the 12th International Conference on Extending Database Technology: Advances in Database Technology" date="2009"></my-citation>
+          <my-citation number="9" author="M. El Dick" title:"A hydrid p2p overlay for effecient query processing in cdn" conference="Proceedings of the 12th International Conference on Extending Database Technology: Advances in Database Technology" date="2009"></my-citation>
         </section>
 
         <section class="content-slide">
           <h3> CyCLaDEs &#10097; Travaux connexes </h3>
-          <p> <b>Cache comportemental :</b> connecte un nombre fixe de nœuds similaires [3] :</p>
+          <p> <b>Cache comportemental :</b> connecte un nombre fixe de nœuds similaires [10] :</p>
           <img id="side" height="250px" src="./pictures/cyclades/main/behave.png"/>
           <ul>
             <li> Accès direct sans latence </li>
@@ -513,14 +513,14 @@
           <p id="question">
             Et si on utilisait les caches comportementaux pour des historiques de requêtes ?
           </p>
-          <my-citation number="3" author="D. Frey" title="Behavioral cache for web content" conference="Ditributed Applications and Interoperable System" date="2014"></my-citation>
+          <my-citation number="10" author="D. Frey" title="Behavioral cache for web content" conference="Ditributed Applications and Interoperable System" date="2014"></my-citation>
         </section>
 
         <section class="content-slide">
           <h3> CyCLaDEs &#10097; Approche </h3>
           <p>
             <b> Hypothèse :</b> Les clients qui exécutent des <b> requêtes similaires </b> dans le <b> passé </b>
-            exécuteront des <b> requêtes similaires </b> dans le <b> futur </b> [4]
+            exécuteront des <b> requêtes similaires </b> dans le <b> futur </b> [11]
           </p>
           <p class="fragment fade-in" data-fragment-index="1">
             <b> Approche :</b>
@@ -533,7 +533,7 @@
             <p id="question" class="fragment fade-in" data-fragment-index="2">
               Combien d'accès aux caches des voisins peut-on obtenir ?
             </p>
-            <my-citation number="4" author="M. D. Ekstrand" title="Collaborative filtering recommender systems" conference="Foundations and Trends in Human-Computer Interaction" date="2011"></my-citation>
+            <my-citation number="11" author="M. D. Ekstrand" title="Collaborative filtering recommender systems" conference="Foundations and Trends in Human-Computer Interaction" date="2011"></my-citation>
           </section>
 
           <section class="content-slide">
@@ -563,9 +563,9 @@
               <li> gère les arrivées et départs des nœuds et les partitions réseau</li>
             </ul>
             <p class="fragment fade-in" data-fragment-index="2">
-              Réseau implémenté par Cyclon [5]
+              Réseau implémenté par Cyclon [12]
             </p>
-            <my-citation number="5" author="S. Voulgaris" title="Cyclon: Inexpensive membership managment for unstructured p2p overlay" conference="Journal of Network and Systems Managment" date="2005"></my-citation>
+            <my-citation number="12" author="S. Voulgaris" title="Cyclon: Inexpensive membership managment for unstructured p2p overlay" conference="Journal of Network and Systems Managment" date="2005"></my-citation>
           </section>
 
           <section class="content-slide">
@@ -584,9 +584,9 @@
             </ul>
             <p class="fragment fade-in" data-fragment-index="2">
               Nécessite un second réseau superposer pour gérer la <b> similarité </b>
-              comme proposé dans Gossple [6]
+              comme proposé dans Gossple [13]
             </p>
-            <my-citation number="6" author="M. Bertier" title="The gossple anonymous social network" conference="11th International Middleware Conference" date="2010"></my-citation>
+            <my-citation number="13" author="M. Bertier" title="The gossple anonymous social network" conference="11th International Middleware Conference" date="2010"></my-citation>
           </section>
 
           <section class="content-slide">
@@ -789,7 +789,7 @@
               <img id="side" height="480px" src="./pictures/cyclades/main/xp.png"/>
               <p>
                 <b> Jeux de données : </b>
-                Berlin Benchmark (BSBM) [7], choisit pour la simulation d'applications Web
+                Berlin Benchmark (BSBM) [14], choisit pour la simulation d'applications Web
               </p>
               <p>
                 Un serveur TPF avec un cache HTTP hébergeant les jeux de données BSBM
@@ -797,7 +797,7 @@
               <p>
                 Un réseau de clients TPF-CyCLaDEs exécutant des requêtes BSBM
               </p>
-              <my-citation number="7" author="C. Bizer" title="The berlin benchmark" conference="International Journal on Semantic Web and Information Systems" date="2009"></my-citation>
+              <my-citation number="14" author="C. Bizer" title="The berlin benchmark" conference="International Journal on Semantic Web and Information Systems" date="2009"></my-citation>
             </section>
 
             <section class="content-slide">
@@ -935,25 +935,34 @@
                 <section class="content-slide">
                   <h3> Ladda &#10097; Exécution de requêtes </h3>
                   <table class="noRow">
-                    <tr> <td> <b>Exécution seul</b> </td> <td> <b>Exécution en collaboration</b> </td> </tr>
+                    <tr>
+                      <td> <b>Exécution seul</b> </td>
+                      <td class="fragment fade-in" data-fragment-index="0"> <b>Exécution en collaboration</b> </td>
+                    </tr>
                     <tr>
                       <td> <img height="380px" src="./pictures/ladda/main/exBis1.png"/> </td>
-                      <td> <img height="380px" src="./pictures/ladda/main/exBis2.png"/> </td>
+                      <td class="fragment fade-in" data-fragment-index="0"> <img height="380px" src="./pictures/ladda/main/exBis2.png"/> </td>
                     </tr>
                     <tr>
                       <td> Fini à <b> T3 </b> </td>
-                      <td> Fini à <b> T2 </b> </td>
+                      <td class="fragment fade-in" data-fragment-index="0"> Fini à <b> T2 </b> </td>
                     </tr>
                   </table>
                 </section>
 
                 <section class="content-slide">
                   <h3> Ladda &#10097; Existe-t'il des clients libres ? </h3>
-                  <p> Analyse des journaux de DBpedia 3.8 sur 24 heures </p>
-                  <img src="./pictures/ladda/main/queryDistribution.png"/>
+                  <p> Analyse des journaux réels [15] de DBpedia 3.8 sur 24 heures </p>
+                  <img height="280px"src="./pictures/ladda/main/queryDistribution.png"/>
                   <p> <b>Beaucoup</b> de clients exécutent <b>peu</b> de requêtes </p>
-                  <p> Il existe des clients <b>libres</b>, à condition qu'ils ne quittent pas
+                  <p style="margin:0"> Il existe des clients <b>libres</b>, à condition qu'ils ne quittent pas
                     immédiatement le réseau </p>
+                  <p style="display: inline-block;
+                  font-size: 20px;
+                  float: left;
+                  text-align: left;margin:0; padding:0">
+                    [15] <a href="url">https://eprints.soton.ac.uk/379399/</a>
+                  </p>
                 </section>
 
                 <section class="content-slide">
@@ -983,13 +992,66 @@
 
                 <section class="content-slide">
                   <h3>Ladda &#10097; Limite de parallélisation</h3>
-                  <p>Allocation de manière optimale LPT[x]</p>
-                  <img src="./pictures/ladda/main/gainParallelizationOptimal.png"/>
+                  <p style="margin:0">Allocation de 1509 requêtes des journaux de DBpedia de manière optimale LPT [16]</p>
+                  <img height="280px" src="./pictures/ladda/main/gainParallelizationOptimal.png"/>
+                  <p style="margin:0"> La parallélisation <b>réduit</b> le temps de réponse </p>
+                  <p style="margin:0"> Paralléliser au-delà d'un certain seuil <b>ne réduit plus </b> le temps de réponse </p>
+                  <my-citation number="16" author="M. Pinedo" title="Theory, Algorithms, and Systems (3nd ed.)" conference="Springer Science and Business Media" date="2008"></my-citation>
+                </section>
+
+                <section class="content-slide">
+                  <h3>Ladda &#10097; Comment choisir ses voisins ?</h3>
+                  <p> Exécution de 1509 requêtes sans effacement du cache <i>(reset off)</i> et
+                    avec effacement du cache <i>(reset on)</i> entre l'exécution de requêtes</p>
+                  <img src="./pictures/ladda/main/localityDBpedia.png"/>
+                  <p> La <b>localité</b> n'a <b>pas d'impacte</b> sur la délégation </p>
                 </section>
 
                 <section class="content-slide">
                   <h3>Ladda &#10097; Algorithme</h3>
-                  <img style="float:left" height="380px" src="./pictures/ladda/main/algo.png"/>
+
+                  <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="7">
+                    <img height="620px" src="./pictures/ladda/main/algo_9.svg"/>
+                  </span>
+
+                  <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="7">
+                    <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="6">
+                      <img height="620px" src="./pictures/ladda/main/algo_8.svg"/>
+                    </span>
+                  </span>
+                  <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="6">
+                    <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
+                      <img height="620px" src="./pictures/ladda/main/algo_7.svg"/>
+                    </span>
+                  </span>
+                  <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
+                    <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
+                      <img height="620px" src="./pictures/ladda/main/algo_6.svg"/>
+                    </span>
+                  </span>
+                  <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
+                    <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
+                      <img height="620px" src="./pictures/ladda/main/algo_5.svg"/>
+                    </span>
+                  </span>
+                  <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
+                    <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
+                      <img height="620px" src="./pictures/ladda/main/algo_4.svg"/>
+                    </span>
+                  </span>
+                  <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
+                    <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
+                      <img height="620px" src="./pictures/ladda/main/algo_3.svg"/>
+                    </span>
+                  </span>
+                  <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
+                    <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+                      <img height="620px" src="./pictures/ladda/main/algo_2.svg"/>
+                    </span>
+                  </span>
+                  <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+                    <img height="620px" src="./pictures/ladda/main/algo_1.svg"/>
+                  </span>
                 </section>
 
               </div>
