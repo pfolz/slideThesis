@@ -991,6 +991,23 @@
                 </section>
 
                 <section class="content-slide">
+                  <h3>Ladda &#10097; Quel sous-ensemble de voisins ?</h3>
+                  <p>
+                    Les consommateurs de données accèdent au <b> même </b> serveur TPF
+                  </p>
+                  <p>
+                    Même s'il est perfomant il a une <b> limite </b>
+                  </p>
+                  <p>
+                    Chaque consommateur de données va <b> interroger </b> un <b> sous-ensemble </b> de
+                    <i>k</i> voisins
+                  </p>
+                  <p id="question">
+                    Faut-il choisir <i>k</i> voisins aléatoirs ou similaires ?
+                  </p>
+                </section>
+
+                <section class="content-slide">
                   <h3>Ladda &#10097; Limite de parallélisation</h3>
                   <p style="margin:0">Allocation de 1509 requêtes des journaux de DBpedia de manière optimale LPT [16]</p>
                   <img height="280px" src="./pictures/ladda/main/gainParallelizationOptimal.png"/>
@@ -1052,6 +1069,45 @@
                   <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
                     <img height="620px" src="./pictures/ladda/main/algo_1.svg"/>
                   </span>
+                </section>
+
+                <section class="content-slide">
+                  <h3> Ladda &#10097; Expériences </h3>
+                  <p>
+                    <b> Jeux de données : </b>
+                    DBpedia 3.8
+                  </p>
+                  <p>
+                    <b> Requêtes : </b> des 50 premiers clients de l'heure 5 = 1509 requêtes
+                  </p>
+                  <p>
+                    <b> Environnement : </b> un serveur TPF (4 workers) et un cache Web
+                  </p>
+                  <p>
+                    <b> Clients : </b> 50 médiateurs Ladda-TPF
+                  </p>
+                </section>
+
+                <section class="content-slide">
+                  <h3> Ladda &#10097; Expériences </h3>
+                  <p><b> Configuration : </b></p>
+                  <p> Supposons une fédération de 6 médiateurs </p>
+                  <table>
+                    <tr>
+                      <td style="padding: 0em 0em 0em 0em;">
+                        <img width="400px" src="./pictures/ladda/xp/config_1.png"/>
+                      </td>
+                      <td style="padding: 0em 0em 0em 0em;">
+                        <img width="400px" src="./pictures/ladda/xp/config_2.png"/>
+                      </td>
+                      <td style="padding: 0em 0em 0em 0em;">
+                        <img width="400px" src="./pictures/ladda/xp/config_3.png"/>
+                      </td>
+                      <td style="padding: 0em 0em 0em 0em;">
+                        <img width="400px" src="./pictures/ladda/xp/config_4.png"/>
+                      </td>
+                    </tr>
+                  </table>
                 </section>
 
               </div>
