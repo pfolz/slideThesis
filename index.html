@@ -133,7 +133,7 @@
         </tr>
       </table>
       <p class="fragment fade-in" data-fragment-index="0" style="margin:0">
-          Selon une étude de 2013 [1] les <b>serveurs</b> ont une disponibilité <b>inférieur à 95%</b>
+          Selon une étude de 2013 [1] les <b>serveurs</b> SPARQL ont une disponibilité <b>inférieur à 95%</b>
       </p>
       <my-citation class="fragment fade-in" data-fragment-index="0" number="1" author="C. B. Aranda" title="SPARQL Web-Querying Infrastructure: Ready for Action ?" conference="International Semantic Web Conference (ISWC)" date="2013"><my-citation>
     </section>
@@ -147,7 +147,7 @@
 
     <section class="content-slide">
       <h3>Introduction &#10097; Collaboration des consommateurs</h3>
-      <p>
+      <!-- <p>
         Si les consommateurs <b>collaboraient</b> ils pourraient partager
         <b>leurs ressources</b>
       </p>
@@ -158,18 +158,34 @@
         <b> Proposition </b>: Construire une fédération de consommateur de données,
         où les consommateurs de données sont connectés entre eux et ils partagent leurs
         ressources
+      </p> -->
+      <p>
+        <b>Pré-requis :</b>
       </p>
+      <ul>
+        <li> Les consommateurs sont <b>connectés</b> entre eux</li>
+        <li> Les consommateurs <b>partagent</b> leurs ressources</li>
+      </ul>
+      <p>
+        <b> Ressources :</b>
+      </p>
+      <ul>
+        <li> Espace disque</li>
+        <li> Capacité de calcul </li>
+        <li> Bande passante </li>
+      </ul>
     </section>
 
     <section class="content-slide">
       <h3> Introduction &#10097; Contributions </h3>
       <p>
-        <b>CyCLaDEs</b> : les consommateurs partagent leur <b>espace disque</b> et forment
+        <b>CyCLaDEs</b> : les consommateurs partagent leur <b>espace disque</b> et construisent
         un <b>cache décentralisé</b>
       </p>
       <p>
         <b>Ladda</b> : les consommateurs partagent leur <b>capacité de calcul</b> et <b>bande
-          passante</b>, permettant de <b>déléguer des requêtes SPARQL</b> aux voisins libres
+          passante</b> et <b>parallélise</b> l'exécution de leurs requêtes SPARQL, en
+          <b>déléguant</b> des requêtes à des voisins libres
         </p>
       </section>
 
@@ -250,11 +266,11 @@
     <h3> Etat de l'art </h3>
   </section>
 
-  <section class="content-slide">
+  <!-- <section class="content-slide">
     <h3> EdA &#10097; Interroger le Web des données </h3>
     <p> Un processus complexe </p>
     <img src="./pictures/intro/query.png"/>
-  </section>
+  </section> -->
 
   <!-- <section class="content-slide">
     <h3> Introduction &#10097; Interroger le Web des données </h3>
@@ -315,8 +331,8 @@
     </p>
     <span style="margin:0; padding:0">
       <my-citation number="2" author="G. Tummarello" title="Sindice.com: Weaving the open linked data" conference="The Semantic Web" date="2007"></my-citation>
-      <p style="display: inline-block;
-      font-size: 20px;
+      <p style="display: block;
+      font-size: 16px;
       float: left;
       text-align: left;margin:0; padding:0">
         [3] http://swoogle.umbc.edu/2006/
@@ -343,7 +359,7 @@
     </p>
   </section> -->
   <section class="content-slide">
-    <h3> EdA &#10097; Parcours de liens </h3>
+    <h3> EdA &#10097; Parcours de liens [6] </h3>
     <p id="query">
       <b>SELECT</b> ?clubName ?playerName <br>
       <b>WHERE</b> { <br>
@@ -359,6 +375,7 @@
     <p>
       Navigation sur le Web des données, mais <b>temps d'exécution trop long</b>
     </p>
+    <my-citation number="6" author="O. Hartig" title="Linked data query processing based on link traversal" conference="Linked Data Managment" date="2014"></my-citation>
   </section>
 
   <!-- <section class="content-slide">
@@ -389,9 +406,9 @@
       Plusieurs approches :
     </p>
     <ul>
-      <li>Edutella [6]</li>
-      <li>RDFPeers [7]</li>
-      <li>Piazza [8]</li>
+      <li>Edutella [7]</li>
+      <li>RDFPeers [8]</li>
+      <li>Piazza [9]</li>
     </ul>
     <p>
       Nécessite la <b>collaboration</b> entre producteurs de données
@@ -399,9 +416,9 @@
     <p>
       Actuellement ils s'accordent seulement pour suivre les <b> principes des données liées</b>
     </p>
-    <my-citation number="6" author="W. Nejdl" title="Super-peer-based routing and clustering strategies for rdf-based peer-to-peer networks" conference="World Wide Web" date="2003"></my-citation>
-    <my-citation number="7" author="M. Cai" title="Rdfpeers: a scalable distributes rdf repository based on a structured peer-to-peer network" conference="World Wide Web" date="2004"></my-citation>
-    <my-citation number="8" author="A. Y. Halevy" title="Piazza: Data managment infrastructure for semantic web applications" conference="World Wide Web" date="2003"></my-citation>
+    <my-citation number="7" author="W. Nejdl" title="Super-peer-based routing and clustering strategies for rdf-based peer-to-peer networks" conference="World Wide Web" date="2003"></my-citation>
+    <my-citation number="8" author="M. Cai" title="Rdfpeers: a scalable distributes rdf repository based on a structured peer-to-peer network" conference="World Wide Web" date="2004"></my-citation>
+    <my-citation number="9" author="A. Y. Halevy" title="Piazza: Data managment infrastructure for semantic web applications" conference="World Wide Web" date="2003"></my-citation>
   </section>
 
   <!-- <section class="content-slide">
@@ -460,14 +477,19 @@
     <h3> EdA &#10097; Moteur de requêtes Fédérées </h3>
     <img id="side" height="380px" src="./pictures/intro/mediator.png"/>
     <p>
-      Anapsid[9], Fedex[10]
+      Anapsid [10], Fedex [11]
     </p>
     <p>
       <b>Limité aux performances des serveurs SPARQL</b> qu'ils interrogent
     </p>
+    <p>
+      <b>Compliqué</b> pour un utilisateur <b>lambda</b> à utiliser
+    </p>
+    <my-citation number="10" author="M. Acosta" title="Anapsid: an adaptive query processing engine for sparql endpoints" conference="International Semantic Web (ISWC)" date="2011"></my-citation>
+    <my-citation number="11" author="A. Schwarte" title="Fedx : Optimization techniques for federated query processing on linked data" conference="Internation Semantic Web (ISWC)" date="2011"></my-citation>
   </section>
 
-  <section class="content-slide">
+  <!-- <section class="content-slide">
     <h3> EdA &#10097; Triple Pattern Fragment [11] </h3>
     <img id="side" height="380px" src="./pictures/cyclades/main/globalArchTPF.png"/>
     <p>
@@ -487,6 +509,32 @@
       <b>LIMIT</b> 100 <br>
     </p>
     <my-citation number="11" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
+  </section> -->
+
+  <section class="content-slide">
+    <h3> EdA &#10097; Triple Pattern Fragment </h3>
+    <p>Les clients TPF exécutent des requêtes SPARQL sur des serveurs TPF [12] :</p>
+    <img src="./pictures/cyclades/main/tpfLogo.png"/ height="110px" style="float:right;"/>
+    <ul>
+      <li> <b>Minimise le traitement</b> côté serveur, grâce aux fragments </li>
+      <li> <b>Jointures</b> exécutées du côté <b>clients</b> </li>
+    </ul>
+    <img src="./pictures/cyclades/main/tpfScale.png"/>
+    <my-citation number="12" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
+  </section>
+
+  <section class="content-slide">
+    <h3> EdA &#10097; Triple Pattern Fragment </h3>
+    <p>
+      Le médiateur TPF s'exécute dans un <b>navigateur Web</b>
+    </p>
+    <p><b>Les caches</b> jouent un rôle important dans les <b>performances</b> de TPF :</p>
+    <img src="./pictures/cyclades/main/tpfLogo.svg" height="110px" style="float:right;"/>
+    <ul>
+      <li> Les caches contiennent des <b>fragments</b> </li>
+      <li> Les fragments sont suceptibles d'être <b>réutilisés</b> localement ou à travers les clients</li>
+    </ul>
+    <img src="./pictures/cyclades/main/tpfScale.png"/>
   </section>
 
   <section class="content-slide">
@@ -494,11 +542,11 @@
     <p> Sélection du <b> médiateur TPF</b> :
       <ol>
         <li> Utilisation de <b>toute l'expressivité de SPARQL</b> </li>
-        <li> <b>Choix</b> des <b>sources</b> de données</li>
-        <li> Les producteurs de données ont <b>connaissance de l'usage de leurs données</b> </li>
-        <li> Ne nécessite <b>pas de collaboration</b> entre <b>producteurs de données</b> </li>
-        <li> Les principes des données liées <b>réduisent l'hétérogénéité</b> </li>
-        <li> Les principes des données liées permettent l'écriture de <b>médiateur compact</b> qui
+        <li class="fragment fade-in" data-fragment-index="0"> <b>Choix</b> des <b>sources</b> de données</li>
+        <li class="fragment fade-in" data-fragment-index="1"> Les producteurs de données ont <b>connaissance de l'usage de leurs données</b> </li>
+        <li class="fragment fade-in" data-fragment-index="2"> Ne nécessite <b>pas de collaboration</b> entre <b>producteurs de données</b> </li>
+        <li class="fragment fade-in" data-fragment-index="3"> Les principes des données liées <b>réduisent l'hétérogénéité sémantique</b> </li>
+        <li class="fragment fade-in" data-fragment-index="4"> Les principes des données liées permettent l'écriture de <b>médiateur compact</b> qui
           peuvent être exécutée dans un navigateur Web </li>
         </ol>
       </section>
@@ -527,29 +575,6 @@
 
         <section class="part-slide">
           <h3>CyCLaDEs : Un cache collaboratif décentralisé pour les fragments TPF</h3>
-        </section>
-
-        <section class="content-slide">
-          <h3> CyCLaDEs &#10097; Contexte </h3>
-          <p>Les clients TPF exécutent des requêtes SPARQL sur des serveurs TPF [11] :</p>
-          <img src="./pictures/cyclades/main/tpfLogo.png"/ height="110px" style="float:right;"/>
-          <ul>
-            <li> <b>Minimise le traitement</b> côté serveur, grâce aux fragments </li>
-            <li> <b>Jointures</b> exécutées du côté <b>clients</b> </li>
-          </ul>
-          <img src="./pictures/cyclades/main/tpfScale.png"/>
-          <my-citation number="11" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
-        </section>
-
-        <section class="content-slide">
-          <h3> CyCLaDEs &#10097; Contexte </h3>
-          <p><b>Les caches</b> jouent un rôle important dans les <b>performances</b> de TPF :</p>
-          <img src="./pictures/cyclades/main/tpfLogo.svg" height="110px" style="float:right;"/>
-          <ul>
-            <li> Les caches contiennent des fragments </li>
-            <li> Les fragments sont suceptibles d'être réutilisés localement ou à travers les clients</li>
-          </ul>
-          <img src="./pictures/cyclades/main/tpfScale.png"/>
         </section>
 
         <section class="content-slide">
