@@ -74,7 +74,107 @@
     </section>
 
     <section class="content-slide">
-      <!--<h3>Introduction &mdash; Les données liées </h3>-->
+      <h3>Introduction &#10097; Utilité du Web sémantique ?</h3>
+      <p id="question">
+        Quels sont les joueurs de foot espagnol qui jouent dans le club de leur ville natale ?
+      </p>
+      <table>
+        <tr>
+          <td> Google </td>
+          <td> Web Sémantique </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="./pictures/intro/googleSoccer.png"/>
+          </td>
+          <td>
+            <img src="./pictures/intro/tpfSoccer.png"/>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- <section class="content-slide">
+      <h3>Introduction &#10097; Requête SPARQL</h3>
+      <p id="query">
+        <b>SELECT</b> ?clubName ?playerName <br>
+        <b>WHERE</b> { <br>
+          &nbsp ?club a dbpedia-owl:SoccerClub; <br>
+            &nbsp &nbsp &nbsp dbpedia-owl:ground ?city; <br>
+            &nbsp &nbsp &nbsp rdfs:label ?clubName. <br>
+          &nbsp ?player dbpedia-owl:team ?club; <br>
+            &nbsp &nbsp &nbsp dbpedia-owl:birthPlace ?city; <br>
+            &nbsp &nbsp &nbsp rdfs:label ?playerName. <br>
+          &nbsp ?city dbpedia-owl:country dbpedia:Spain. <br>
+
+          <b>FILTER</b> LANGMATCHES(LANG(?clubName), "EN") <br>
+          <b>FILTER</b> LANGMATCHES(LANG(?playerName), "EN") <br>
+        }
+      </p>
+    </section> -->
+
+    <section class="content-slide">
+      <h3>Introduction &#10097; Problèmatique</h3>
+      <p>
+        Exécuter des requêtes sur le Web des données
+      </p>
+      <table class="noRow" style="display:inline-block; padding: 0em 0em 0em 0em;">
+        <tr>
+          <td> <b>Seul</b> </td>
+          <td class="fragment fade-in" data-fragment-index="0"> <b>A plusieurs </b> </td>
+        </tr>
+        <tr>
+          <td>
+            <img height="300px" src="./pictures/intro/load_1.png"/>
+          </td>
+          <td class="fragment fade-in" data-fragment-index="0">
+            <img height="300px" src="./pictures/intro/load_2.png"/>
+          </td>
+        </tr>
+      </table>
+      <p class="fragment fade-in" data-fragment-index="0" style="margin:0">
+          Selon une étude de 2013 [1] les <b>serveurs</b> ont une disponibilité <b>inférieur à 95%</b>
+      </p>
+      <my-citation class="fragment fade-in" data-fragment-index="0" number="1" author="C. B. Aranda" title="SPARQL Web-Querying Infrastructure: Ready for Action ?" conference="International Semantic Web Conference (ISWC)" date="2013"><my-citation>
+    </section>
+
+    <section class="content-slide">
+      <img id="side" src="./pictures/intro/load_3.png"/>
+      <p style='color: #2a76dd;font-family: "Roboto Slab";'>
+        Et si les consommateurs de données collaboraient entre eux ?
+      </p>
+    </section>
+
+    <section class="content-slide">
+      <h3>Introduction &#10097; Collaboration des consommateurs</h3>
+      <p>
+        Si les consommateurs <b>collaboraient</b> ils pourraient partager
+        <b>leurs ressources</b>
+      </p>
+      <p>
+        Nécessite que les consommateurs soient <b>connectés</b> entre eux
+      </p>
+      <p>
+        <b> Proposition </b>: Construire une fédération de consommateur de données,
+        où les consommateurs de données sont connectés entre eux et ils partagent leurs
+        ressources
+      </p>
+    </section>
+
+    <section class="content-slide">
+      <h3> Introduction &#10097; Contributions </h3>
+      <p>
+        <b>CyCLaDEs</b> : les consommateurs partagent leur <b>espace disque</b> et forment
+        un <b>cache décentralisé</b>
+      </p>
+      <p>
+        <b>Ladda</b> : les consommateurs partagent leur <b>capacité de calcul</b> et <b>bande
+          passante</b>, permettant de <b>déléguer des requêtes SPARQL</b> aux voisins libres
+        </p>
+      </section>
+
+    <!--<section class="content-slide">
+      <!--<h3>Introduction &mdash; Les données liées </h3>
       <h3>Introduction &#10097; Les données liées </h3>
       <table class="noRow">
         <tr>
@@ -115,14 +215,14 @@
           </td>
         </tr>
       </table>
-    </section>
+    </section>-->
 
     <!--<section class="content-slide">
     <h3> Extrait de graphe RDF </h3>
     <img height="550px" src="./pictures/intro/botticelliGraph.png"/>
   </section>-->
 
-  <section class="content-slide">
+  <!-- <section class="content-slide">
     <h3> Introduction &#10097; Linked Open Data cloud </h3>
     <figure>
       <img  height="500px" src="./pictures/intro/lodResize.png"/>
@@ -144,10 +244,14 @@
         &nbsp ?oeuvre dbpedia-owl:author dbpedia-fr:Sandro_Botticelli <br>
       } <br>
     </p>
+  </section> -->
+
+  <section class="part-slide">
+    <h3> Etat de l'art </h3>
   </section>
 
   <section class="content-slide">
-    <h3> Introduction &#10097; Interroger le Web des données </h3>
+    <h3> EdA &#10097; Interroger le Web des données </h3>
     <p> Un processus complexe </p>
     <img src="./pictures/intro/query.png"/>
   </section>
@@ -187,13 +291,7 @@
   </section> -->
 
   <section class="content-slide">
-    <blockquote>
-      Est si les consommateurs de données collaboraient entre eux ?
-    </blockquote>
-  </section>
-
-  <section class="content-slide">
-    <h3> Introduction &#10097; Indexes centralisés </h3>
+    <h3> EdA &#10097; Indexes centralisés </h3>
     <table id="side" class="noRow">
       <tr><td>
         <img height="100px" src="./pictures/intro/swoogle.png"/>
@@ -212,24 +310,24 @@
       Recherche par <b>mots clés</b>
     </p>
     <p>
-      <b>Sites Web</b> proposant un index centralisé : Sindice[1], Swoogle[2], Waston[3] ou
-      Laundromat[4]
+      <b>Sites Web</b> proposant un index centralisé : Sindice[2], Swoogle[3], Waston[4] ou
+      Laundromat[5]
     </p>
     <span style="margin:0; padding:0">
-      <my-citation number="1" author="G. Tummarello" title="Sindice.com: Weaving the open linked data" conference="The Semantic Web" date="2007"></my-citation>
+      <my-citation number="2" author="G. Tummarello" title="Sindice.com: Weaving the open linked data" conference="The Semantic Web" date="2007"></my-citation>
       <p style="display: inline-block;
       font-size: 20px;
       float: left;
       text-align: left;margin:0; padding:0">
-        [2] http://swoogle.umbc.edu/2006/
+        [3] http://swoogle.umbc.edu/2006/
       </p>
-      <my-citation number="3" author="M. d'Aquin" title="Waston, more than a semantic web search engine" conference="Semantic Web" date="2011"></my-citation>
-      <my-citation number="4" author="W. Beek" title="Lod laundromat: a uniform way of publishing other people's dirty data" conference="International Semantic Web (ISWC)" date="2014"></my-citation>
+      <my-citation number="4" author="M. d'Aquin" title="Waston, more than a semantic web search engine" conference="Semantic Web" date="2011"></my-citation>
+      <my-citation number="5" author="W. Beek" title="Lod laundromat: a uniform way of publishing other people's dirty data" conference="International Semantic Web (ISWC)" date="2014"></my-citation>
     <span>
   </section>
 
-  <section class="content-slide">
-    <h3> Introduction &#10097; Parcours de liens </h3>
+  <!-- <section class="content-slide">
+    <h3> EdA &#10097; Parcours de liens </h3>
     <p id="query">
       <b>PREFIX</b> dcterms: &#60;http://purl.org/dc/terms/> <br>
       <b>SELECT</b> ?titre <br>
@@ -242,6 +340,24 @@
     </p>
     <p>
       Solution élégante, mais temps d'exécution trop long
+    </p>
+  </section> -->
+  <section class="content-slide">
+    <h3> EdA &#10097; Parcours de liens </h3>
+    <p id="query">
+      <b>SELECT</b> ?clubName ?playerName <br>
+      <b>WHERE</b> { <br>
+        &nbsp ?club a <span style="color:#2a76dd">dbpedia-owl:SoccerClub</span>; <br>
+          &nbsp &nbsp &nbsp dbpedia-owl:ground ?city; <br>
+          &nbsp &nbsp &nbsp rdfs:label ?clubName. <br>
+        &nbsp ?player dbpedia-owl:team ?club; <br>
+          &nbsp &nbsp &nbsp dbpedia-owl:birthPlace ?city; <br>
+          &nbsp &nbsp &nbsp rdfs:label ?playerName. <br>
+        &nbsp ?city dbpedia-owl:country <span style="color:#2a76dd">dbpedia:Spain</span>. <br>
+      }
+    </p>
+    <p>
+      Navigation sur le Web des données, mais <b>temps d'exécution trop long</b>
     </p>
   </section>
 
@@ -267,15 +383,15 @@
   </section> -->
 
   <section class="content-slide">
-    <h3> Introduction &#10097; Gestionnaire de données sur réseau P2P </h3>
+    <h3> EdA &#10097; Gestionnaire de données sur réseau P2P </h3>
     <img id="side" src="./pictures/intro/p2p.png"/>
     <p>
       Plusieurs approches :
     </p>
     <ul>
-      <li>Edutella [5]</li>
-      <li>RDFPeers [6]</li>
-      <li>Piazza [7]</li>
+      <li>Edutella [6]</li>
+      <li>RDFPeers [7]</li>
+      <li>Piazza [8]</li>
     </ul>
     <p>
       Nécessite la <b>collaboration</b> entre producteurs de données
@@ -283,9 +399,9 @@
     <p>
       Actuellement ils s'accordent seulement pour suivre les <b> principes des données liées</b>
     </p>
-    <my-citation number="5" author="W. Nejdl" title="Super-peer-based routing and clustering strategies for rdf-based peer-to-peer networks" conference="World Wide Web" date="2003"></my-citation>
-    <my-citation number="6" author="M. Cai" title="Rdfpeers: a scalable distributes rdf repository based on a structured peer-to-peer network" conference="World Wide Web" date="2004"></my-citation>
-    <my-citation number="7" author="A. Y. Halevy" title="Piazza: Data managment infrastructure for semantic web applications" conference="World Wide Web" date="2003"></my-citation>
+    <my-citation number="6" author="W. Nejdl" title="Super-peer-based routing and clustering strategies for rdf-based peer-to-peer networks" conference="World Wide Web" date="2003"></my-citation>
+    <my-citation number="7" author="M. Cai" title="Rdfpeers: a scalable distributes rdf repository based on a structured peer-to-peer network" conference="World Wide Web" date="2004"></my-citation>
+    <my-citation number="8" author="A. Y. Halevy" title="Piazza: Data managment infrastructure for semantic web applications" conference="World Wide Web" date="2003"></my-citation>
   </section>
 
   <!-- <section class="content-slide">
@@ -341,25 +457,41 @@
   </section> -->
 
   <section class="content-slide">
-    <h3> Introduction &#10097; Médiateur et fédération </h3>
+    <h3> EdA &#10097; Moteur de requêtes Fédérées </h3>
+    <img id="side" height="380px" src="./pictures/intro/mediator.png"/>
     <p>
-      <b>Médiateurs</b>
+      Anapsid[9], Fedex[10]
     </p>
     <p>
-      <b>Base de données fédérées</b>
-    </p>
-  </section>
-
-  <section class="content-slide">
-    <h3> Introduction &#10097; Médiateur et fédération </h3>
-    <p>
-      Triple Pattern Fragment
+      <b>Limité aux performances des serveurs SPARQL</b> qu'ils interrogent
     </p>
   </section>
 
   <section class="content-slide">
-    <h3> Introduction &#10097; Synthèse </h3>
-    <p> Sélection de l'approche <b> médiateur </b> :
+    <h3> EdA &#10097; Triple Pattern Fragment [11] </h3>
+    <img id="side" height="380px" src="./pictures/cyclades/main/globalArchTPF.png"/>
+    <p>
+      Le <b>serveur TPF</b> exécute des <b>requêtes simples</b>
+    </p>
+    <p>
+      Les <b>médiateurs TPF</b> exécutent les <b>jointures localement</b>
+    </p>
+    <p>
+      Les requêtes sont <b>décomposés en triplets</b>
+    </p>
+    <p id="query" style="width:50%">
+      <b>SELECT</b> ?author ?book <br>
+      <b>WHERE</b> { <br>
+        ?book rdf:label dbo:Book; <b> tp1 </b><br>
+        dbo:author  ?author } <b> tp2 </b> <br>
+      <b>LIMIT</b> 100 <br>
+    </p>
+    <my-citation number="11" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
+  </section>
+
+  <section class="content-slide">
+    <h3> EdA &#10097; Synthèse </h3>
+    <p> Sélection du <b> médiateur TPF</b> :
       <ol>
         <li> Utilisation de <b>toute l'expressivité de SPARQL</b> </li>
         <li> <b>Choix</b> des <b>sources</b> de données</li>
@@ -373,14 +505,16 @@
 
       <section>
         <blockquote>
-          Si les médiateurs collaborent en partageant leurs ressources en : espace disque,
-          capacité de calcul et bande passante ; est-il possible d’obtenir un meilleur compromis
+          Si les médiateurs collaborent en partageant leurs ressources.
+        </blockquote>
+        <blockquote>
+          Est-il possible d’obtenir un meilleur compromis
           entre performances et disponibilité des données ?
         </blockquote>
       </section>
 
       <section class="content-slide">
-        <h3> Introduction &#10097; Contributions </h3>
+        <h3> EdA &#10097; Contributions </h3>
         <p>
           <b>CyCLaDEs</b> : les médiateurs partagent leur <b>espace disque</b> et forment
           un <b>cache décentralisé</b>
@@ -397,14 +531,14 @@
 
         <section class="content-slide">
           <h3> CyCLaDEs &#10097; Contexte </h3>
-          <p>Les clients TPF exécutent des requêtes SPARQL sur des serveurs TPF [8] :</p>
+          <p>Les clients TPF exécutent des requêtes SPARQL sur des serveurs TPF [11] :</p>
           <img src="./pictures/cyclades/main/tpfLogo.png"/ height="110px" style="float:right;"/>
           <ul>
             <li> <b>Minimise le traitement</b> côté serveur, grâce aux fragments </li>
             <li> <b>Jointures</b> exécutées du côté <b>clients</b> </li>
           </ul>
           <img src="./pictures/cyclades/main/tpfScale.png"/>
-          <my-citation number="8" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
+          <my-citation number="11" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
         </section>
 
         <section class="content-slide">
@@ -490,7 +624,7 @@
       <section class="content-slide">
         <h3> CyCLaDEs &#10097; Travaux connexes </h3>
         <p>
-          <b> Table de hachage distribuées (DHT) : </b> distibue le cache à travers les participants [9] :
+          <b> Table de hachage distribuées (DHT) : </b> distibue le cache à travers les participants [12] :
         </p>
         <img id="side" height="300px" src="./pictures/cyclades/main/dht.png"/>
         <ul>
@@ -498,12 +632,12 @@
           <li>Une requête &#8594; 20 000 appels &#8594; 20 000 sauts <i>log(n)</i>, n:
             nombre de pairs</li>
           </ul>
-          <my-citation number="9" author="M. El Dick" title:"A hydrid p2p overlay for effecient query processing in cdn" conference="Proceedings of the 12th International Conference on Extending Database Technology: Advances in Database Technology" date="2009"></my-citation>
+          <my-citation number="12" author="M. El Dick" title:"A hydrid p2p overlay for effecient query processing in cdn" conference="Proceedings of the 12th International Conference on Extending Database Technology: Advances in Database Technology" date="2009"></my-citation>
         </section>
 
         <section class="content-slide">
           <h3> CyCLaDEs &#10097; Travaux connexes </h3>
-          <p> <b>Cache comportemental :</b> connecte un nombre fixe de nœuds similaires [10] :</p>
+          <p> <b>Cache comportemental :</b> connecte un nombre fixe de nœuds similaires [13] :</p>
           <img id="side" height="250px" src="./pictures/cyclades/main/behave.png"/>
           <ul>
             <li> Accès direct sans latence </li>
@@ -513,14 +647,14 @@
           <p id="question">
             Et si on utilisait les caches comportementaux pour des historiques de requêtes ?
           </p>
-          <my-citation number="10" author="D. Frey" title="Behavioral cache for web content" conference="Ditributed Applications and Interoperable System" date="2014"></my-citation>
+          <my-citation number="13" author="D. Frey" title="Behavioral cache for web content" conference="Ditributed Applications and Interoperable System" date="2014"></my-citation>
         </section>
 
         <section class="content-slide">
           <h3> CyCLaDEs &#10097; Approche </h3>
           <p>
             <b> Hypothèse :</b> Les clients qui exécutent des <b> requêtes similaires </b> dans le <b> passé </b>
-            exécuteront des <b> requêtes similaires </b> dans le <b> futur </b> [11]
+            exécuteront des <b> requêtes similaires </b> dans le <b> futur </b> [14]
           </p>
           <p class="fragment fade-in" data-fragment-index="1">
             <b> Approche :</b>
@@ -533,7 +667,7 @@
             <p id="question" class="fragment fade-in" data-fragment-index="2">
               Combien d'accès aux caches des voisins peut-on obtenir ?
             </p>
-            <my-citation number="11" author="M. D. Ekstrand" title="Collaborative filtering recommender systems" conference="Foundations and Trends in Human-Computer Interaction" date="2011"></my-citation>
+            <my-citation number="14" author="M. D. Ekstrand" title="Collaborative filtering recommender systems" conference="Foundations and Trends in Human-Computer Interaction" date="2011"></my-citation>
           </section>
 
           <section class="content-slide">
@@ -563,9 +697,9 @@
               <li> gère les arrivées et départs des nœuds et les partitions réseau</li>
             </ul>
             <p class="fragment fade-in" data-fragment-index="2">
-              Réseau implémenté par Cyclon [12]
+              Réseau implémenté par Cyclon [15]
             </p>
-            <my-citation number="12" author="S. Voulgaris" title="Cyclon: Inexpensive membership managment for unstructured p2p overlay" conference="Journal of Network and Systems Managment" date="2005"></my-citation>
+            <my-citation number="15" author="S. Voulgaris" title="Cyclon: Inexpensive membership managment for unstructured p2p overlay" conference="Journal of Network and Systems Managment" date="2005"></my-citation>
           </section>
 
           <section class="content-slide">
@@ -584,9 +718,9 @@
             </ul>
             <p class="fragment fade-in" data-fragment-index="2">
               Nécessite un second réseau superposer pour gérer la <b> similarité </b>
-              comme proposé dans Gossple [13]
+              comme proposé dans Gossple [16]
             </p>
-            <my-citation number="13" author="M. Bertier" title="The gossple anonymous social network" conference="11th International Middleware Conference" date="2010"></my-citation>
+            <my-citation number="16" author="M. Bertier" title="The gossple anonymous social network" conference="11th International Middleware Conference" date="2010"></my-citation>
           </section>
 
           <section class="content-slide">
@@ -789,7 +923,7 @@
               <img id="side" height="480px" src="./pictures/cyclades/main/xp.png"/>
               <p>
                 <b> Jeux de données : </b>
-                Berlin Benchmark (BSBM) [14], choisit pour la simulation d'applications Web
+                Berlin Benchmark (BSBM) [17], choisit pour la simulation d'applications Web
               </p>
               <p>
                 Un serveur TPF avec un cache HTTP hébergeant les jeux de données BSBM
@@ -797,7 +931,7 @@
               <p>
                 Un réseau de clients TPF-CyCLaDEs exécutant des requêtes BSBM
               </p>
-              <my-citation number="14" author="C. Bizer" title="The berlin benchmark" conference="International Journal on Semantic Web and Information Systems" date="2009"></my-citation>
+              <my-citation number="17" author="C. Bizer" title="The berlin benchmark" conference="International Journal on Semantic Web and Information Systems" date="2009"></my-citation>
             </section>
 
             <section class="content-slide">
@@ -891,7 +1025,7 @@
               </section>
 
               <section class="content-slide">
-                <h3> CyCLaDEs &#10097; Travaux futur </h3>
+                <h3> CyCLaDEs &#10097; Perspectives </h3>
                 <p>
                   Mesurer l'impact sur le <b> temps d'exécution </b>
                 </p>
@@ -952,7 +1086,7 @@
 
                 <section class="content-slide">
                   <h3> Ladda &#10097; Existe-t'il des clients libres ? </h3>
-                  <p> Analyse des journaux réels [15] de DBpedia 3.8 sur 24 heures </p>
+                  <p> Analyse des journaux réels [18] de DBpedia 3.8 sur 24 heures </p>
                   <img height="280px"src="./pictures/ladda/main/queryDistribution.png"/>
                   <p> <b>Beaucoup</b> de clients exécutent <b>peu</b> de requêtes </p>
                   <p style="margin:0"> Il existe des clients <b>libres</b>, à condition qu'ils ne quittent pas
@@ -961,7 +1095,7 @@
                   font-size: 20px;
                   float: left;
                   text-align: left;margin:0; padding:0">
-                    [15] <a href="url">https://eprints.soton.ac.uk/379399/</a>
+                    [18] <a href="url">https://eprints.soton.ac.uk/379399/</a>
                   </p>
                 </section>
 
@@ -1009,11 +1143,11 @@
 
                 <section class="content-slide">
                   <h3>Ladda &#10097; Limite de parallélisation</h3>
-                  <p style="margin:0">Allocation de 1509 requêtes des journaux de DBpedia de manière optimale LPT [16]</p>
+                  <p style="margin:0">Allocation de 1509 requêtes des journaux de DBpedia de manière optimale LPT [19]</p>
                   <img height="280px" src="./pictures/ladda/main/gainParallelizationOptimal.png"/>
                   <p style="margin:0"> La parallélisation <b>réduit</b> le temps de réponse </p>
                   <p style="margin:0"> Paralléliser au-delà d'un certain seuil <b>ne réduit plus </b> le temps de réponse </p>
-                  <my-citation number="16" author="M. Pinedo" title="Theory, Algorithms, and Systems (3nd ed.)" conference="Springer Science and Business Media" date="2008"></my-citation>
+                  <my-citation number="19" author="M. Pinedo" title="Theory, Algorithms, and Systems (3nd ed.)" conference="Springer Science and Business Media" date="2008"></my-citation>
                 </section>
 
                 <section class="content-slide">
