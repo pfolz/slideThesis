@@ -74,7 +74,7 @@
     </section>
 
     <section class="content-slide">
-      <h3>Introduction &#10097; Utilité du Web sémantique ?</h3>
+      <h3>Utilité du Web sémantique ?</h3>
       <p id="question">
         Quels sont les joueurs de foot espagnol qui jouent dans le club de leur ville natale ?
       </p>
@@ -94,71 +94,8 @@
       </table>
     </section>
 
-    <!-- <section class="content-slide">
-      <h3>Introduction &#10097; Requête SPARQL</h3>
-      <p id="query">
-        <b>SELECT</b> ?clubName ?playerName <br>
-        <b>WHERE</b> { <br>
-          &nbsp ?club a dbpedia-owl:SoccerClub; <br>
-            &nbsp &nbsp &nbsp dbpedia-owl:ground ?city; <br>
-            &nbsp &nbsp &nbsp rdfs:label ?clubName. <br>
-          &nbsp ?player dbpedia-owl:team ?club; <br>
-            &nbsp &nbsp &nbsp dbpedia-owl:birthPlace ?city; <br>
-            &nbsp &nbsp &nbsp rdfs:label ?playerName. <br>
-          &nbsp ?city dbpedia-owl:country dbpedia:Spain. <br>
-
-          <b>FILTER</b> LANGMATCHES(LANG(?clubName), "EN") <br>
-          <b>FILTER</b> LANGMATCHES(LANG(?playerName), "EN") <br>
-        }
-      </p>
-    </section> -->
-
     <section class="content-slide">
-      <h3>Introduction &#10097; Problèmatique</h3>
-      <p>
-        Exécuter des requêtes sur le Web des données
-      </p>
-      <table class="noRow" style="display:inline-block; padding: 0em 0em 0em 0em;">
-        <tr>
-          <td> <b>Seul</b> </td>
-          <td class="fragment fade-in" data-fragment-index="0"> <b>A plusieurs </b> </td>
-        </tr>
-        <tr>
-          <td>
-            <img height="300px" src="./pictures/intro/load_1.png"/>
-          </td>
-          <td class="fragment fade-in" data-fragment-index="0">
-            <img height="300px" src="./pictures/intro/load_2.png"/>
-          </td>
-        </tr>
-      </table>
-      <p class="fragment fade-in" data-fragment-index="0" style="margin:0">
-          Selon une étude de 2013 [1] les <b>serveurs</b> SPARQL ont une disponibilité <b>inférieur à 95%</b>
-      </p>
-      <my-citation class="fragment fade-in" data-fragment-index="0" number="1" author="C. B. Aranda" title="SPARQL Web-Querying Infrastructure: Ready for Action ?" conference="International Semantic Web Conference (ISWC)" date="2013"><my-citation>
-    </section>
-
-    <section class="content-slide">
-      <img id="side" src="./pictures/intro/load_3.png"/>
-      <p style='color: #2a76dd;font-family: "Roboto Slab";'>
-        Et si les consommateurs de données collaboraient entre eux ?
-      </p>
-    </section>
-
-    <section class="content-slide">
-      <h3>Introduction &#10097; Collaboration des consommateurs</h3>
-      <!-- <p>
-        Si les consommateurs <b>collaboraient</b> ils pourraient partager
-        <b>leurs ressources</b>
-      </p>
-      <p>
-        Nécessite que les consommateurs soient <b>connectés</b> entre eux
-      </p>
-      <p>
-        <b> Proposition </b>: Construire une fédération de consommateur de données,
-        où les consommateurs de données sont connectés entre eux et ils partagent leurs
-        ressources
-      </p> -->
+      <h3>Collaboration des consommateurs</h3>
       <p>
         <b>Pré-requis :</b>
       </p>
@@ -177,7 +114,7 @@
     </section>
 
     <section class="content-slide">
-      <h3> Introduction &#10097; Contributions </h3>
+      <h3>Contributions </h3>
       <p>
         <b>CyCLaDEs</b> : les consommateurs partagent leur <b>espace disque</b> et construisent
         un <b>cache décentralisé</b>
@@ -189,330 +126,8 @@
         </p>
       </section>
 
-    <!--<section class="content-slide">
-      <!--<h3>Introduction &mdash; Les données liées </h3>
-      <h3>Introduction &#10097; Les données liées </h3>
-      <table class="noRow">
-        <tr>
-          <td><b>Sujet</b></td>
-          <td><b>Prédicat</b></td>
-          <td><b>Objet</b></td>
-        </tr>
-        <tr>
-          <td>
-            <figure>
-              <img height="180px" src="./pictures/intro/venus.jpg"/>
-              <figcaption  style="font-size:18px">
-                <a  href="http://fr.dbpedia.org/page/La_Naissance_de_Vénus_(Botticelli)" target="_blank">
-                  http://fr.dbpedia.org/page/La_Naissance_de_Vénus_(Botticelli)
-                </a>
-              </figcaption>
-            </figure>
-          </td>
-          <td>
-            <figure>
-              <img src="./pictures/intro/arrow.png"/>
-              <figcaption style="font-size:18px">
-                <a href="http://dbpedia.org/ontology/author" target="_blank">
-                  http://dbpedia.org/ontology/author
-                </a>
-              </figcaption>
-            </figure>
-          </td>
-          <td>
-            <figure>
-              <img height="180px" src="./pictures/intro/botticelli.jpg"/>
-              <figcaption style="font-size:18px">
-                <a href="http://fr.dbpedia.org/page/Sandro_Botticelli" target="_blank">
-                  http://fr.dbpedia.org/page/Sandro_Botticelli
-                </a>
-              </figcaption>
-            </figure>
-          </td>
-        </tr>
-      </table>
-    </section>-->
-
-    <!--<section class="content-slide">
-    <h3> Extrait de graphe RDF </h3>
-    <img height="550px" src="./pictures/intro/botticelliGraph.png"/>
-  </section>-->
-
-  <!-- <section class="content-slide">
-    <h3> Introduction &#10097; Linked Open Data cloud </h3>
-    <figure>
-      <img  height="500px" src="./pictures/intro/lodResize.png"/>
-      <figcaption style="font-size:20px">
-        Diagramme du Linked Open Data cloud du 26 janvier 2017 (1146 jeux de données)
-      </figcaption>
-    </figure>
-  </section>
-
   <section class="content-slide">
-    <h3> Introduction &#10097; Requête SPARQL </h3>
-    <p id="query">
-      <b>PREFIX</b> dcterms: &#60;http://purl.org/dc/terms/> <br>
-      <b>SELECT</b> ?titre <br>
-      <b>WHERE</b> { <br>
-        &nbsp ?oeuvre dcterms:subject &#60;http://fr.dbpedia.org/resource/ <br>
-        &nbsp Catégorie:Œuvre_conservée_à_la_Galerie_des_Offices> . <br>
-        &nbsp ?oeuvre prop-fr:titre ?titre . <br>
-        &nbsp ?oeuvre dbpedia-owl:author dbpedia-fr:Sandro_Botticelli <br>
-      } <br>
-    </p>
-  </section> -->
-
-  <section class="part-slide">
-    <h3> Etat de l'art </h3>
-  </section>
-
-  <!-- <section class="content-slide">
-    <h3> EdA &#10097; Interroger le Web des données </h3>
-    <p> Un processus complexe </p>
-    <img src="./pictures/intro/query.png"/>
-  </section> -->
-
-  <!-- <section class="content-slide">
-    <h3> Introduction &#10097; Interroger le Web des données </h3>
-    <p>
-      <b>Localisation des données :</b> tout le Web des données ou un sous-ensemble
-    </p>
-    <p class="fragment fade-in" data-fragment-index="0">
-      <b>Performances et passage à l'échelle :</b> compromis entre performance et disponibilité
-      des données
-    </p>
-    <p class="fragment fade-in" data-fragment-index="1">
-      <b>Hétérogénéité sémantique :</b> hétérogène entre les sources de données
-    </p>
-    <p class="fragment fade-in" data-fragment-index="2">
-      <b>Confiance :</b> sélection des sources effectuée par l'utilisateur ?
-    </p>
-    <p class="fragment fade-in" data-fragment-index="3">
-      <b>Usage :</b> connu ou non par le producteur de données
-    </p>
-    <p class="fragment fade-in" data-fragment-index="4">
-      <b>Fraîcheur et cohérence des données :</b> réplicat ou non
-    </p>
-  </section> -->
-
-  <!-- <section class="content-slide">
-    <h3> Introduction &#10097; Evaluer les requêtes SPARQL sur le Web des données </h3>
-    <p> Plusieurs approches existent : </p>
-    <ul>
-      <li> Indexes centralisés </li>
-      <li> Entrepôt des données </li>
-      <li> Gestionnaire de données sur réseaux pair-à-pair </li>
-      <li> Médiateurs </li>
-    </ul>
-  </section> -->
-
-  <section class="content-slide">
-    <h3> EdA &#10097; Indexes centralisés </h3>
-    <table id="side" class="noRow">
-      <tr><td>
-        <img height="100px" src="./pictures/intro/swoogle.png"/>
-      </tr></td>
-      <tr><td>
-        <img height="100px" src="./pictures/intro/waston.jpg"/>
-      </tr></td>
-      <tr><td>
-        <img height="100px" src="./pictures/intro/laundromat.png"/>
-      </tr></td>
-    </table>
-    <p>
-      <b>Parcours</b> (<i>crawler</i>) du Web des données
-    </p>
-    <p>
-      Recherche par <b>mots clés</b>
-    </p>
-    <p>
-      <b>Sites Web</b> proposant un index centralisé : Sindice[2], Swoogle[3], Waston[4] ou
-      Laundromat[5]
-    </p>
-    <span style="margin:0; padding:0">
-      <my-citation number="2" author="G. Tummarello" title="Sindice.com: Weaving the open linked data" conference="The Semantic Web" date="2007"></my-citation>
-      <p style="display: block;
-      font-size: 16px;
-      float: left;
-      text-align: left;margin:0; padding:0">
-        [3] http://swoogle.umbc.edu/2006/
-      </p>
-      <my-citation number="4" author="M. d'Aquin" title="Waston, more than a semantic web search engine" conference="Semantic Web" date="2011"></my-citation>
-      <my-citation number="5" author="W. Beek" title="Lod laundromat: a uniform way of publishing other people's dirty data" conference="International Semantic Web (ISWC)" date="2014"></my-citation>
-    <span>
-  </section>
-
-  <!-- <section class="content-slide">
-    <h3> EdA &#10097; Parcours de liens </h3>
-    <p id="query">
-      <b>PREFIX</b> dcterms: &#60;http://purl.org/dc/terms/> <br>
-      <b>SELECT</b> ?titre <br>
-      <b>WHERE</b> { <br>
-        &nbsp ?oeuvre dcterms:subject <span style="color:#2a76dd">&#60;http://fr.dbpedia.org/resource/ <br>
-        &nbsp Catégorie:Œuvre_conservée_à_la_Galerie_des_Offices></span> . <br>
-        &nbsp ?oeuvre prop-fr:titre ?titre . <br>
-        &nbsp ?oeuvre dbpedia-owl:author <span style="color:#2a76dd">dbpedia-fr:Sandro_Botticelli</span> <br>
-      } <br>
-    </p>
-    <p>
-      Solution élégante, mais temps d'exécution trop long
-    </p>
-  </section> -->
-  <section class="content-slide">
-    <h3> EdA &#10097; Parcours de liens [6] </h3>
-    <p id="query">
-      <b>SELECT</b> ?clubName ?playerName <br>
-      <b>WHERE</b> { <br>
-        &nbsp ?club a <span style="color:#2a76dd">dbpedia-owl:SoccerClub</span>; <br>
-          &nbsp &nbsp &nbsp dbpedia-owl:ground ?city; <br>
-          &nbsp &nbsp &nbsp rdfs:label ?clubName. <br>
-        &nbsp ?player dbpedia-owl:team ?club; <br>
-          &nbsp &nbsp &nbsp dbpedia-owl:birthPlace ?city; <br>
-          &nbsp &nbsp &nbsp rdfs:label ?playerName. <br>
-        &nbsp ?city dbpedia-owl:country <span style="color:#2a76dd">dbpedia:Spain</span>. <br>
-      }
-    </p>
-    <p>
-      Navigation sur le Web des données, mais <b>temps d'exécution trop long</b>
-    </p>
-    <my-citation number="6" author="O. Hartig" title="Linked data query processing based on link traversal" conference="Linked Data Managment" date="2014"></my-citation>
-  </section>
-
-  <!-- <section class="content-slide">
-    <h3> Introduction &#10097; Serveurs SPARQL </h3>
-    <p>
-      <b>Avec autorité</b> : hébergeur = producteur
-    </p>
-    <p style="margin-left:2em">
-      <i>Exemple : DBpedia <a href="url">http://dbpedia.org/sparql</a></i> <br>
-      Selon une étude de 2013 [5] les <b>serveurs</b> ont une disponibilité <b>inférieur à 95%</b>
-    </p>
-    <span class="fragment fade-in" fragment-data-index="0">
-      <p>
-        <b>Sans autorité</b> : hébergeur &#8800; producteur
-      </p>
-      <p style="margin-left:2em">
-        <i>Exemple : LODCache <a href="url">http://datahub.io/dataset/openlink-lod-cache</a></i> <br>
-        Les données peuvent ne <b>pas</b> être <b>cohérente</b> et <b>à jour</b>
-      </p>
-    </span>
-    <my-citation number="5" author="C. B. Aranda" title="SPARQL Web-Querying Infrastructure: Ready for Action ?" conference="International Semantic Web Conference (ISWC)" date="2013"><my-citation>
-  </section> -->
-
-  <section class="content-slide">
-    <h3> EdA &#10097; Gestionnaire de données sur réseau P2P </h3>
-    <img id="side" src="./pictures/intro/p2p.png"/>
-    <p>
-      Plusieurs approches :
-    </p>
-    <ul>
-      <li>Edutella [7]</li>
-      <li>RDFPeers [8]</li>
-      <li>Piazza [9]</li>
-    </ul>
-    <p>
-      Nécessite la <b>collaboration</b> entre producteurs de données
-    </p>
-    <p>
-      Actuellement ils s'accordent seulement pour suivre les <b> principes des données liées</b>
-    </p>
-    <my-citation number="7" author="W. Nejdl" title="Super-peer-based routing and clustering strategies for rdf-based peer-to-peer networks" conference="World Wide Web" date="2003"></my-citation>
-    <my-citation number="8" author="M. Cai" title="Rdfpeers: a scalable distributes rdf repository based on a structured peer-to-peer network" conference="World Wide Web" date="2004"></my-citation>
-    <my-citation number="9" author="A. Y. Halevy" title="Piazza: Data managment infrastructure for semantic web applications" conference="World Wide Web" date="2003"></my-citation>
-  </section>
-
-  <!-- <section class="content-slide">
-    <h3> Introduction &#10097; Gestionnaire de données sur réseau P2P </h3>
-    <figure id="side">
-      <figcaption>
-        <b>Edutella</b>
-      </figcaption>
-      <img  height="380px" src="./pictures/intro/edutella.png"/>
-    </figure>
-    <p>
-      Deux indexes :
-    </p>
-    <ul>
-      <li> du contenu des <b>pairs</b> ;</li>
-      <li> du contenu des <b>super-pairs</b>.</li>
-    </ul>
-    <p>
-      Problème de <b>passage à l'échelle</b> dans le cadre de <b>requêtes concurrentes </b>
-    </p>
-  </section>
-
-  <section class="content-slide">
-    <h3> Introduction &#10097; Gestionnaire de données sur réseau P2P </h3>
-    <figure id="side">
-      <figcaption>
-        <b>RDFPeers</b>
-      </figcaption>
-      <img height="380px" src="./pictures/intro/rdfpeers-store.png"/>
-    </figure>
-    <p>
-      Basé sur une <b>table de hachage distribuée</b>
-    </p>
-    <p>
-      Données <b>intégrées</b> dans le store RDFPeers
-    </p>
-  </section>
-
-  <section class="content-slide">
-    <h3> Introduction &#10097; Gestionnaire de données sur réseau P2P </h3>
-    <figure id="side">
-      <figcaption>
-        <b> Piazza </b>
-      </figcaption>
-      <img height="280px" src="./pictures/intro/piazza.png"/>
-    </figure>
-    <p>
-      <b>Alignement</b> entre pairs
-    </p>
-    <p>
-      <b>Réécriture de requêtes </b> en fonction des schémas des pairs
-    </p>
-  </section> -->
-
-  <section class="content-slide">
-    <h3> EdA &#10097; Moteur de requêtes Fédérées </h3>
-    <img id="side" height="380px" src="./pictures/intro/mediator.png"/>
-    <p>
-      Anapsid [10], Fedex [11]
-    </p>
-    <p>
-      <b>Limité aux performances des serveurs SPARQL</b> qu'ils interrogent
-    </p>
-    <p>
-      <b>Compliqué</b> pour un utilisateur <b>lambda</b> à utiliser
-    </p>
-    <my-citation number="10" author="M. Acosta" title="Anapsid: an adaptive query processing engine for sparql endpoints" conference="International Semantic Web (ISWC)" date="2011"></my-citation>
-    <my-citation number="11" author="A. Schwarte" title="Fedx : Optimization techniques for federated query processing on linked data" conference="Internation Semantic Web (ISWC)" date="2011"></my-citation>
-  </section>
-
-  <!-- <section class="content-slide">
-    <h3> EdA &#10097; Triple Pattern Fragment [11] </h3>
-    <img id="side" height="380px" src="./pictures/cyclades/main/globalArchTPF.png"/>
-    <p>
-      Le <b>serveur TPF</b> exécute des <b>requêtes simples</b>
-    </p>
-    <p>
-      Les <b>médiateurs TPF</b> exécutent les <b>jointures localement</b>
-    </p>
-    <p>
-      Les requêtes sont <b>décomposés en triplets</b>
-    </p>
-    <p id="query" style="width:50%">
-      <b>SELECT</b> ?author ?book <br>
-      <b>WHERE</b> { <br>
-        ?book rdf:label dbo:Book; <b> tp1 </b><br>
-        dbo:author  ?author } <b> tp2 </b> <br>
-      <b>LIMIT</b> 100 <br>
-    </p>
-    <my-citation number="11" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
-  </section> -->
-
-  <section class="content-slide">
-    <h3> EdA &#10097; Triple Pattern Fragment </h3>
+    <h3> Triple Pattern Fragment </h3>
     <p>Les clients TPF exécutent des requêtes SPARQL sur des serveurs TPF [12] :</p>
     <img src="./pictures/cyclades/main/tpfLogo.png"/ height="110px" style="float:right;"/>
     <ul>
@@ -524,7 +139,7 @@
   </section>
 
   <section class="content-slide">
-    <h3> EdA &#10097; Triple Pattern Fragment </h3>
+    <h3> Triple Pattern Fragment </h3>
     <p>
       Le médiateur TPF s'exécute dans un <b>navigateur Web</b>
     </p>
@@ -537,857 +152,843 @@
     <img src="./pictures/cyclades/main/tpfScale.png"/>
   </section>
 
-  <section class="content-slide">
-    <h3> EdA &#10097; Synthèse </h3>
-    <p> Sélection du <b> médiateur TPF</b> :
-      <ol>
-        <li> Utilisation de <b>toute l'expressivité de SPARQL</b> </li>
-        <li class="fragment fade-in" data-fragment-index="0"> <b>Choix</b> des <b>sources</b> de données</li>
-        <li class="fragment fade-in" data-fragment-index="1"> Les producteurs de données ont <b>connaissance de l'usage de leurs données</b> </li>
-        <li class="fragment fade-in" data-fragment-index="2"> Ne nécessite <b>pas de collaboration</b> entre <b>producteurs de données</b> </li>
-        <li class="fragment fade-in" data-fragment-index="3"> Les principes des données liées <b>réduisent l'hétérogénéité sémantique</b> </li>
-        <li class="fragment fade-in" data-fragment-index="4"> Les principes des données liées permettent l'écriture de <b>médiateur compact</b> qui
-          peuvent être exécutée dans un navigateur Web </li>
-        </ol>
-      </section>
+  <section>
+    <blockquote>
+      Si les médiateurs collaborent en partageant leurs ressources.
+    </blockquote>
+    <blockquote>
+      Est-il possible d’obtenir un meilleur compromis
+      entre performances et disponibilité des données ?
+    </blockquote>
+  </section>
 
-      <section>
-        <blockquote>
-          Si les médiateurs collaborent en partageant leurs ressources.
-        </blockquote>
-        <blockquote>
-          Est-il possible d’obtenir un meilleur compromis
-          entre performances et disponibilité des données ?
-        </blockquote>
+  <section class="content-slide">
+    <h3> Contributions </h3>
+    <p>
+      <b>CyCLaDEs</b> : les médiateurs partagent leurs <b>espaces disques</b> et forment
+      un <b>cache décentralisé collaboratif</b>
+    </p>
+    <p>
+      <b>Ladda</b> : les médiateurs partagent leur <b>capacité de calcul</b> et <b>bande
+        passante</b>, permet d'<b>équilibrer la charge</b> dans la fédération
+      </p>
+    </section>
+
+    <section class="part-slide">
+      <h3>CyCLaDEs : Un cache collaboratif décentralisé pour les fragments TPF</h3>
+    </section>
+
+    <section class="content-slide">
+      <h3> Client TPF 1 exécute Q1 </h3>
+      <div style="position:relative" >
+        <div class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0" data-fragment-index="1">
+          <p>
+            <img id="side" src="./pictures/cyclades/main/globalArchNum.png" height="492px"/>
+            152 Appels HTTP
+          </p>
+          <table style="font-size: 25px">
+            <tr>
+              <td> 0 </td>
+              <td> ?book <b>http://www.w3.org/1999/02/22-rdf-syntaxns#type</b> http:.../ontology/Book </td>
+            </tr>
+            <tr>
+              <td> 1 </td>
+              <td> ?book <b>http:.../ontology/author</b> ?author </td>
+            </tr>
+            <tr>
+              <td> 2 </td>
+              <td> http:.../resource/%22...And Ladies of the Club%22 <b>http:.../ontology/author</b> ?author </td>
+            </tr>
+            <tr>
+              <td> 3 </td>
+              <td> http:.../resource/%22A%22 Is for Alibi <b>http:.../ontology/author</b> ?author </td>
+            </tr>
+            <tr>
+              <td> 4 </td>
+              <td> http:.../resource/%22B%22 Is for Burglar <b>http:.../ontology/author</b> ?author </td>
+            </tr>
+          </table>
+        </div>
+        <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+          <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
+            <img src= "./pictures/cyclades/main/globalArchQuery.png" height="480px" align="right">
+          </span>
+        </span>
+        <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+          <img src="./pictures/cyclades/main/globalArchTpf.png" height="492px" align="right">
+        </span>
+      </div>
+    </section>
+
+    <section>
+      <blockquote>
+        Que se passe t'il si les clients collaborent ?
+      </blockquote>
+    </section>
+
+    <section class="content-slide">
+      <h3> Si les clients collaborent </h3>
+      <p>
+        <img id="side" height="492px" src="./pictures/cyclades/main/clientCollab.png"/>
+        Le cache local d'un client peut être <b> partagé </b> avec les autres :
+      </p>
+      <ul>
+        <li> Réduit la charge du serveur </li>
+      </ul>
+      <p>
+        <b>Défi </b> :
+      </p>
+      <ul>
+        <li> Réseau avec un million de clients </li>
+      </ul>
+    </p>
+    <p id="question">
+      Comment un client peut trouver rapidement un fragment chez un autre client ?
+    </p>
+  </section>
+
+  <section class="content-slide">
+    <h3> Travaux connexes </h3>
+    <p>
+      <b> Table de hachage distribuées (DHT) : </b> distibue le cache à travers les participants [12] :
+    </p>
+    <img id="side" height="300px" src="./pictures/cyclades/main/dht.png"/>
+    <ul>
+      <li>Trouve le framgent s'il existe</li>
+      <li>Une requête &#8594; 20 000 appels &#8594; 20 000 sauts <i>log(n)</i>, n:
+        nombre de pairs</li>
+      </ul>
+      <my-citation number="12" author="M. El Dick" title:"A hydrid p2p overlay for effecient query processing in cdn" conference="Proceedings of the 12th International Conference on Extending Database Technology: Advances in Database Technology" date="2009"></my-citation>
+    </section>
+
+    <section class="content-slide">
+      <h3> Travaux connexes </h3>
+      <p> <b>Cache comportemental :</b> connecte un nombre fixe de nœuds similaires [13] :</p>
+      <img id="side" height="250px" src="./pictures/cyclades/main/behave.png"/>
+      <ul>
+        <li> Accès direct sans latence </li>
+        <li> Pas de garantie de trouver le fragment </li>
+        <li> Expérimenté avec des historiques de navigation Web </li>
+      </ul>
+      <p id="question">
+        Et si on utilisait les caches comportementaux pour des historiques de requêtes ?
+      </p>
+      <my-citation number="13" author="D. Frey" title="Behavioral cache for web content" conference="Ditributed Applications and Interoperable System" date="2014"></my-citation>
+    </section>
+
+    <section class="content-slide">
+      <h3> Approche </h3>
+      <p>
+        <b> Hypothèse :</b> Les clients qui exécutent des <b> requêtes similaires </b> dans le <b> passé </b>
+        exécuteront des <b> requêtes similaires </b> dans le <b> futur </b> [14]
+      </p>
+      <p class="fragment fade-in" data-fragment-index="1">
+        <b> Approche :</b>
+      </p>
+      <ul class="fragment fade-in" data-fragment-index="1">
+        <li> Chaque client construit une vue fixe de voisins similaire avec un accès direct </li>
+        <li> Pour chaque appel 1) vérifier le cache local 2) verifier le cache des voisins en
+          parallèle 3) aller au serveur </li>
+        </ul>
+        <p id="question" class="fragment fade-in" data-fragment-index="2">
+          Combien d'accès aux caches des voisins peut-on obtenir ?
+        </p>
+        <my-citation number="14" author="M. D. Ekstrand" title="Collaborative filtering recommender systems" conference="Foundations and Trends in Human-Computer Interaction" date="2011"></my-citation>
       </section>
 
       <section class="content-slide">
-        <h3> EdA &#10097; Contributions </h3>
+        <h3> Approche TPF </h3>
         <p>
-          <b>CyCLaDEs</b> : les médiateurs partagent leur <b>espace disque</b> et forment
-          un <b>cache décentralisé</b>
+          <img id="side" src="./pictures/cyclades/main/archTpf.png" />
+          Beaucoup de clients accèdent au serveur TPF de manière concurrente, mais
+          les <b>clients ne collaborent pas</b>.
         </p>
+      </section>
+
+      <section class="content-slide">
+        <h3> Approche </h3>
         <p>
-          <b>Ladda</b> : les médiateurs partagent leur <b>capacité de calcul</b> et <b>bande
-            passante</b>, permettant de <b>déléguer des requêtes SPARQL</b> aux voisins libres
+          <img id="side" src="./pictures/cyclades/main/archCyclades.png"/>
+          Connecte les nœuds à travers un réseau d'échantillonage aléatoire
+          des pairs (RPS) :
+        </p>
+        <ul>
+          <li> Chaque nœud maitient une vue partielle du réseau </li>
+        </ul>
+        <p class="fragment fade-in" data-fragment-index="1">
+          Phases d'échange de voisins :</b>
+        </p>
+        <ul class="fragment fade-in" data-fragment-index="1">
+          <li> <b>renouvelle périodiquement les voisins</b></li>
+          <li> gère les arrivées et départs des nœuds et les partitions réseau</li>
+        </ul>
+        <p class="fragment fade-in" data-fragment-index="2">
+          Réseau implémenté par Cyclon [15]
+        </p>
+        <my-citation number="15" author="S. Voulgaris" title="Cyclon: Inexpensive membership managment for unstructured p2p overlay" conference="Journal of Network and Systems Managment" date="2005"></my-citation>
+      </section>
+
+      <section class="content-slide">
+        <h3> Approche </h3>
+        <p>
+          <img id="side" height="480px" src="./pictures/cyclades/main/archCyclades2.png"/>
+          Le réseau RPS garantit la connectivité entre tous les clients
+        </p>
+        <p class="fragment fade-in" data-fragment-index="1">
+          C6 est connecté à C3 :
+        </p>
+        <ul class="fragment fade-in" data-fragment-index="1">
+          <li> C6 &#8594; DBpedia </li>
+          <li> C3 &#8594; DrugBank </li>
+          <li> C6 n'est pas <b> similaire </b> à C3 </li>
+        </ul>
+        <p class="fragment fade-in" data-fragment-index="2">
+          Nécessite un second réseau superposer pour gérer la <b> similarité </b>
+          comme proposé dans Gossple [16]
+        </p>
+        <my-citation number="16" author="M. Bertier" title="The gossple anonymous social network" conference="11th International Middleware Conference" date="2010"></my-citation>
+      </section>
+
+      <section class="content-slide">
+        <h3> Approche </h3>
+        <p>
+          <img id="side" height="480px" src="./pictures/cyclades/main/archCyclades3.png"/>
+          Réseau superposé de similarité (CON) :
+        </p>
+        <ul>
+          <li> Chaque nœud à un <b> profil </b> basé sur l'historique des requêtes
+            qu'il a exécutées </li>
+          </ul>
+          <p class="fragment fade-in" data-fragment-index="1">
+            Les phases d'échange de voisins permettent d'obtenir des voisins plus similaires.
+          </p>
+          <p class="fragment fade-in" data-fragment-index="1">
+            Chaque nœud classe et sélectionne les <b> meilleurs voisins </b> selon la
+            similarité de leurs profils
           </p>
         </section>
 
-        <section class="part-slide">
-          <h3>CyCLaDEs : Un cache collaboratif décentralisé pour les fragments TPF</h3>
+        <section class="content-slide">
+          <h3> Comment profiler les nœuds ? </h3>
+          <img id="side" height="200px" src="./pictures/cyclades/main/profil.png"/>
+          <p style="padding:2em 0 4em 0">
+            Exécuter des requêtes produit un <b>flux de fragment</b>, le cache est
+            une <b>fenêtre</b> sur de <b>flux</b>
+          </p>
+
+          <p id="question" >
+            Profil = résumé du passé récent = fréquence des <i>k</i> derniers prédicats
+            utilisés
+          </p>
         </section>
 
         <section class="content-slide">
-          <h3> CyCLaDEs &#10097; Fragment de triplets et caches </h3>
-          <div style="position:relative" >
-            <div class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0" data-fragment-index="1">
-              <p>
-                <img id="side" src="./pictures/cyclades/main/globalArchNum.png" height="492px"/>
-                152 Appels HTTP
-              </p>
-              <table style="font-size: 25px">
-                <tr>
-                  <td> 0 </td>
-                  <td> ?book <b>http://www.w3.org/1999/02/22-rdf-syntaxns#type</b> http:.../ontology/Book </td>
-                </tr>
-                <tr>
-                  <td> 1 </td>
-                  <td> ?book <b>http:.../ontology/author</b> ?author </td>
-                </tr>
-                <tr>
-                  <td> 2 </td>
-                  <td> http:.../resource/%22...And Ladies of the Club%22 <b>http:.../ontology/author</b> ?author </td>
-                </tr>
-                <tr>
-                  <td> 3 </td>
-                  <td> http:.../resource/%22A%22 Is for Alibi <b>http:.../ontology/author</b> ?author </td>
-                </tr>
-                <tr>
-                  <td> 4 </td>
-                  <td> http:.../resource/%22B%22 Is for Burglar <b>http:.../ontology/author</b> ?author </td>
-                </tr>
-              </table>
-            </div>
-            <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
-              <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
-                <img src= "./pictures/cyclades/main/globalArchQuery.png" height="480px" align="right">
+          <h3> Algorithme de profilage </h3>
+          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
+            <img src="./pictures/cyclades/main/algoCyclades_7.png"/>
+          </span>
+          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
+              <img src="./pictures/cyclades/main/algoCyclades_6.png"/>
+            </span>
+          </span>
+          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
+              <img src="./pictures/cyclades/main/algoCyclades_5.png"/>
+            </span>
+          </span>
+          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
+              <img src="./pictures/cyclades/main/algoCyclades_4.png"/>
+            </span>
+          </span>
+          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
+              <img src="./pictures/cyclades/main/algoCyclades_3.png"/>
+            </span>
+          </span>
+          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
+              <img src="./pictures/cyclades/main/algoCyclades_2.png"/>
+            </span>
+          </span>
+          <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+            <img src="./pictures/cyclades/main/algoCyclades_1.png"/>
+          </span>
+        </section>
+
+        <section class="content-slide">
+          <h3> Exemple - Algorithme de profilage </h3>
+          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="7">
+            <img src="./pictures/cyclades/main/exAlgoCyclades_9.png"/>
+          </span>
+          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="6">
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="7">
+              <img src="./pictures/cyclades/main/exAlgoCyclades_8.png"/>
+            </span>
+          </span>
+          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="6">
+              <img src="./pictures/cyclades/main/exAlgoCyclades_7.png"/>
+            </span>
+          </span>
+          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
+              <img src="./pictures/cyclades/main/exAlgoCyclades_6.png"/>
+            </span>
+          </span>
+          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
+              <img src="./pictures/cyclades/main/exAlgoCyclades_5.png"/>
+            </span>
+          </span>
+          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
+              <img src="./pictures/cyclades/main/exAlgoCyclades_4.png"/>
+            </span>
+          </span>
+          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
+              <img src="./pictures/cyclades/main/exAlgoCyclades_3.png"/>
+            </span>
+          </span>
+          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
+              <img src="./pictures/cyclades/main/exAlgoCyclades_2.png"/>
+            </span>
+          </span>
+          <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+            <img src="./pictures/cyclades/main/exAlgoCyclades_1.png"/>
+          </span>
+        </section>
+
+        <section class="content-slide">
+          <h3> Comment comparer les voisins ? </h3>
+          <table style="float:right">
+            <th>
+              <td> <b>P1</b> </td> <td> <b>P2</b> </td> <td> <b>P3</b> </td>
+            </th>
+            <tr>
+              <td> <b>C5</b> </td> <td> 10 </td> <td> 6 </td> <td> 40 </td>
+            </tr>
+            <tr>
+              <td> <b>C9</b> </td> <td> 10 </td> <td> 20 </td> <td> 5 </td>
+            </tr>
+            <tr>
+              <td> <b>C8</b> </td> <td> 10 </td> <td> 2 </td> <td> 2 </td>
+            </tr>
+          </table>
+
+          <p>
+            Durant le classement les <b>nœuds</b> sont <b>comparés</b> grâce à leur <b>profil</b>
+          </p>
+
+          <p>
+            Les nœuds sont comparés avec le <b>coefficient de similarité Jaccard</b>
+          </p>
+
+          <span id="jaccard" style="float:left;padding:2em 0 0 0"></span>
+          <script>
+          katex.render("J(x,y) = \\dfrac{\\sum_{i} min(x_i,y_i)}{\\sum_{i}max(x_i,y_i)}", jaccard);
+          </script>
+          <ul style="padding:0 0 0 18em">
+            <li> J(C5,C9) = (10+6+5)/(10+20+40) = <b>0.3</b> </li>
+            <li> J(C5,C8) = 14/56 = <b>0.25</b> </li>
+          </ul>
+        </section>
+
+        <section class="content-slide">
+          <h3> Exemple - Echange de voisins </h3>
+          <p style="text-align:center">
+            Avant &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Après
+          </p>
+          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+            <img height="380px" src="./pictures/cyclades/main/shuffle_2.png"/>
+            <p style="text-align:right">
+              Pour C5 : C9 est plus similaire que C8 <br>
+              Pour C6 : C8 est plus similaire que C9
+            </p>
+          </span>
+          <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+            <img height="380px" src="./pictures/cyclades/main/shuffle_1.png"/>
+          </span>
+        </section>
+
+        <section class="content-slide">
+          <h3> Exécuter une requête avec CyCLaDEs </h3>
+          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
+            <img id="side" height="480px" src="./pictures/cyclades/main/exQuery_4.png"/>
+          </span>
+          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
+              <img id="side" height="480px" src="./pictures/cyclades/main/exQuery_3.png"/>
+            </span>
+          </span>
+          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
+              <img id="side" height="480px" src="./pictures/cyclades/main/exQuery_2.png"/>
+            </span>
+          </span>
+          <img class="fragment fade-out" data-fragment-index="0" id="side" height="480px" src="./pictures/cyclades/main/exQuery_1.png"/>
+          <p>
+            C1 exécute Q1
+          </p>
+          <p>
+            Pour chaque triplet, essayé de résoudre le triplet dans :
+          </p>
+          <ol>
+            <li> Cache local </li>
+            <li> Cache des voisins </li>
+            <li> Cache HTTP </li>
+            <li> Serveur TPF </li>
+          </ol>
+        </section>
+
+        <section class="content-slide">
+          <h3> Expériences </h3>
+          <img id="side" height="480px" src="./pictures/cyclades/main/xp.png"/>
+          <p>
+            <b> Jeux de données : </b>
+            Berlin Benchmark (BSBM) [17], choisit pour la simulation d'applications Web
+          </p>
+          <p>
+            Un serveur TPF avec un cache HTTP hébergeant les jeux de données BSBM
+          </p>
+          <p>
+            Un réseau de clients TPF-CyCLaDEs exécutant des requêtes BSBM
+          </p>
+          <my-citation number="17" author="C. Bizer" title="The berlin benchmark" conference="International Journal on Semantic Web and Information Systems" date="2009"></my-citation>
+        </section>
+
+        <section class="content-slide">
+          <h3> Paramètress d'expérimentations </h3>
+          <img id="side" height="480px" src="./pictures/cyclades/main/xp.png"/>
+          <p>
+            Chaque <b>client</b> a un <b>emsemble de 25 requêtes</b> générées à partir
+            de <b>12 modèles</b> :
+          </p>
+          <ul>
+            <li> Phases d'échange de voisins : toutes les 10 secondes </li>
+            <li> Deux étapes : </li>
+            <ol>
+              <li> Initialisation </li>
+              <li> Mesures </li>
+            </ul>
+          </section>
+
+          <section class="content-slide">
+            <h3> Est-ce que le cache distribué passe à l'échelle ? </h3>
+            <figure style="float:left">
+              <img height="320px" src="./pictures/cyclades/xp/bsbm1M_TPF.png"/>
+              <figcaption> Sans CyCLaDEs </figcaption>
+            </figure>
+            <figure id="side">
+              <img id="side" height="320px" src="./pictures/cyclades/xp/bsbm1M_Cyclades.png"/>
+              <figcaption> Avec CyCLaDEs </figcaption>
+            </figure>
+            <p id="parameter">
+              Paramètres : BSBM 1M, cache = 1000, profil = 10, RPS(4,6,7), CON(9,15,20)
+            </p>
+            <p id="xp">
+              &#126; 20% des appels sont résolus par le cache décentralisé
+            </p>
+          </section>
+
+          <section class="content-slide">
+            <h3> Est-ce que la taille du jeux de données impacte le cache décentralisé ? </h3>
+            <img height="380px" src="./pictures/cyclades/xp/bsbmX_Cyclades.png"/>
+            <p id="parameter">
+              Paramètress : 10 clients, cache = 1000, RPS = 4, CON = 9
+            </p>
+            <p id="xp">
+              Le cache décentralisé résiste mieux que le cache local
+            </p>
+          </section>
+
+          <section class="content-slide">
+            <h3> CyCLaDEs avec deux communautés </h3>
+            <img id="side" height="380px" src="./pictures/cyclades/xp/exTwoCommunities.png"/>
+            <p>
+              Deux communautées accédent deux jeux de données BSBM <b> différents </b> sur le
+              même serveur
+            </p>
+            <p>
+              Les nœuds sont sur le même réseau aléatoire
+            </p>
+            <p id="question">
+              Est-ce que CyCLaDEs grâce aux profils va bien détecter les deux communautés ?
+            </p>
+          </section>
+
+          <section class="content-slide">
+            <h3> Est-ce que la précision du profil impacte la définition des communautés ? </h3>
+            <figure style="float:left">
+              <img height="300px" src="./pictures/cyclades/xp/k_5.png"/>
+              <figcaption> Taille du profil = 5 </figcaption>
+            </figure>
+            <figure id="side">
+              <img height="300px" src="./pictures/cyclades/xp/k_30.png"/>
+              <figcaption> Taille du profil = 30 </figcaption>
+            </figure>
+            <p id="parameter">
+              Paramètress : 2 BSBM 1M, 50 clients par jeu de données, cache = 1000
+            </p>
+            <p id="xp">
+              Dans le réseau superposé CON, CyCLaDEs contruit deux communautés distinctes :
+              BSBM1 et BSBM2
+            </p>
+          </section>
+
+          <section class="content-slide">
+            <h3> Conclusion </h3>
+            <p>
+              CyCLaDEs contruit un <b>cache décentralisé</b> pour les clients TPF
+            </p>
+            <p>
+              CyCLaDEs <b>réduit</b> le nombre d'appels au <b>serveur</b> dans le contexte
+              d'<b>applications Web</b>.
+            </p>
+          </section>
+
+          <section class="content-slide">
+            <h3> Perspectives </h3>
+            <p>
+              Mesurer l'impact sur le <b> temps d'exécution </b>
+            </p>
+            <p>
+              CyCLaDEs <b>amène</b> les <b>données</b> aux <b>requêtes</b>
+            </p>
+            <p>
+              <b> Amener les requêtes </b> aux <b> données </b>
+            </p>
+          </section>
+
+          <section class="part-slide">
+            <h3> Ladda : délégation de requête dans une fédération de consommateurs
+              de données liées </h3>
+          </section>
+
+          <section class="content-slide">
+            <h3> Contexte </h3>
+            <img id="side" src="./pictures/ladda/main/archCyclades.png"/>
+            <p>
+              <b>Fédération</b> de consommateurs de données liées
+            </p>
+            <p>
+              Chaque consommateur de données :
+            </p>
+            <ul>
+              <li> est connecté à nombre fixe de <b>voisins</b> choisis aléatoirement ; </li>
+              <li> est <b> autonome </b> ; </li>
+              <li> est un <b>médiateur</b> TPF ; </li>
+              <li> peut <b>partager ses ressources</b>. </li>
+            </ul>
+          </section>
+
+          <section>
+            <blockquote>
+              Que se passe-t'il si un consommateur de données peut partager ses capacités
+              d'exécution de requêtes SPARQL ?
+            </blockquote>
+          </section>
+
+          <section class="content-slide">
+            <h3> Exécution de requêtes </h3>
+            <table class="noRow">
+              <tr>
+                <td> <b>Exécution seul</b> </td>
+                <td class="fragment fade-in" data-fragment-index="0"> <b>Exécution en collaboration</b> </td>
+              </tr>
+              <tr>
+                <td> <img height="380px" src="./pictures/ladda/main/exBis1.png"/> </td>
+                <td class="fragment fade-in" data-fragment-index="0"> <img height="380px" src="./pictures/ladda/main/exBis2.png"/> </td>
+              </tr>
+              <tr>
+                <td> Fini à <b> T3 </b> </td>
+                <td class="fragment fade-in" data-fragment-index="0"> Fini à <b> T2 </b> </td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="content-slide">
+            <h3> Existe-t'il des clients libres ? </h3>
+            <p> Analyse des journaux réels [18] de DBpedia 3.8 sur 24 heures </p>
+            <img height="280px"src="./pictures/ladda/main/queryDistribution.png"/>
+            <p> <b>Beaucoup</b> de clients exécutent <b>peu</b> de requêtes </p>
+            <p style="margin:0"> Il existe des clients <b>libres</b>, à condition qu'ils ne quittent pas
+              immédiatement le réseau </p>
+            <p style="display: inline-block;
+            font-size: 20px;
+            float: left;
+            text-align: left;margin:0; padding:0">
+              [18] <a href="url">https://eprints.soton.ac.uk/379399/</a>
+            </p>
+          </section>
+
+          <section class="content-slide">
+            <h3> Modèle </h3>
+            <p>
+              <b>Fédération</b> : consommateurs de données {C<sub>1</sub>, ..., C<sub>n</sub>}
+            </p>
+            <p class="fragment fade-in" data-fragment-index="0">
+              <b>Consommateur de données </b> <i>(C<sub>i</sub>)</i>: <span style="color:#009900"> Libre </span> &or;
+              <span style="color:#cc0000"> Occupé </span>, des voisins <i>(K)</i>, des requêtes en attente <i>(W)</i>
+            </p>
+            <p class="fragment fade-in" data-fragment-index="1">
+              <b> Requête </b> <i>(Q<sub>i</sub>)</i>: identifiant, description, temps d'arrivée <i>(at)</i>,
+              temps d'exécution <i>(et)</i>, temps de réponse <i>(rt)</i>
+            </p>
+            <p class="fragment fade-in" data-fragment-index="2">
+              <b> Allouer </b> : localement &or; à un voisin <span style="color:#009900"> Libre </span>
+            </p>
+            <p id="question" class="fragment fade-in" data-fragment-index="3">
+              Comment minimiser le temps de réponse pour les consommateurs de données ?
+            </p>
+            <span id="ladda" style="float:left;padding:0 0 0 0" class="fragment fade-in" data-fragment-index="3"></span>
+            <script>
+            katex.render("\\forall C_i \\in F \\land \\forall Q_i \\in C_i.W~|~ \\Delta = (Q_i.rt -Q_i.at) \\textit{ est minimisé.}", ladda);
+            </script>
+          </section>
+
+          <section class="content-slide">
+            <h3>Quel sous-ensemble de voisins ?</h3>
+            <p>
+              Les consommateurs de données accèdent au <b> même </b> serveur TPF
+            </p>
+            <p>
+              Même s'il est perfomant il a une <b> limite </b>
+            </p>
+            <p>
+              Chaque consommateur de données va <b> interroger </b> un <b> sous-ensemble </b> de
+              <i>k</i> voisins
+            </p>
+            <p id="question">
+              Faut-il choisir <i>k</i> voisins aléatoirs ou similaires ?
+            </p>
+          </section>
+
+          <section class="content-slide">
+            <h3>Limite de parallélisation</h3>
+            <p style="margin:0">Allocation de 1509 requêtes des journaux de DBpedia de manière optimale LPT [19]</p>
+            <img height="280px" src="./pictures/ladda/main/gainParallelizationOptimal.png"/>
+            <p style="margin:0"> La parallélisation <b>réduit</b> le temps de réponse </p>
+            <p style="margin:0"> Paralléliser au-delà d'un certain seuil <b>ne réduit plus </b> le temps de réponse </p>
+            <my-citation number="19" author="M. Pinedo" title="Theory, Algorithms, and Systems (3nd ed.)" conference="Springer Science and Business Media" date="2008"></my-citation>
+          </section>
+
+          <section class="content-slide">
+            <h3>Est-ce que le cache local est réutilisé entre 2 requêtes ?</h3>
+            <p> Exécution de 1509 requêtes sans effacement du cache <i>(reset off)</i> et
+              avec effacement du cache <i>(reset on)</i> entre l'exécution de requêtes</p>
+            <img src="./pictures/ladda/main/localityDBpedia.png"/>
+            <p> La <b>localité</b> n'a <b>pas d'impacte</b> sur la délégation </p>
+          </section>
+
+          <section class="content-slide">
+            <h3>Algorithme</h3>
+
+            <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="7">
+              <img height="620px" src="./pictures/ladda/main/algo_9.svg"/>
+            </span>
+
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="7">
+              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="6">
+                <img height="620px" src="./pictures/ladda/main/algo_8.svg"/>
+              </span>
+            </span>
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="6">
+              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
+                <img height="620px" src="./pictures/ladda/main/algo_7.svg"/>
+              </span>
+            </span>
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
+              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
+                <img height="620px" src="./pictures/ladda/main/algo_6.svg"/>
+              </span>
+            </span>
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
+              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
+                <img height="620px" src="./pictures/ladda/main/algo_5.svg"/>
+              </span>
+            </span>
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
+              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
+                <img height="620px" src="./pictures/ladda/main/algo_4.svg"/>
+              </span>
+            </span>
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
+              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
+                <img height="620px" src="./pictures/ladda/main/algo_3.svg"/>
+              </span>
+            </span>
+            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
+              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
+                <img height="620px" src="./pictures/ladda/main/algo_2.svg"/>
               </span>
             </span>
             <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
-              <img src="./pictures/cyclades/main/globalArchTpf.png" height="492px" align="right">
+              <img height="620px" src="./pictures/ladda/main/algo_1.svg"/>
             </span>
-          </div>
-        </section>
-
-        <section>
-          <blockquote>
-            Que se passe t'il si les clients collaborent ?
-          </blockquote>
-        </section>
-
-        <section class="content-slide">
-          <h3> CyCLaDEs &#10097; Si les clients collaborent </h3>
-          <p>
-            <img id="side" height="492px" src="./pictures/cyclades/main/clientCollab.png"/>
-            Le cache local d'un client peut être <b> partagé </b> avec les autres :
-          </p>
-          <ul>
-            <li> Réduit la charge du serveur </li>
-          </ul>
-          <p>
-            <b>Défi </b> :
-          </p>
-          <ul>
-            <li> Réseau avec un million de clients </li>
-          </ul>
-        </p>
-        <p id="question">
-          Comment un client peut trouver rapidement un fragment chez un autre client ?
-        </p>
-      </section>
-
-      <section class="content-slide">
-        <h3> CyCLaDEs &#10097; Travaux connexes </h3>
-        <p>
-          <b> Table de hachage distribuées (DHT) : </b> distibue le cache à travers les participants [12] :
-        </p>
-        <img id="side" height="300px" src="./pictures/cyclades/main/dht.png"/>
-        <ul>
-          <li>Trouve le framgent s'il existe</li>
-          <li>Une requête &#8594; 20 000 appels &#8594; 20 000 sauts <i>log(n)</i>, n:
-            nombre de pairs</li>
-          </ul>
-          <my-citation number="12" author="M. El Dick" title:"A hydrid p2p overlay for effecient query processing in cdn" conference="Proceedings of the 12th International Conference on Extending Database Technology: Advances in Database Technology" date="2009"></my-citation>
-        </section>
-
-        <section class="content-slide">
-          <h3> CyCLaDEs &#10097; Travaux connexes </h3>
-          <p> <b>Cache comportemental :</b> connecte un nombre fixe de nœuds similaires [13] :</p>
-          <img id="side" height="250px" src="./pictures/cyclades/main/behave.png"/>
-          <ul>
-            <li> Accès direct sans latence </li>
-            <li> Pas de garantie de trouver le fragment </li>
-            <li> Expérimenté avec des historiques de navigation Web </li>
-          </ul>
-          <p id="question">
-            Et si on utilisait les caches comportementaux pour des historiques de requêtes ?
-          </p>
-          <my-citation number="13" author="D. Frey" title="Behavioral cache for web content" conference="Ditributed Applications and Interoperable System" date="2014"></my-citation>
-        </section>
-
-        <section class="content-slide">
-          <h3> CyCLaDEs &#10097; Approche </h3>
-          <p>
-            <b> Hypothèse :</b> Les clients qui exécutent des <b> requêtes similaires </b> dans le <b> passé </b>
-            exécuteront des <b> requêtes similaires </b> dans le <b> futur </b> [14]
-          </p>
-          <p class="fragment fade-in" data-fragment-index="1">
-            <b> Approche :</b>
-          </p>
-          <ul class="fragment fade-in" data-fragment-index="1">
-            <li> Chaque client construit une vue fixe de voisins similaire avec un accès direct </li>
-            <li> Pour chaque appel 1) vérifier le cache local 2) verifier le cache des voisins en
-              parallèle 3) aller au serveur </li>
-            </ul>
-            <p id="question" class="fragment fade-in" data-fragment-index="2">
-              Combien d'accès aux caches des voisins peut-on obtenir ?
-            </p>
-            <my-citation number="14" author="M. D. Ekstrand" title="Collaborative filtering recommender systems" conference="Foundations and Trends in Human-Computer Interaction" date="2011"></my-citation>
           </section>
 
           <section class="content-slide">
-            <h3> CyCLaDEs &#10097; Approche TPF </h3>
+            <h3> Expériences </h3>
             <p>
-              <img id="side" src="./pictures/cyclades/main/archTpf.png" />
-              Beaucoup de clients accèdent au serveur TPF de manière concurrente, mais
-              les <b>clients ne collaborent pas</b>.
+              <b> Jeux de données : </b>
+              DBpedia 3.8
+            </p>
+            <p>
+              <b> Requêtes : </b> des 50 premiers clients de l'heure 5 = 1509 requêtes
+            </p>
+            <p>
+              <b> Environnement : </b> un serveur TPF (4 workers) et un cache Web
+            </p>
+            <p>
+              <b> Clients : </b> 50 médiateurs Ladda-TPF
+            </p>
+            <p>
+              <b> Approches : </b> <i>Ladda 2 (L2), Ladda K (LK)</i> et <i>Sans Délégation (SD)</i>
             </p>
           </section>
 
           <section class="content-slide">
-            <h3> CyCLaDEs &#10097; Approche </h3>
+            <h3> Expériences </h3>
+            <p><b> Configuration : </b></p>
+            <p> Supposons une fédération de 6 médiateurs avec des requêtes </p>
+            <table>
+              <tr>
+                <td style="padding: 0em 0em 0em 0em;">
+                  <img width="400px" src="./pictures/ladda/xp/config_1.png"/>
+                </td>
+                <td style="padding: 0em 0em 0em 0em;">
+                  <img width="400px" src="./pictures/ladda/xp/config_2.png"/>
+                </td>
+                <td style="padding: 0em 0em 0em 0em;">
+                  <img width="400px" src="./pictures/ladda/xp/config_3.png"/>
+                </td>
+                <td style="padding: 0em 0em 0em 0em;">
+                  <img width="400px" src="./pictures/ladda/xp/config_4.png"/>
+                </td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="content-slide">
+            <h3> Est-ce que la délégation réduit le temps
+              global d'exécution ? </h3>
+            <img src="./pictures/ladda/xp/globalExecutionTime_Avg.png"/>
+            <p id="parameter">
+              Description : Moyenne de 3 exécutions
+            </p>
+            <p id="xp">
+              En parallélisant les requêtes <i>Ladda 2</i> et <i>Ladda K</i> réduisent le temps
+              global d'exécution de la fédération
+            </p>
+          </section>
+
+          <section class="content-slide">
+            <h3> Est-ce qu'avec la délégation plus de requêtes sont
+              exécutées par secondes ? </h3>
+            <img src="./pictures/ladda/xp/totalThroughput_Avg.png"/>
+            <p id="parameter">
+              Description : Moyenne de 3 exécutions
+            </p>
+            <p id="xp">
+              Grâce à la parallélisation Ladda a un meilleur débit de requêtes
+            </p>
+          </section>
+
+          <section class="content-slide">
+            <h3> Est-ce qu'avec la délégation plus de requêtes sont
+              exécutées par secondes ? </h3>
+            <img src="./pictures/ladda/xp/nbExecQueries_AllLoaded_1.png"/>
+            <p id="parameter">
+              Description : Tous Chargé, 1 seul exécution
+            </p>
+            <p id="xp">
+              Dès les premières minutes, Ladda exécutent plus de requêtes
+            </p>
+          </section>
+
+          <section class="content-slide">
+            <h3> Est-ce la délégation impacte le temps de réponse par clients ?</h3>
+            <img src="./pictures/ladda/xp/localExecutionTimeByClient_QuaterLoadedWithoutAsk2_Avg.png"/>
+            <p id="parameter">
+              Description : 1/4 Chargés, Moyenne sur 3 exécutions
+            </p>
+            <p id="xp">
+              Ladda améliore le temps d'exécution local pour 3 clients
+            </p>
+          </section>
+
+          <section class="content-slide">
+            <h3> Conclusion</h3>
             <p>
-              <img id="side" src="./pictures/cyclades/main/archCyclades.png"/>
-              Connecte les nœuds à travers un réseau d'échantillonage aléatoire
-              des pairs (RPS) :
+              Ladda <b>partage</b> les capacités d'<b>exécution de requêtes SPARQL</b> des
+              consommateurs de la fédération
+            </p>
+            <p>
+              Ladda permet de <b>paralléliser</b> l'exécution de requêtes en <b>déléguant</b> des
+              requêtes à des voisins <b>libres</b>
+            </p>
+            <p>
+              Ladda <b>réduit</b> le temps global d'exécution de la fédération
+            </p>
+          </section>
+
+          <section class="content-slide">
+            <h3> Perspectives</h3>
+            <p>
+              Faire du parallélisme intra-requêtes
+            </p>
+          </section>
+
+          <section class="part-slide">
+            <h3> Conclusion </h3>
+          </section>
+
+          <section class="content-slide">
+            <h3> Conclusion général </h3>
+            <p>
+              <b> Fédération de consommateurs de données :</b>
             </p>
             <ul>
-              <li> Chaque nœud maitient une vue partielle du réseau </li>
+              <li> où les consommateurs sont <b>connectées</b> entre eux ;</li>
+              <li> où les consommateurs <b>partagent</b> leurs ressources. </li>
             </ul>
-            <p class="fragment fade-in" data-fragment-index="1">
-              Phases d'échange de voisins :</b>
-            </p>
-            <ul class="fragment fade-in" data-fragment-index="1">
-              <li> <b>renouvelle périodiquement les voisins</b></li>
-              <li> gère les arrivées et départs des nœuds et les partitions réseau</li>
-            </ul>
-            <p class="fragment fade-in" data-fragment-index="2">
-              Réseau implémenté par Cyclon [15]
-            </p>
-            <my-citation number="15" author="S. Voulgaris" title="Cyclon: Inexpensive membership managment for unstructured p2p overlay" conference="Journal of Network and Systems Managment" date="2005"></my-citation>
-          </section>
-
-          <section class="content-slide">
-            <h3> CyCLaDEs &#10097; Approche </h3>
             <p>
-              <img id="side" height="480px" src="./pictures/cyclades/main/archCyclades2.png"/>
-              Le réseau RPS garantit la connectivité entre tous les clients
-            </p>
-            <p class="fragment fade-in" data-fragment-index="1">
-              C6 est connecté à C3 :
-            </p>
-            <ul class="fragment fade-in" data-fragment-index="1">
-              <li> C6 &#8594; DBpedia </li>
-              <li> C3 &#8594; DrugBank </li>
-              <li> C6 n'est pas <b> similaire </b> à C3 </li>
-            </ul>
-            <p class="fragment fade-in" data-fragment-index="2">
-              Nécessite un second réseau superposer pour gérer la <b> similarité </b>
-              comme proposé dans Gossple [16]
-            </p>
-            <my-citation number="16" author="M. Bertier" title="The gossple anonymous social network" conference="11th International Middleware Conference" date="2010"></my-citation>
-          </section>
-
-          <section class="content-slide">
-            <h3> CyCLaDEs &#10097; Approche </h3>
-            <p>
-              <img id="side" height="480px" src="./pictures/cyclades/main/archCyclades3.png"/>
-              Réseau superposé de similarité (CON) :
+              <b> Collaboration :</b>
             </p>
             <ul>
-              <li> Chaque nœud à un <b> profil </b> basé sur l'historique des requêtes
-                qu'il a exécutées </li>
-              </ul>
-              <p class="fragment fade-in" data-fragment-index="1">
-                Les phases d'échange de voisins permettent d'obtenir des voisins plus similaires.
-              </p>
-              <p class="fragment fade-in" data-fragment-index="1">
-                Chaque nœud classe et sélectionne les <b> meilleurs voisins </b> selon la
-                similarité de leurs profils
-              </p>
-            </section>
+              <li> Espace disque : construction d'un <b>cache décentralisé</b> hébergé par
+                les clients </li>
+              <li> Bande passante &#38; capacité de calcul : <b>parallélisation inter-requêtes</b>
+                en déléguant à des voisins libres</li>
+            </ul>
+          </section>
 
-            <section class="content-slide">
-              <h3> CyCLaDEs &#10097; Comment profiler les nœuds ? </h3>
-              <img id="side" height="200px" src="./pictures/cyclades/main/profil.png"/>
-              <p style="padding:2em 0 4em 0">
-                Exécuter des requêtes produit un <b>flux de fragment</b>, le cache est
-                une <b>fenêtre</b> sur de <b>flux</b>
-              </p>
-
-              <p id="question" >
-                Profil = résumé du passé récent = fréquence des <i>k</i> derniers prédicats
-                utilisés
-              </p>
-            </section>
-
-            <section class="content-slide">
-              <h3> CyCLaDEs &#10097; Algorithme de profilage </h3>
-              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
-                <img src="./pictures/cyclades/main/algoCyclades_7.png"/>
-              </span>
-              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
-                <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
-                  <img src="./pictures/cyclades/main/algoCyclades_6.png"/>
-                </span>
-              </span>
-              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
-                <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
-                  <img src="./pictures/cyclades/main/algoCyclades_5.png"/>
-                </span>
-              </span>
-              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
-                <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
-                  <img src="./pictures/cyclades/main/algoCyclades_4.png"/>
-                </span>
-              </span>
-              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
-                <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
-                  <img src="./pictures/cyclades/main/algoCyclades_3.png"/>
-                </span>
-              </span>
-              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
-                <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
-                  <img src="./pictures/cyclades/main/algoCyclades_2.png"/>
-                </span>
-              </span>
-              <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
-                <img src="./pictures/cyclades/main/algoCyclades_1.png"/>
-              </span>
-            </section>
-
-            <section class="content-slide">
-              <h3> CyCLaDEs &#10097; Exemple - Algorithme de profilage </h3>
-              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="7">
-                <img src="./pictures/cyclades/main/exAlgoCyclades_9.png"/>
-              </span>
-              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="6">
-                <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="7">
-                  <img src="./pictures/cyclades/main/exAlgoCyclades_8.png"/>
-                </span>
-              </span>
-              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
-                <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="6">
-                  <img src="./pictures/cyclades/main/exAlgoCyclades_7.png"/>
-                </span>
-              </span>
-              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
-                <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
-                  <img src="./pictures/cyclades/main/exAlgoCyclades_6.png"/>
-                </span>
-              </span>
-              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
-                <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
-                  <img src="./pictures/cyclades/main/exAlgoCyclades_5.png"/>
-                </span>
-              </span>
-              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
-                <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
-                  <img src="./pictures/cyclades/main/exAlgoCyclades_4.png"/>
-                </span>
-              </span>
-              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
-                <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
-                  <img src="./pictures/cyclades/main/exAlgoCyclades_3.png"/>
-                </span>
-              </span>
-              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
-                <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
-                  <img src="./pictures/cyclades/main/exAlgoCyclades_2.png"/>
-                </span>
-              </span>
-              <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
-                <img src="./pictures/cyclades/main/exAlgoCyclades_1.png"/>
-              </span>
-            </section>
-
-            <section class="content-slide">
-              <h3> CyCLaDEs &#10097; Comment comparer les voisins ? </h3>
-              <table style="float:right">
-                <th>
-                  <td> <b>P1</b> </td> <td> <b>P2</b> </td> <td> <b>P3</b> </td>
-                </th>
-                <tr>
-                  <td> <b>C5</b> </td> <td> 10 </td> <td> 6 </td> <td> 40 </td>
-                </tr>
-                <tr>
-                  <td> <b>C9</b> </td> <td> 10 </td> <td> 20 </td> <td> 5 </td>
-                </tr>
-                <tr>
-                  <td> <b>C8</b> </td> <td> 10 </td> <td> 2 </td> <td> 2 </td>
-                </tr>
-              </table>
-
-              <p>
-                Durant le classement les <b>nœuds</b> sont <b>comparés</b> grâce à leur <b>profil</b>
-              </p>
-
-              <p>
-                Les nœuds sont comparés avec le <b>coefficient de similarité Jaccard</b>
-              </p>
-
-              <span id="jaccard" style="float:left;padding:2em 0 0 0"></span>
-              <script>
-              katex.render("J(x,y) = \\dfrac{\\sum_{i} min(x_i,y_i)}{\\sum_{i}max(x_i,y_i)}", jaccard);
-              </script>
-              <ul style="padding:0 0 0 18em">
-                <li> J(C5,C9) = (10+6+5)/(10+20+40) = <b>0.3</b> </li>
-                <li> J(C5,C8) = 14/56 = <b>0.25</b> </li>
-              </ul>
-            </section>
-
-            <section class="content-slide">
-              <h3> CyCLaDEs &#10097; Exemple - Echange de voisins </h3>
-              <p style="text-align:center">
-                Avant &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Après
-              </p>
-              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
-                <img height="380px" src="./pictures/cyclades/main/shuffle_2.png"/>
-                <p style="text-align:right">
-                  Pour C5 : C9 est plus similaire que C8 <br>
-                  Pour C6 : C8 est plus similaire que C9
-                </p>
-              </span>
-              <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
-                <img height="380px" src="./pictures/cyclades/main/shuffle_1.png"/>
-              </span>
-            </section>
-
-            <section class="content-slide">
-              <h3> CyCLaDEs &#10097; Exécuter une requête avec CyCLaDEs </h3>
-              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
-                <img id="side" height="480px" src="./pictures/cyclades/main/exQuery_4.png"/>
-              </span>
-              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
-                <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
-                  <img id="side" height="480px" src="./pictures/cyclades/main/exQuery_3.png"/>
-                </span>
-              </span>
-              <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
-                <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
-                  <img id="side" height="480px" src="./pictures/cyclades/main/exQuery_2.png"/>
-                </span>
-              </span>
-              <img class="fragment fade-out" data-fragment-index="0" id="side" height="480px" src="./pictures/cyclades/main/exQuery_1.png"/>
-              <p>
-                C1 exécute Q1
-              </p>
-              <p>
-                Pour chaque triplet, essayé de résoudre le triplet dans :
-              </p>
-              <ol>
-                <li> Cache local </li>
-                <li> Cache des voisins </li>
-                <li> Cache HTTP </li>
-                <li> Serveur TPF </li>
-              </ol>
-            </section>
-
-            <section class="content-slide">
-              <h3> CyCLaDEs &#10097; Expériences </h3>
-              <img id="side" height="480px" src="./pictures/cyclades/main/xp.png"/>
-              <p>
-                <b> Jeux de données : </b>
-                Berlin Benchmark (BSBM) [17], choisit pour la simulation d'applications Web
-              </p>
-              <p>
-                Un serveur TPF avec un cache HTTP hébergeant les jeux de données BSBM
-              </p>
-              <p>
-                Un réseau de clients TPF-CyCLaDEs exécutant des requêtes BSBM
-              </p>
-              <my-citation number="17" author="C. Bizer" title="The berlin benchmark" conference="International Journal on Semantic Web and Information Systems" date="2009"></my-citation>
-            </section>
-
-            <section class="content-slide">
-              <h3> CyCLaDEs &#10097; Paramètress d'expérimentations </h3>
-              <img id="side" height="480px" src="./pictures/cyclades/main/xp.png"/>
-              <p>
-                Chaque <b>client</b> a un <b>emsemble de 25 requêtes</b> générées à partir
-                de <b>12 modèles</b> :
-              </p>
+          <section class="content-slide">
+            <h3> Perspectives </h3>
+            <p>
+              <b>CyCLaDEs + Ladda :</b>
+            </p>
+            <ul>
+              <li> CyCLaDEs : réduit la pression sur le producteur de données</li>
+              <li> Ladda : rend le cache Web plus efficace</li>
+            </ul>
+            <p>
+              <b>Matérialisation de fragment:</b>
               <ul>
-                <li> Phases d'échange de voisins : toutes les 10 secondes </li>
-                <li> Deux étapes : </li>
-                <ol>
-                  <li> Initialisation </li>
-                  <li> Mesures </li>
-                </ul>
-              </section>
+                <li> TPF <b>stocke</b> des fragments <i>partiels</i> et <i>complets</i>
+                <li> Stocker des fragments <b>complets </b></li>
+                <li> Une communauté peut stocker les fragments les plus <b>populaire</b></li>
+              </ul>
+            </p>
+          </section>
 
-              <section class="content-slide">
-                <h3> CyCLaDEs &#10097; Est-ce que le cache distribué passe à l'échelle ? </h3>
-                <figure style="float:left">
-                  <img height="320px" src="./pictures/cyclades/xp/bsbm1M_TPF.png"/>
-                  <figcaption> Sans CyCLaDEs </figcaption>
-                </figure>
-                <figure id="side">
-                  <img id="side" height="320px" src="./pictures/cyclades/xp/bsbm1M_Cyclades.png"/>
-                  <figcaption> Avec CyCLaDEs </figcaption>
-                </figure>
-                <p id="parameter">
-                  Paramètres : BSBM 1M, cache = 1000, profil = 10, RPS(4,6,7), CON(9,15,20)
-                </p>
-                <p id="xp">
-                  &#126; 20% des appels sont résolus par le cache décentralisé
-                </p>
-              </section>
-
-              <section class="content-slide">
-                <h3> CyCLaDEs &#10097; Est-ce que la taille du jeux de données impacte le cache décentralisé ? </h3>
-                <img height="380px" src="./pictures/cyclades/xp/bsbmX_Cyclades.png"/>
-                <p id="parameter">
-                  Paramètress : 10 clients, cache = 1000, RPS = 4, CON = 9
-                </p>
-                <p id="xp">
-                  Le cache décentralisé résiste mieux que le cache local
-                </p>
-              </section>
-
-              <section class="content-slide">
-                <h3> CyCLaDEs &#10097; CyCLaDEs avec deux communautés </h3>
-                <img id="side" height="380px" src="./pictures/cyclades/xp/exTwoCommunities.png"/>
-                <p>
-                  Deux communautées accédent deux jeux de données BSBM <b> différents </b> sur le
-                  même serveur
-                </p>
-                <p>
-                  Les nœuds sont sur le même réseau aléatoire
-                </p>
-                <p id="question">
-                  Est-ce que CyCLaDEs grâce aux profils va bien détecter les deux communautés ?
-                </p>
-              </section>
-
-              <section class="content-slide">
-                <h3> CyCLaDEs &#10097; Est-ce que la précision du profil impacte la définition des communautés ? </h3>
-                <figure style="float:left">
-                  <img height="300px" src="./pictures/cyclades/xp/k_5.png"/>
-                  <figcaption> Taille du profil = 5 </figcaption>
-                </figure>
-                <figure id="side">
-                  <img height="300px" src="./pictures/cyclades/xp/k_30.png"/>
-                  <figcaption> Taille du profil = 30 </figcaption>
-                </figure>
-                <p id="parameter">
-                  Paramètress : 2 BSBM 1M, 50 clients par jeu de données, cache = 1000
-                </p>
-                <p id="xp">
-                  Dans le réseau superposé CON, CyCLaDEs contruit deux communautés distinctes :
-                  BSBM1 et BSBM2
-                </p>
-              </section>
-
-              <section class="content-slide">
-                <h3> CyCLaDEs &#10097; Conclusion </h3>
-                <p>
-                  CyCLaDEs contruit un <b>cache décentralisé</b> pour les clients TPF
-                </p>
-                <p>
-                  CyCLaDEs <b>réduit</b> le nombre d'appels au <b>serveur</b> dans le contexte
-                  d'<b>applications Web</b>.
-                </p>
-              </section>
-
-              <section class="content-slide">
-                <h3> CyCLaDEs &#10097; Perspectives </h3>
-                <p>
-                  Mesurer l'impact sur le <b> temps d'exécution </b>
-                </p>
-                <p>
-                  CyCLaDEs <b>amène</b> les <b>données</b> aux <b>requêtes</b>
-                </p>
-                <p>
-                  <b> Amener les requêtes </b> aux <b> données </b>
-                </p>
-              </section>
-
-              <section class="part-slide">
-                <h3> Ladda : délégation de requête dans une fédération de consommateurs
-                  de données liées </h3>
-                </section>
-
-                <section class="content-slide">
-                  <h3> Ladda &#10097; Contexte </h3>
-                  <img id="side" src="./pictures/ladda/main/archCyclades.png"/>
-                  <p>
-                    <b>Fédération</b> de consommateurs de données liées
-                  </p>
-                  <p>
-                    Chaque consommateur de données :
-                  </p>
-                  <ul>
-                    <li> est connecté à nombre fixe de <b>voisins</b> choisis aléatoirement ; </li>
-                    <li> est <b> autonome </b> ; </li>
-                    <li> est un <b>médiateur</b> TPF ; </li>
-                    <li> peut <b>partager ses ressources</b>. </li>
-                  </ul>
-                </section>
-
-                <section>
-                  <blockquote>
-                    Que se passe-t'il si un consommateur de données peut partager ses capacités
-                    d'exécution de requêtes SPARQL ?
-                  </blockquote>
-                </section>
-
-                <section class="content-slide">
-                  <h3> Ladda &#10097; Exécution de requêtes </h3>
-                  <table class="noRow">
-                    <tr>
-                      <td> <b>Exécution seul</b> </td>
-                      <td class="fragment fade-in" data-fragment-index="0"> <b>Exécution en collaboration</b> </td>
-                    </tr>
-                    <tr>
-                      <td> <img height="380px" src="./pictures/ladda/main/exBis1.png"/> </td>
-                      <td class="fragment fade-in" data-fragment-index="0"> <img height="380px" src="./pictures/ladda/main/exBis2.png"/> </td>
-                    </tr>
-                    <tr>
-                      <td> Fini à <b> T3 </b> </td>
-                      <td class="fragment fade-in" data-fragment-index="0"> Fini à <b> T2 </b> </td>
-                    </tr>
-                  </table>
-                </section>
-
-                <section class="content-slide">
-                  <h3> Ladda &#10097; Existe-t'il des clients libres ? </h3>
-                  <p> Analyse des journaux réels [18] de DBpedia 3.8 sur 24 heures </p>
-                  <img height="280px"src="./pictures/ladda/main/queryDistribution.png"/>
-                  <p> <b>Beaucoup</b> de clients exécutent <b>peu</b> de requêtes </p>
-                  <p style="margin:0"> Il existe des clients <b>libres</b>, à condition qu'ils ne quittent pas
-                    immédiatement le réseau </p>
-                  <p style="display: inline-block;
-                  font-size: 20px;
-                  float: left;
-                  text-align: left;margin:0; padding:0">
-                    [18] <a href="url">https://eprints.soton.ac.uk/379399/</a>
-                  </p>
-                </section>
-
-                <section class="content-slide">
-                  <h3> Ladda &#10097; Modèle </h3>
-                  <p>
-                    <b>Fédération</b> : consommateurs de données {C<sub>1</sub>, ..., C<sub>n</sub>}
-                  </p>
-                  <p class="fragment fade-in" data-fragment-index="0">
-                    <b>Consommateur de données </b> <i>(C<sub>i</sub>)</i>: <span style="color:#009900"> Libre </span> &or;
-                    <span style="color:#cc0000"> Occupé </span>, des voisins <i>(K)</i>, des requêtes en attente <i>(W)</i>
-                  </p>
-                  <p class="fragment fade-in" data-fragment-index="1">
-                    <b> Requête </b> <i>(Q<sub>i</sub>)</i>: identifiant, description, temps d'arrivée <i>(at)</i>,
-                    temps d'exécution <i>(et)</i>, temps de réponse <i>(rt)</i>
-                  </p>
-                  <p class="fragment fade-in" data-fragment-index="2">
-                    <b> Allouer </b> : localement &or; à un voisin <span style="color:#009900"> Libre </span>
-                  </p>
-                  <p id="question" class="fragment fade-in" data-fragment-index="3">
-                    Comment minimiser le temps de réponse pour les consommateurs de données ?
-                  </p>
-                  <span id="ladda" style="float:left;padding:0 0 0 0" class="fragment fade-in" data-fragment-index="3"></span>
-                  <script>
-                  katex.render("\\forall C_i \\in F \\land \\forall Q_i \\in C_i.W~|~ \\Delta = (Q_i.rt -Q_i.at) \\textit{ est minimisé.}", ladda);
-                  </script>
-                </section>
-
-                <section class="content-slide">
-                  <h3>Ladda &#10097; Quel sous-ensemble de voisins ?</h3>
-                  <p>
-                    Les consommateurs de données accèdent au <b> même </b> serveur TPF
-                  </p>
-                  <p>
-                    Même s'il est perfomant il a une <b> limite </b>
-                  </p>
-                  <p>
-                    Chaque consommateur de données va <b> interroger </b> un <b> sous-ensemble </b> de
-                    <i>k</i> voisins
-                  </p>
-                  <p id="question">
-                    Faut-il choisir <i>k</i> voisins aléatoirs ou similaires ?
-                  </p>
-                </section>
-
-                <section class="content-slide">
-                  <h3>Ladda &#10097; Limite de parallélisation</h3>
-                  <p style="margin:0">Allocation de 1509 requêtes des journaux de DBpedia de manière optimale LPT [19]</p>
-                  <img height="280px" src="./pictures/ladda/main/gainParallelizationOptimal.png"/>
-                  <p style="margin:0"> La parallélisation <b>réduit</b> le temps de réponse </p>
-                  <p style="margin:0"> Paralléliser au-delà d'un certain seuil <b>ne réduit plus </b> le temps de réponse </p>
-                  <my-citation number="19" author="M. Pinedo" title="Theory, Algorithms, and Systems (3nd ed.)" conference="Springer Science and Business Media" date="2008"></my-citation>
-                </section>
-
-                <section class="content-slide">
-                  <h3>Ladda &#10097; Comment choisir ses voisins ?</h3>
-                  <p> Exécution de 1509 requêtes sans effacement du cache <i>(reset off)</i> et
-                    avec effacement du cache <i>(reset on)</i> entre l'exécution de requêtes</p>
-                  <img src="./pictures/ladda/main/localityDBpedia.png"/>
-                  <p> La <b>localité</b> n'a <b>pas d'impacte</b> sur la délégation </p>
-                </section>
-
-                <section class="content-slide">
-                  <h3>Ladda &#10097; Algorithme</h3>
-
-                  <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="7">
-                    <img height="620px" src="./pictures/ladda/main/algo_9.svg"/>
-                  </span>
-
-                  <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="7">
-                    <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="6">
-                      <img height="620px" src="./pictures/ladda/main/algo_8.svg"/>
-                    </span>
-                  </span>
-                  <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="6">
-                    <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
-                      <img height="620px" src="./pictures/ladda/main/algo_7.svg"/>
-                    </span>
-                  </span>
-                  <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
-                    <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
-                      <img height="620px" src="./pictures/ladda/main/algo_6.svg"/>
-                    </span>
-                  </span>
-                  <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
-                    <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
-                      <img height="620px" src="./pictures/ladda/main/algo_5.svg"/>
-                    </span>
-                  </span>
-                  <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
-                    <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
-                      <img height="620px" src="./pictures/ladda/main/algo_4.svg"/>
-                    </span>
-                  </span>
-                  <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
-                    <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
-                      <img height="620px" src="./pictures/ladda/main/algo_3.svg"/>
-                    </span>
-                  </span>
-                  <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
-                    <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
-                      <img height="620px" src="./pictures/ladda/main/algo_2.svg"/>
-                    </span>
-                  </span>
-                  <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
-                    <img height="620px" src="./pictures/ladda/main/algo_1.svg"/>
-                  </span>
-                </section>
-
-                <section class="content-slide">
-                  <h3> Ladda &#10097; Expériences </h3>
-                  <p>
-                    <b> Jeux de données : </b>
-                    DBpedia 3.8
-                  </p>
-                  <p>
-                    <b> Requêtes : </b> des 50 premiers clients de l'heure 5 = 1509 requêtes
-                  </p>
-                  <p>
-                    <b> Environnement : </b> un serveur TPF (4 workers) et un cache Web
-                  </p>
-                  <p>
-                    <b> Clients : </b> 50 médiateurs Ladda-TPF
-                  </p>
-                  <p>
-                    <b> Approches : </b> <i>Ladda 2 (L2), Ladda K (LK)</i> et <i>Sans Délégation (SD)</i>
-                  </p>
-                </section>
-
-                <section class="content-slide">
-                  <h3> Ladda &#10097; Expériences </h3>
-                  <p><b> Configuration : </b></p>
-                  <p> Supposons une fédération de 6 médiateurs avec des requêtes </p>
-                  <table>
-                    <tr>
-                      <td style="padding: 0em 0em 0em 0em;">
-                        <img width="400px" src="./pictures/ladda/xp/config_1.png"/>
-                      </td>
-                      <td style="padding: 0em 0em 0em 0em;">
-                        <img width="400px" src="./pictures/ladda/xp/config_2.png"/>
-                      </td>
-                      <td style="padding: 0em 0em 0em 0em;">
-                        <img width="400px" src="./pictures/ladda/xp/config_3.png"/>
-                      </td>
-                      <td style="padding: 0em 0em 0em 0em;">
-                        <img width="400px" src="./pictures/ladda/xp/config_4.png"/>
-                      </td>
-                    </tr>
-                  </table>
-                </section>
-
-                <section class="content-slide">
-                  <h3> Ladda &#10097; Est-ce que la délégation réduit le temps
-                    global d'exécution ? </h3>
-                  <img src="./pictures/ladda/xp/globalExecutionTime_Avg.png"/>
-                  <p id="parameter">
-                    Description : Moyenne de 3 exécutions
-                  </p>
-                  <p id="xp">
-                    En parallélisant les requêtes <i>Ladda 2</i> et <i>Ladda K</i> réduisent le temps
-                    global d'exécution de la fédération
-                  </p>
-                </section>
-
-                <section class="content-slide">
-                  <h3> Ladda &#10097; Est-ce qu'avec la délégation plus de requêtes sont
-                    exécutées par secondes ? </h3>
-                  <img src="./pictures/ladda/xp/totalThroughput_Avg.png"/>
-                  <p id="parameter">
-                    Description : Moyenne de 3 exécutions
-                  </p>
-                  <p id="xp">
-                    Grâce à la parallélisation Ladda a un meilleur débit de requêtes
-                  </p>
-                </section>
-
-                <section class="content-slide">
-                  <h3> Ladda &#10097; Est-ce qu'avec la délégation plus de requêtes sont
-                    exécutées par secondes ? </h3>
-                  <img src="./pictures/ladda/xp/nbExecQueries_AllLoaded_1.png"/>
-                  <p id="parameter">
-                    Description : Tous Chargé, 1 seul exécution
-                  </p>
-                  <p id="xp">
-                    Dès les premières minutes, Ladda exécutent plus de requêtes
-                  </p>
-                </section>
-
-                <section class="content-slide">
-                  <h3> Ladda &#10097; Est-ce la délégation impacte le temps de réponse par clients ?</h3>
-                  <img src="./pictures/ladda/xp/localExecutionTimeByClient_QuaterLoadedWithoutAsk2_Avg.png"/>
-                  <p id="parameter">
-                    Description : 1/4 Chargés, Moyenne sur 3 exécutions
-                  </p>
-                  <p id="xp">
-                    Ladda améliore le temps d'exécution local pour 3 clients
-                  </p>
-                </section>
-
-                <section class="content-slide">
-                  <h3> Ladda &#10097; Conclusion</h3>
-                  <p>
-                    Ladda <b>partage</b> les capacités d'<b>exécution de requêtes SPARQL</b> des
-                    consommateurs de la fédération
-                  </p>
-                  <p>
-                    Ladda permet de <b>paralléliser</b> l'exécution de requêtes en <b>déléguant</b> des
-                    requêtes à des voisins <b>libres</b>
-                  </p>
-                  <p>
-                    Ladda <b>réduit</b> le temps global d'exécution de la fédération
-                  </p>
-                </section>
-
-                <section class="content-slide">
-                  <h3> Ladda &#10097; Perspectives</h3>
-                  <p>
-                    Faire du parallélisme intra-requêtes
-                  </p>
-                </section>
-
-                <section class="part-slide">
-                  <h3> Conclusion </h3>
-                </section>
-
-                <section class="content-slide">
-                  <h3> Conclusion &#10097; Général </h3>
-                  <p>
-                    <b> Fédération de consommateurs de données :</b>
-                  </p>
-                  <ul>
-                    <li> où les consommateurs sont <b>connectées</b> entre eux ;</li>
-                    <li> où les consommateurs <b>partagent</b> leurs ressources. </li>
-                  </ul>
-                  <p>
-                    <b> Collaboration :</b>
-                  </p>
-                  <ul>
-                    <li> Espace disque : construction d'un <b>cache décentralisé</b> hébergé par
-                      les clients </li>
-                    <li> Bande passante &#38; capacité de calcul : <b>parallélisation inter-requêtes</b>
-                      en déléguant à des voisins libres</li>
-                  </ul>
-                </section>
-
-                <section class="content-slide">
-                  <h3> Conclusion &#10097; Perspectives </h3>
-                  <p>
-                    <b>CyCLaDEs + Ladda :</b>
-                  </p>
-                  <ul>
-                    <li> CyCLaDEs : réduit la pression sur le producteur de données</li>
-                    <li> Ladda : rend le cache Web plus efficace</li>
-                  </ul>
-                  <p>
-                    <b>Matérialisation de fragment:</b>
-                    <ul>
-                      <li> TPF <b>stocke</b> des fragments <i>partiels</i> et <i>complets</i>
-                      <li> Stocker des fragments <b>complets </b></li>
-                      <li> Une communauté peut stocker les fragments les plus <b>populaire</b></li>
-                    </ul>
-                  </p>
-                </section>
-
-                <section class="part-slide">
-                  <h3> Questions ? </h3>
-                </section>
+          <section class="part-slide">
+            <h3> Questions ? </h3>
+          </section>
               </div>
             </div>
 
