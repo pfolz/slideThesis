@@ -94,6 +94,38 @@
     </section>
 
     <section class="content-slide">
+      <h3> Données RDF </h3>
+      <img src="./pictures/intro/soccerGraph.svg"/>
+    </section>
+
+    <section class="content-slide">
+      <h3> Requête SPARQL </h3>
+      <p id="query">
+        <b>SELECT</b> ?clubName ?playerName <br>
+        <b>WHERE</b> { <br>
+          &nbsp ?club <span style="color:#2a76dd">a dbpedia-owl:SoccerClub</span>; <br>
+            &nbsp &nbsp &nbsp <span style="color:#2a76dd">dbpedia-owl:ground</span> ?city; <br>
+            &nbsp &nbsp &nbsp <span style="color:#2a76dd">rdfs:label</span> ?clubName. <br>
+          &nbsp ?player <span style="color:#2a76dd">dbpedia-owl:team</span> ?club; <br>
+            &nbsp &nbsp &nbsp <span style="color:#2a76dd">dbpedia-owl:birthPlace</span> ?city; <br>
+            &nbsp &nbsp &nbsp <span style="color:#2a76dd">rdfs:label</span> ?playerName. <br>
+          &nbsp ?city <span style="color:#2a76dd">dbpedia-owl:country dbpedia:Spain</span>. <br>
+        }
+      </p>
+    </section>
+
+    <section class="content-slide">
+      <h3> Comment exécuter une requête SPARQL ? </h3>
+      <p>
+        Nécessite une <b>interface SPARQL</b> :
+      </p>
+      <ul>
+        <li> <b> local </b> ;</li>
+        <li> sur un <b> serveur SPARQL</b>.</li>
+      </ul>
+    </section>
+
+    <section class="content-slide">
       <h3>Collaboration des consommateurs</h3>
       <p>
         <b>Pré-requis :</b>
