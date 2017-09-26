@@ -133,6 +133,9 @@
         Un serveur SPARQL est <b>performant</b> mais <b>peu disponible</b>
       </p>
       <my-citation class="fragment fade-in" data-fragment-index="1" number="1" author="C. B. Aranda" title="SPARQL Web-Querying Infrastructure: Ready for Action ?" conference="International Semantic Web Conference (ISWC)" date="2013"><my-citation>
+      <aside class="notes">
+        Serveur SPARQL passe pas à l'échelle
+      </aside>
     </section>
 
     <section class="content-slide">
@@ -149,6 +152,9 @@
       </p>
       <!-- <img src="./pictures/cyclades/main/tpfScale.png"/> -->
       <my-citation number="2" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
+      <aside class="notes">
+        Appel serveur TPF en temps constant
+      </aside>
     </section>
 
     <section class="content-slide">
@@ -180,25 +186,27 @@
     <section class="content-slide">
       <h3>Contributions </h3>
       <p>
-        <b>CyCLaDEs</b> : les consommateurs partagent leur <b>espace disque</b> et construisent
+        <b>CyCLaDEs</b> [3]: les consommateurs partagent leur <b>espace disque</b> et construisent
         un <b>cache décentralisé</b>
       </p>
       <p>
-        <b>Ladda</b> : les consommateurs partagent leur <b>capacité de calcul</b> et <b>bande
+        <b>Ladda</b> [4]: les consommateurs partagent leur <b>capacité de calcul</b> et <b>bande
           passante</b> et <b>parallélise</b> l'exécution de leurs requêtes SPARQL, en
           <b>déléguant</b> des requêtes à des voisins libres
-        </p>
-      </section>
+      </p>
+      <my-citation number="3" author="P. Folz" title="CyCLaDEs: a decentralized cache for triple pattern fragment" conference="Extended Semantic Web (ESWC)" date="2016"></my-citation>
+      <my-citation number="4" author="A. Graal" title="Ladda: SPARQL queries in a Fog of Browsers" conference="Extended Semantic Web (ESWC)" date="2017"></my-citation>
+    </section>
 
     <section class="part-slide">
       <h3>CyCLaDEs : Un cache collaboratif décentralisé pour les fragments TPF</h3>
     </section>
 
     <section class="content-slide">
-      <h3> Triple Pattern Fragment </h3>
-      <p>
+      <h3> Triple Pattern Fragment [2]</h3>
+      <!-- <p>
         Le médiateur TPF s'exécute dans un <b>navigateur Web</b>
-      </p>
+      </p> -->
       <p><b>Les caches</b> jouent un rôle important dans les <b>performances</b> de TPF :</p>
       <img src="./pictures/cyclades/main/tpfLogo.svg" height="110px" style="float:right;"/>
       <ul>
@@ -206,6 +214,7 @@
         <li> Les fragments sont suceptibles d'être <b>réutilisés</b> localement ou à travers les clients</li>
       </ul>
       <img src="./pictures/cyclades/main/tpfScale.png"/>
+        <my-citation number="2" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
     </section>
 
     <section class="content-slide">
