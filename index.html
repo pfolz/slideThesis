@@ -41,7 +41,7 @@
         </tr>-->
         <tr>
           <td><b> Rapporteurs :</b></td>
-          <td><b>Catherine Faron Zucker</b>, Maître de conférences, Sophia Antipolis</td>
+          <td><b>Catherine Faron Zucker</b>, Maître de conférences/Hdr, Sophia Antipolis</td>
         </tr>
         <tr>
           <td></td>
@@ -197,7 +197,7 @@
           <b>déléguant</b> des requêtes à des voisins libres
       </p>
       <my-citation number="3" author="P. Folz" title="CyCLaDEs: a decentralized cache for triple pattern fragment" conference="Extended Semantic Web (ESWC)" date="2016"></my-citation>
-      <my-citation number="4" author="A. Graal" title="Ladda: SPARQL queries in a Fog of Browsers" conference="Extended Semantic Web (ESWC)" date="2017"></my-citation>
+      <my-citation number="4" author="A. Grall" title="Ladda: SPARQL queries in a Fog of Browsers" conference="Extended Semantic Web (ESWC)" date="2017"></my-citation>
     </section>
 
     <section class="part-slide">
@@ -294,11 +294,13 @@
       <b> Table de hachage distribuées (DHT) : </b> distibue le cache à travers les participants [12] :
     </p>
     <img id="side" height="300px" src="./pictures/cyclades/main/dht.png"/>
-    <ul>
-      <li>Trouve le framgent s'il existe</li>
-      <li>Une requête &#8594; 20 000 appels &#8594; 20 000 sauts <i>log(n)</i>, n:
-        nombre de pairs</li>
-      </ul>
+    <p style="margin-left:1em;">
+      <span style="color:#6aa84fff; font-weight:bold">+</span>Trouve le framgent s'il existe
+    </p>
+    <p style="margin-left:1em;">
+      <span style="color:#a61c00ff; font-weight:bold">-</span> Une requête &#8594; 20 000 appels &#8594; 20 000 sauts <i>log(n)</i>, n:
+        nombre de pairs
+      <p>
       <my-citation number="12" author="M. El Dick" title:"A hydrid p2p overlay for effecient query processing in cdn" conference="Proceedings of the 12th International Conference on Extending Database Technology: Advances in Database Technology" date="2009"></my-citation>
     </section>
 
@@ -306,11 +308,15 @@
       <h3> Travaux connexes </h3>
       <p> <b>Cache comportemental :</b> connecte un nombre fixe de nœuds similaires [13] :</p>
       <img id="side" height="250px" src="./pictures/cyclades/main/behave.png"/>
-      <ul>
-        <li> Accès direct sans latence </li>
-        <li> Pas de garantie de trouver le fragment </li>
-        <li> Expérimenté avec des historiques de navigation Web </li>
-      </ul>
+      <p style="margin-left:1em;">
+        <span style="color:#6aa84fff; font-weight:bold">+</span> Accès direct sans latence
+      </p>
+      <p style="margin-left:1em;">
+        <span style="color:#a61c00ff; font-weight:bold">-</span> Pas de garantie de trouver le fragment
+      </p>
+      <p style="margin-left:1em;">
+        Expérimenté avec des historiques de navigation Web
+      </p>
       <p id="question">
         Et si on utilisait les caches comportementaux pour des historiques de requêtes ?
       </p>
@@ -318,7 +324,7 @@
     </section>
 
     <section class="content-slide">
-      <h3> Approche </h3>
+      <h3> Approche de CyCLaDEs </h3>
       <p>
         <b> Hypothèse :</b> Les clients qui exécutent des <b> requêtes similaires </b> dans le <b> passé </b>
         exécuteront des <b> requêtes similaires </b> dans le <b> futur </b> [14]
@@ -327,9 +333,9 @@
         <b> Approche :</b>
       </p>
       <ul class="fragment fade-in" data-fragment-index="1">
-        <li> Chaque client construit une vue fixe de voisins similaire avec un accès direct </li>
+        <li> Chaque client construit une <b>vue fixe de voisins similaires</b> avec un <b>accès direct</b> </li>
         <li> Pour chaque appel 1) vérifier le cache local 2) verifier le cache des voisins en
-          parallèle 3) aller au serveur </li>
+          <b>parallèle</b> 3) aller au serveur </li>
         </ul>
         <p id="question" class="fragment fade-in" data-fragment-index="2">
           Combien d'accès aux caches des voisins peut-on obtenir ?
@@ -338,7 +344,7 @@
       </section>
 
       <section class="content-slide">
-        <h3> Approche TPF </h3>
+        <h3> Approche de TPF </h3>
         <p>
           <img id="side" src="./pictures/cyclades/main/archTpf.png" />
           Beaucoup de clients accèdent au serveur TPF de manière concurrente, mais
@@ -347,7 +353,7 @@
       </section>
 
       <section class="content-slide">
-        <h3> Approche </h3>
+        <h3> Connecter les clients TPF </h3>
         <p>
           <img id="side" src="./pictures/cyclades/main/archCyclades.png"/>
           Connecte les nœuds à travers un réseau d'échantillonage aléatoire
@@ -363,14 +369,14 @@
           <li> <b>renouvelle périodiquement les voisins</b></li>
           <li> gère les arrivées et départs des nœuds et les partitions réseau</li>
         </ul>
-        <p class="fragment fade-in" data-fragment-index="2">
+        <p class="fragment fade-in" data-fragment-index="2" style="margin:0">
           Réseau implémenté par Cyclon [15]
         </p>
         <my-citation number="15" author="S. Voulgaris" title="Cyclon: Inexpensive membership managment for unstructured p2p overlay" conference="Journal of Network and Systems Managment" date="2005"></my-citation>
       </section>
 
       <section class="content-slide">
-        <h3> Approche </h3>
+        <h3> Comment gérer la similarité ? </h3>
         <p>
           <img id="side" height="480px" src="./pictures/cyclades/main/archCyclades2.png"/>
           Le réseau RPS garantit la connectivité entre tous les clients
@@ -391,7 +397,7 @@
       </section>
 
       <section class="content-slide">
-        <h3> Approche </h3>
+        <h3> Connecter les clients TPF similaires </h3>
         <p>
           <img id="side" height="480px" src="./pictures/cyclades/main/archCyclades3.png"/>
           Réseau superposé de similarité (CON) :
@@ -425,36 +431,31 @@
 
         <section class="content-slide">
           <h3> Algorithme de profilage </h3>
-          <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
-            <img src="./pictures/cyclades/main/algoCyclades_7.png"/>
-          </span>
           <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
-            <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="5">
-              <img src="./pictures/cyclades/main/algoCyclades_6.png"/>
-            </span>
+              <img src="./pictures/cyclades/main/algoCyclades_6.svg"/>
           </span>
           <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
             <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
-              <img src="./pictures/cyclades/main/algoCyclades_5.png"/>
+              <img src="./pictures/cyclades/main/algoCyclades_5.svg"/>
             </span>
           </span>
           <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
             <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="3">
-              <img src="./pictures/cyclades/main/algoCyclades_4.png"/>
+              <img src="./pictures/cyclades/main/algoCyclades_4.svg"/>
             </span>
           </span>
           <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
             <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="2">
-              <img src="./pictures/cyclades/main/algoCyclades_3.png"/>
+              <img src="./pictures/cyclades/main/algoCyclades_3.svg"/>
             </span>
           </span>
           <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
             <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="1">
-              <img src="./pictures/cyclades/main/algoCyclades_2.png"/>
+              <img src="./pictures/cyclades/main/algoCyclades_2.svg"/>
             </span>
           </span>
           <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
-            <img src="./pictures/cyclades/main/algoCyclades_1.png"/>
+            <img src="./pictures/cyclades/main/algoCyclades_1.svg"/>
           </span>
         </section>
 
