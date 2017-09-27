@@ -141,7 +141,7 @@
     </section>
 
     <section class="content-slide">
-      <h3> Triple Pattern Fragment [2]</h3>
+      <h3>Partager le coût d'exécution grâce à TPF [2]</h3>
       <img id="side" src="./pictures/intro/infra_2.png"/>
       <p>Les clients TPF exécutent des requêtes SPARQL sur des serveurs TPF :</p>
       <!-- <img src="./pictures/cyclades/main/tpfLogo.png"/ height="110px" style="float:right;"/> -->
@@ -596,119 +596,124 @@
           <img id="side" height="480px" src="./pictures/cyclades/main/xp.png"/>
           <p>
             <b> Jeux de données : </b>
-            Berlin Benchmark (BSBM) [17], choisit pour la simulation d'applications Web
+            <span style="color:#6B7177;">
+              Berlin Benchmark (BSBM) [17], choisit pour la simulation d'applications Web
+            </span>
           </p>
           <p>
-            Un serveur TPF avec un cache HTTP hébergeant les jeux de données BSBM
+            <b> Requêtes : </b>
+            <span style="color:#6B7177;">
+              Chaque <b>client</b> a un <b>emsemble de 25 requêtes</b> générées à partir
+              de <b>12 modèles</b>
+            </span>
           </p>
           <p>
-            Un réseau de clients TPF-CyCLaDEs exécutant des requêtes BSBM
+            <b> Environnement : </b>
+            <span style="color:#6B7177;">
+              Un serveur TPF et un cache Web
+            </span>
+          </p>
+          <p>
+            <b> Echange de voisins : </b>
+            <span style="color:#6B7177;">
+              toutes les 30 sec
+            </span>
+          </p>
+          <p>
+            <b>2 phases:</b>
+            <span style="color:#6B7177;">
+              initialisation et mesures
+            </span>
           </p>
           <my-citation number="17" author="C. Bizer" title="The berlin benchmark" conference="International Journal on Semantic Web and Information Systems" date="2009"></my-citation>
         </section>
 
         <section class="content-slide">
-          <h3> Paramètress d'expérimentations </h3>
-          <img id="side" height="480px" src="./pictures/cyclades/main/xp.png"/>
-          <p>
-            Chaque <b>client</b> a un <b>emsemble de 25 requêtes</b> générées à partir
-            de <b>12 modèles</b> :
+          <h3> Est-ce que le cache distribué passe à l'échelle ? </h3>
+          <figure style="float:left">
+            <img height="320px" src="./pictures/cyclades/xp/bsbm1M_TPF.png"/>
+            <figcaption> Sans CyCLaDEs </figcaption>
+          </figure>
+          <figure id="side">
+            <img id="side" height="320px" src="./pictures/cyclades/xp/bsbm1M_Cyclades.png"/>
+            <figcaption> Avec CyCLaDEs </figcaption>
+          </figure>
+          <p id="parameter">
+            Paramètres : BSBM 1M, cache = 1000, profil = 10, RPS(4,6,7), CON(9,15,20)
           </p>
-          <ul>
-            <li> Phases d'échange de voisins : toutes les 10 secondes </li>
-            <li> Deux étapes : </li>
-            <ol>
-              <li> Initialisation </li>
-              <li> Mesures </li>
-            </ul>
-          </section>
+          <p id="xp">
+            &#126; 20% des appels sont résolus par le cache décentralisé
+          </p>
+        </section>
 
-          <section class="content-slide">
-            <h3> Est-ce que le cache distribué passe à l'échelle ? </h3>
-            <figure style="float:left">
-              <img height="320px" src="./pictures/cyclades/xp/bsbm1M_TPF.png"/>
-              <figcaption> Sans CyCLaDEs </figcaption>
-            </figure>
-            <figure id="side">
-              <img id="side" height="320px" src="./pictures/cyclades/xp/bsbm1M_Cyclades.png"/>
-              <figcaption> Avec CyCLaDEs </figcaption>
-            </figure>
-            <p id="parameter">
-              Paramètres : BSBM 1M, cache = 1000, profil = 10, RPS(4,6,7), CON(9,15,20)
-            </p>
-            <p id="xp">
-              &#126; 20% des appels sont résolus par le cache décentralisé
-            </p>
-          </section>
+        <section class="content-slide">
+          <h3> Est-ce que la taille du jeux de données impacte le cache décentralisé ? </h3>
+          <img height="380px" src="./pictures/cyclades/xp/bsbmX_Cyclades.png"/>
+          <p id="parameter">
+            Paramètres : 10 clients, cache = 1000, RPS = 4, CON = 9
+          </p>
+          <p id="xp">
+            Le cache décentralisé résiste mieux que le cache local
+          </p>
+        </section>
 
-          <section class="content-slide">
-            <h3> Est-ce que la taille du jeux de données impacte le cache décentralisé ? </h3>
-            <img height="380px" src="./pictures/cyclades/xp/bsbmX_Cyclades.png"/>
-            <p id="parameter">
-              Paramètress : 10 clients, cache = 1000, RPS = 4, CON = 9
-            </p>
-            <p id="xp">
-              Le cache décentralisé résiste mieux que le cache local
-            </p>
-          </section>
+        <section class="content-slide">
+          <h3> CyCLaDEs avec deux communautés </h3>
+          <img id="side" height="380px" src="./pictures/cyclades/xp/exTwoCommunities.png"/>
+          <p>
+            Deux communautées accédent deux jeux de données BSBM <b> différents </b> sur le
+            même serveur
+          </p>
+          <p>
+            Les nœuds sont sur le même réseau aléatoire
+          </p>
+          <p id="question">
+            Est-ce que CyCLaDEs grâce aux profils va bien détecter les deux communautés ?
+          </p>
+        </section>
 
-          <section class="content-slide">
-            <h3> CyCLaDEs avec deux communautés </h3>
-            <img id="side" height="380px" src="./pictures/cyclades/xp/exTwoCommunities.png"/>
-            <p>
-              Deux communautées accédent deux jeux de données BSBM <b> différents </b> sur le
-              même serveur
-            </p>
-            <p>
-              Les nœuds sont sur le même réseau aléatoire
-            </p>
-            <p id="question">
-              Est-ce que CyCLaDEs grâce aux profils va bien détecter les deux communautés ?
-            </p>
-          </section>
+        <section class="content-slide">
+          <h3> Est-ce que la précision du profil impacte la définition des communautés ? </h3>
+          <figure style="float:left">
+            <img height="300px" src="./pictures/cyclades/xp/k_5.png"/>
+            <figcaption> Taille du profil = 5 </figcaption>
+          </figure>
+          <figure id="side">
+            <img height="300px" src="./pictures/cyclades/xp/k_30.png"/>
+            <figcaption> Taille du profil = 30 </figcaption>
+          </figure>
+          <p id="parameter">
+            Paramètres : 2 BSBM 1M, 50 clients par jeu de données, cache = 1000
+          </p>
+          <p id="xp">
+            Dans le réseau superposé CON, CyCLaDEs contruit deux communautés distinctes :
+            BSBM1 et BSBM2
+          </p>
+        </section>
 
-          <section class="content-slide">
-            <h3> Est-ce que la précision du profil impacte la définition des communautés ? </h3>
-            <figure style="float:left">
-              <img height="300px" src="./pictures/cyclades/xp/k_5.png"/>
-              <figcaption> Taille du profil = 5 </figcaption>
-            </figure>
-            <figure id="side">
-              <img height="300px" src="./pictures/cyclades/xp/k_30.png"/>
-              <figcaption> Taille du profil = 30 </figcaption>
-            </figure>
-            <p id="parameter">
-              Paramètress : 2 BSBM 1M, 50 clients par jeu de données, cache = 1000
-            </p>
-            <p id="xp">
-              Dans le réseau superposé CON, CyCLaDEs contruit deux communautés distinctes :
-              BSBM1 et BSBM2
-            </p>
-          </section>
+        <section class="content-slide">
+          <h3> Conclusion </h3>
+          <p>
+            CyCLaDEs construit un <b>cache décentralisé collaboratif</b> pour les clients TPF
+          </p>
+          <p>
+            CyCLaDEs <b>réduit</b> le nombre d'appels au <b>serveur</b> dans le contexte
+            d'<b>applications Web</b>.
+          </p>
+        </section>
 
-          <section class="content-slide">
-            <h3> Conclusion </h3>
-            <p>
-              CyCLaDEs contruit un <b>cache décentralisé</b> pour les clients TPF
-            </p>
-            <p>
-              CyCLaDEs <b>réduit</b> le nombre d'appels au <b>serveur</b> dans le contexte
-              d'<b>applications Web</b>.
-            </p>
-          </section>
-
-          <section class="content-slide">
-            <h3> Perspectives </h3>
-            <p>
-              Mesurer l'impact sur le <b> temps d'exécution </b>
-            </p>
-            <p>
-              CyCLaDEs <b>amène</b> les <b>données</b> aux <b>requêtes</b>
-            </p>
-            <p>
-              <b> Amener les requêtes </b> aux <b> données </b>
-            </p>
-          </section>
+        <section class="content-slide">
+          <h3> Perspectives </h3>
+          <p>
+            Mesurer l'impact sur le <b> temps d'exécution </b>
+          </p>
+          <p>
+            CyCLaDEs <b>amène</b> les <b>données</b> aux <b>requêtes</b>
+          </p>
+          <p>
+            <b> Amener les requêtes </b> aux <b> données </b>
+          </p>
+        </section>
 
           <section class="part-slide">
             <h3> Ladda : délégation de requête dans une fédération de consommateurs
