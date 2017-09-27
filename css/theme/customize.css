@@ -399,6 +399,6 @@ transition: color .15s ease; **/}
  * SLIDE NUMBER
  *********************************************/
  .reveal .slide-number {
-   font-size: 30pt;
+   font-size: 20pt;
    font-weight: bold;
  }
