@@ -730,9 +730,9 @@
               Chaque consommateur de données :
             </p>
             <ul>
-              <li> est connecté à nombre fixe de <b>voisins</b> choisis aléatoirement ; </li>
+              <li> est connecté à nombre fixe de <b>voisins</b> choisis <b>aléatoirement</b> ; </li>
               <li> est <b> autonome </b> ; </li>
-              <li> est un <b>médiateur</b> TPF ; </li>
+              <li> n'est <b>pas malicieux</b> ; </li>
               <li> peut <b>partager ses ressources</b>. </li>
             </ul>
           </section>
@@ -758,13 +758,27 @@
           </section>
 
           <section class="content-slide">
-            <h3>Description de l'approche Ladda</h3>
+            <h3>Comment utiliser le temps libre du serveur ?</h3>
             <p>
               <b> Objectif : </b> Paralléliser l'exécution des requêtes SPARQL
             </p>
-            <p>
-              Sur le même client ? Différents clients ?
+            <p class="fragment fade-in" data-fragment-index="1">
+              <b>Comment paralléliser :</b>
             </p>
+            <ul>
+              <li class="fragment fade-in" data-fragment-index="1">
+                Sur le <b>même client</b> :
+                <ul>
+                  <li class="fragment fade-in" data-fragment-index="2">Un client peut exécuter <b>plusieurs</b> appels HTTP pour une <b>même</b> requête</li>
+                  <li class="fragment fade-in" data-fragment-index="3">La <b>bande passante</b> d'un client est <b>limitée</b></li>
+                </ul>
+              </li>
+              <li class="fragment fade-in" data-fragment-index="4"> <b>Différents clients</b> :</li>
+              <ul>
+                <li class="fragment fade-in" data-fragment-index="5">Un client <b>parallélise ses requêtes</b> sur d'autres clients</li>
+                <li class="fragment fade-in" data-fragment-index="6">A condition qu'ils soient <b>disponibles</b></li>
+              </ul>
+            </ul>
           </section>
 
           <section class="content-slide">
@@ -783,20 +797,20 @@
           </section>
 
           <section class="content-slide">
-            <h3> Modèle </h3>
+            <h3> Modèle et problème </h3>
             <p>
               <b>Fédération</b> : consommateurs de données {C<sub>1</sub>, ..., C<sub>n</sub>}
             </p>
             <p class="fragment fade-in" data-fragment-index="0">
-              <b>Consommateur de données </b> <i>(C<sub>i</sub>)</i>: <span style="color:#009900"> Libre </span> &or;
-              <span style="color:#cc0000"> Occupé </span>, des voisins <i>(K)</i>, des requêtes en attente <i>(W)</i>
+              <b>Consommateur de données </b> <i>(C<sub>i</sub>)</i>: <span style="color:#86ba0cff"> Libre </span> &or;
+              <span style="color:#a61c00ff"> Occupé </span>, des voisins <i>(K)</i>, des requêtes en attente <i>(W)</i>
             </p>
             <p class="fragment fade-in" data-fragment-index="1">
               <b> Requête </b> <i>(Q<sub>i</sub>)</i>: identifiant, description, temps d'arrivée <i>(at)</i>,
               temps d'exécution <i>(et)</i>, temps de réponse <i>(rt)</i>
             </p>
             <p class="fragment fade-in" data-fragment-index="2">
-              <b> Allouer </b> : localement &or; à un voisin <span style="color:#009900"> Libre </span>
+              <b> Allouer </b> : localement &or; déléguer à un voisin <span style="color:#86ba0cff"> Libre </span>
             </p>
             <p id="question" class="fragment fade-in" data-fragment-index="3">
               Comment minimiser le temps de réponse pour les consommateurs de données ?
@@ -808,19 +822,24 @@
           </section>
 
           <section class="content-slide">
-            <h3>Quel sous-ensemble de voisins ?</h3>
+            <h3>A quels clients allouer des requêtes ?</h3>
             <p>
               Les consommateurs de données accèdent au <b> même </b> serveur TPF
             </p>
             <p>
               Même s'il est perfomant il a une <b> limite </b>
             </p>
+            <p style="margin-left:1em;">
+              &#8594; Déléguer à un sous-ensemble de clients
+            </p>
             <p>
-              Chaque consommateur de données va <b> interroger </b> un <b> sous-ensemble </b> de
-              <i>k</i> voisins
+              La délégation doit être <b>rapide</b>
+            </p>
+            <p style="margin-left:1em;">
+              &#8594; Déléguer à un sous-ensemble de <i>k</i> voisinss
             </p>
             <p id="question">
-              Faut-il choisir <i>k</i> voisins aléatoirs ou similaires ?
+              Faut-il choisir <i>k</i> voisins aléatoires ou similaires ?
             </p>
           </section>
 
@@ -835,10 +854,10 @@
 
           <section class="content-slide">
             <h3>Est-ce que le cache local est réutilisé entre 2 requêtes ?</h3>
-            <p> Exécution de 1509 requêtes sans effacement du cache <i>(reset off)</i> et
+            <p style="margin:0"> Exécution de 1509 requêtes sans effacement du cache <i>(reset off)</i> et
               avec effacement du cache <i>(reset on)</i> entre l'exécution de requêtes</p>
             <img src="./pictures/ladda/main/localityDBpedia.png"/>
-            <p> La <b>localité</b> n'a <b>pas d'impacte</b> sur la délégation </p>
+            <p style="margin:0"> La <b>localité</b> n'a <b>pas d'impacte</b> sur la délégation </p>
           </section>
 
           <section class="content-slide">
