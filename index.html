@@ -385,9 +385,9 @@
           C6 est connecté à C3 :
         </p>
         <ul class="fragment fade-in" data-fragment-index="1">
-          <li> C6 &#8594; DBpedia </li>
-          <li> C3 &#8594; DrugBank </li>
-          <li> C6 n'est pas <b> similaire </b> à C3 </li>
+          <li> C3 &#8594; DBpedia </li>
+          <li> C6 &#8594; DrugBank </li>
+          <li> C3 n'est pas <b> similaire </b> à C6 </li>
         </ul>
         <p class="fragment fade-in" data-fragment-index="2">
           Nécessite un second réseau superposer pour gérer la <b> similarité </b>
@@ -619,7 +619,7 @@
               toutes les 30 secondes
             </span>
           </p>
-          <p>
+          <p style="margin:0">
             <b>2 phases:</b>
             <span style="color:#6B7177;">
               initialisation et mesures
@@ -655,6 +655,16 @@
           <p id="xp">
             Le cache décentralisé résiste mieux que le cache local
           </p>
+          <aside class="notes">
+            Cache local <br>
+            1M : 0,1% <br>
+            10M : 0,01% <br>
+            100M : 0,001% <br>
+            Cache décentralisé <br>
+            1M : 0,9% <br>
+            10M : 0,09% <br>
+            100M : 0,009%
+          </aside>
         </section>
 
         <section class="content-slide">
@@ -732,7 +742,7 @@
               Chaque consommateur de données :
             </p>
             <ul>
-              <li> est connecté à nombre fixe de <b>voisins</b> choisis <b>aléatoirement</b> ; </li>
+              <li> est connecté à nombre fixe de <b>voisins</b> ; </li>
               <li> est <b> autonome </b> ; </li>
               <li> n'est <b>pas malicieux</b> ; </li>
               <li> peut <b>partager ses ressources</b>. </li>
@@ -938,6 +948,9 @@
             <p>
               <b> Approches : </b> <i>Ladda 2 (L2), Ladda K (LK)</i> et <i>Sans Délégation (SD)</i>
             </p>
+            <p style="margin:0">
+              <b>2 phases</b> : initialisation et mesures
+            </p>
             <p style="display: inline-block;
             font-size: 20px;
             float: left;
@@ -1046,8 +1059,20 @@
           <section class="content-slide">
             <h3> Perspectives</h3>
             <p>
-              Faire du parallélisme intra-requêtes
+              Ladda fait du parallélisme <b>inter-requêtes</b>
             </p>
+            <p>
+              Faire du parallélisme <b>intra-requêtes</b>
+            </p>
+            <ul>
+              <li>Paralléliser les sous-requêtes</li>
+            </ul>
+            <p>
+              Mettre en place un <b>estimateur de charge</b>
+            </p>
+            <ul>
+              <li>Réduire la charge lorsque le serveur est trop chargé</li>
+            </ul>
           </section>
 
           <section class="part-slide">
@@ -1087,7 +1112,7 @@
               <b>Matérialisation de fragment:</b>
               <ul>
                 <li> TPF <b>stocke</b> des fragments <i>partiels</i> et <i>complets</i>
-                <li> Stocker des fragments <b>complets </b></li>
+                <li> Matérialiser des fragments <b>complets </b></li>
                 <li> Une communauté peut stocker les fragments les plus <b>populaire</b></li>
               </ul>
             </p>
