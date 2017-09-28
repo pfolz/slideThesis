@@ -291,7 +291,7 @@
   <section class="content-slide">
     <h3> Travaux connexes </h3>
     <p>
-      <b> Table de hachage distribuées (DHT) : </b> distibue le cache à travers les participants [12] :
+      <b> Table de hachage distribuées (DHT) : </b> distibue le cache à travers les participants [5] :
     </p>
     <img id="side" height="300px" src="./pictures/cyclades/main/dht.png"/>
     <p style="margin-left:1em;">
@@ -301,12 +301,12 @@
       <span style="color:#a61c00ff; font-weight:bold">-</span> Une requête &#8594; 20 000 appels &#8594; 20 000 sauts <i>log(n)</i>, n:
         nombre de pairs
       <p>
-      <my-citation number="12" author="M. El Dick" title:"A hydrid p2p overlay for effecient query processing in cdn" conference="Proceedings of the 12th International Conference on Extending Database Technology: Advances in Database Technology" date="2009"></my-citation>
+      <my-citation number="5" author="M. El Dick" title:"A hydrid p2p overlay for effecient query processing in cdn" conference="Proceedings of the 12th International Conference on Extending Database Technology: Advances in Database Technology" date="2009"></my-citation>
     </section>
 
     <section class="content-slide">
       <h3> Travaux connexes </h3>
-      <p> <b>Cache comportemental :</b> connecte un nombre fixe de nœuds similaires [13] :</p>
+      <p> <b>Cache comportemental :</b> connecte un nombre fixe de nœuds similaires [6] :</p>
       <img id="side" height="250px" src="./pictures/cyclades/main/behave.png"/>
       <p style="margin-left:1em;">
         <span style="color:#6aa84fff; font-weight:bold">+</span> Accès direct sans latence
@@ -320,14 +320,14 @@
       <p id="question">
         Et si on utilisait les caches comportementaux pour des historiques de requêtes ?
       </p>
-      <my-citation number="13" author="D. Frey" title="Behavioral cache for web content" conference="Ditributed Applications and Interoperable System" date="2014"></my-citation>
+      <my-citation number="6" author="D. Frey" title="Behavioral cache for web content" conference="Ditributed Applications and Interoperable System" date="2014"></my-citation>
     </section>
 
     <section class="content-slide">
       <h3> Approche de CyCLaDEs </h3>
       <p>
         <b> Hypothèse :</b> Les clients qui exécutent des <b> requêtes similaires </b> dans le <b> passé </b>
-        exécuteront des <b> requêtes similaires </b> dans le <b> futur </b> [14]
+        exécuteront des <b> requêtes similaires </b> dans le <b> futur </b> [7]
       </p>
       <p class="fragment fade-in" data-fragment-index="1">
         <b> Approche :</b>
@@ -340,7 +340,7 @@
         <p id="question" class="fragment fade-in" data-fragment-index="2">
           Combien d'accès aux caches des voisins peut-on obtenir ?
         </p>
-        <my-citation number="14" author="M. D. Ekstrand" title="Collaborative filtering recommender systems" conference="Foundations and Trends in Human-Computer Interaction" date="2011"></my-citation>
+        <my-citation number="7" author="M. D. Ekstrand" title="Collaborative filtering recommender systems" conference="Foundations and Trends in Human-Computer Interaction" date="2011"></my-citation>
       </section>
 
       <section class="content-slide">
@@ -370,9 +370,9 @@
           <li> gère les arrivées et départs des nœuds et les partitions réseau</li>
         </ul>
         <p class="fragment fade-in" data-fragment-index="2" style="margin:0">
-          Réseau implémenté par Cyclon [15]
+          Réseau implémenté par Cyclon [8]
         </p>
-        <my-citation number="15" author="S. Voulgaris" title="Cyclon: Inexpensive membership managment for unstructured p2p overlay" conference="Journal of Network and Systems Managment" date="2005"></my-citation>
+        <my-citation number="8" author="S. Voulgaris" title="Cyclon: Inexpensive membership managment for unstructured p2p overlay" conference="Journal of Network and Systems Managment" date="2005"></my-citation>
       </section>
 
       <section class="content-slide">
@@ -391,9 +391,9 @@
         </ul>
         <p class="fragment fade-in" data-fragment-index="2">
           Nécessite un second réseau superposer pour gérer la <b> similarité </b>
-          comme proposé dans Gossple [16]
+          comme proposé dans Gossple [9]
         </p>
-        <my-citation number="16" author="M. Bertier" title="The gossple anonymous social network" conference="11th International Middleware Conference" date="2010"></my-citation>
+        <my-citation number="9" author="M. Bertier" title="The gossple anonymous social network" conference="11th International Middleware Conference" date="2010"></my-citation>
       </section>
 
       <section class="content-slide">
@@ -597,7 +597,7 @@
           <p>
             <b> Jeux de données : </b>
             <span style="color:#6B7177;">
-              Berlin Benchmark (BSBM) [17], choisit pour la simulation d'applications Web
+              Berlin Benchmark (BSBM) [10], choisit pour la simulation d'applications Web
             </span>
           </p>
           <p>
@@ -625,7 +625,7 @@
               initialisation et mesures
             </span>
           </p>
-          <my-citation number="17" author="C. Bizer" title="The berlin benchmark" conference="International Journal on Semantic Web and Information Systems" date="2009"></my-citation>
+          <my-citation number="10" author="C. Bizer" title="The berlin benchmark" conference="International Journal on Semantic Web and Information Systems" date="2009"></my-citation>
         </section>
 
         <section class="content-slide">
@@ -716,7 +716,7 @@
         </section>
 
           <section class="part-slide">
-            <h3> Ladda : délégation de requête dans une fédération de consommateurs
+            <h3> Ladda : délégation de requêtes dans une fédération de consommateurs
               de données liées </h3>
           </section>
 
@@ -783,7 +783,7 @@
 
           <section class="content-slide">
             <h3> Existe-t'il des clients libres ? </h3>
-            <p> Analyse des journaux réels [18] de DBpedia 3.8 sur 24 heures </p>
+            <p> Analyse des journaux réels [11] de DBpedia 3.8 sur 24 heures </p>
             <img height="280px"src="./pictures/ladda/main/queryDistribution.png"/>
             <p> <b>Beaucoup</b> de clients exécutent <b>peu</b> de requêtes </p>
             <p style="margin:0"> Il existe des clients <b>libres</b>, à condition qu'ils ne quittent pas
@@ -792,7 +792,7 @@
             font-size: 20px;
             float: left;
             text-align: left;margin:0; padding:0">
-              [18] <a href="url">https://eprints.soton.ac.uk/379399/</a>
+              [11] <a href="url">https://eprints.soton.ac.uk/379399/</a>
             </p>
           </section>
 
@@ -829,27 +829,30 @@
             <p>
               Même s'il est perfomant il a une <b> limite </b>
             </p>
-            <p style="margin-left:1em;">
+            <p class="fragment fade-in" data-fragment-index="0" style="margin-left:1em;">
               &#8594; Déléguer à un sous-ensemble de clients
             </p>
-            <p>
+            <p class="fragment fade-in" data-fragment-index="1">
               La délégation doit être <b>rapide</b>
             </p>
-            <p style="margin-left:1em;">
-              &#8594; Déléguer à un sous-ensemble de <i>k</i> voisinss
+            <p class="fragment fade-in" data-fragment-index="2" style="margin-left:1em;">
+              &#8594; Déléguer à un sous-ensemble de <i>k</i> voisins
             </p>
-            <p id="question">
+            <p class="fragment fade-in" data-fragment-index="3" id="question">
+              Quelle est la valeur de <i>k</i> ?
+            </p>
+            <p class="fragment fade-in" data-fragment-index="4" id="question">
               Faut-il choisir <i>k</i> voisins aléatoires ou similaires ?
             </p>
           </section>
 
           <section class="content-slide">
             <h3>Limite de parallélisation</h3>
-            <p style="margin:0">Allocation de 1509 requêtes des journaux de DBpedia de manière optimale LPT [19]</p>
+            <p style="margin:0">Allocation de 1509 requêtes des journaux de DBpedia de manière optimale LPT [12]</p>
             <img height="280px" src="./pictures/ladda/main/gainParallelizationOptimal.png"/>
             <p style="margin:0"> La parallélisation <b>réduit</b> le temps de réponse </p>
-            <p style="margin:0"> Paralléliser au-delà d'un certain seuil <b>ne réduit plus </b> le temps de réponse </p>
-            <my-citation number="19" author="M. Pinedo" title="Theory, Algorithms, and Systems (3nd ed.)" conference="Springer Science and Business Media" date="2008"></my-citation>
+            <p style="margin:0"> Paralléliser au-delà d'un certain seuil <b>ne réduit plus </b> le temps de réponse, <i>k</i> = 21 </p>
+            <my-citation number="12" author="M. Pinedo" title="Theory, Algorithms, and Systems (3nd ed.)" conference="Springer Science and Business Media" date="2008"></my-citation>
           </section>
 
           <section class="content-slide">
@@ -861,7 +864,7 @@
           </section>
 
           <section class="content-slide">
-            <h3>Algorithme</h3>
+            <h3>Exemple - Algorithme d'allocation de requêtes</h3>
 
             <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="7">
               <img height="620px" src="./pictures/ladda/main/algo_9.svg"/>
@@ -929,7 +932,7 @@
 
           <section class="content-slide">
             <h3> Expériences </h3>
-            <p><b> Configuration : </b></p>
+            <p><b> Configurations : </b></p>
             <p> Supposons une fédération de 6 médiateurs avec des requêtes </p>
             <table>
               <tr>
