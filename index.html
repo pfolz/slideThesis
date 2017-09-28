@@ -291,14 +291,14 @@
   <section class="content-slide">
     <h3> Travaux connexes </h3>
     <p>
-      <b> Table de hachage distribuées (DHT) : </b> distibue le cache à travers les participants [5] :
+      <b> Table de hachage distribuées (DHT) : </b> distribue le cache à travers les participants [5] :
     </p>
     <img id="side" height="300px" src="./pictures/cyclades/main/dht.png"/>
     <p style="margin-left:1em;">
-      <span style="color:#6aa84fff; font-weight:bold">+</span>Trouve le framgent s'il existe
+      <span style="color:#6aa84fff; font-weight:bold">+</span>Trouve le fragment s'il existe
     </p>
     <p style="margin-left:1em;">
-      <span style="color:#a61c00ff; font-weight:bold">-</span> Une requête &#8594; 20 000 appels &#8594; 20 000 sauts <i>log(n)</i>, n:
+      <span style="color:#a61c00ff; font-weight:bold">-</span> Une requête &#8594; 20 000 appels HTTP &#8594; 20 000 sauts <i>log(n)</i>, n:
         nombre de pairs
       <p>
       <my-citation number="5" author="M. El Dick" title:"A hydrid p2p overlay for effecient query processing in cdn" conference="Proceedings of the 12th International Conference on Extending Database Technology: Advances in Database Technology" date="2009"></my-citation>
@@ -581,7 +581,7 @@
             C1 exécute Q1
           </p>
           <p>
-            Pour chaque triplet, essayé de résoudre le triplet dans :
+            Pour chaque fragment, vérifier s'il est :
           </p>
           <ol>
             <li> Cache local </li>
@@ -616,7 +616,7 @@
           <p>
             <b> Echange de voisins : </b>
             <span style="color:#6B7177;">
-              toutes les 30 sec
+              toutes les 30 secondes
             </span>
           </p>
           <p>
@@ -693,6 +693,7 @@
 
         <section class="content-slide">
           <h3> Conclusion </h3>
+          <img id="side" src="./pictures/cyclades/main/archCyclades3.png"/>
           <p>
             CyCLaDEs construit un <b>cache décentralisé collaboratif</b> pour les clients TPF
           </p>
@@ -704,6 +705,7 @@
 
         <section class="content-slide">
           <h3> Perspectives </h3>
+          <img id="side" src="./pictures/cyclades/main/archCyclades3.png"/>
           <p>
             Mesurer l'impact sur le <b> temps d'exécution </b>
           </p>
@@ -779,6 +781,9 @@
                 <li class="fragment fade-in" data-fragment-index="6">A condition qu'ils soient <b>disponibles</b></li>
               </ul>
             </ul>
+            <p class="fragment fade-in" data-fragment-index="7">
+              <b>Hypothèse :</b> il existe des clients <b>libres</b> dans la fédération
+            </p>
           </section>
 
           <section class="content-slide">
@@ -857,10 +862,11 @@
 
           <section class="content-slide">
             <h3>Est-ce que le cache local est réutilisé entre 2 requêtes ?</h3>
-            <p style="margin:0"> Exécution de 1509 requêtes sans effacement du cache <i>(reset off)</i> et
+            <p style="margin:0"> Exécution de 1509 requêtes sans <i>(reset off)</i> et
               avec effacement du cache <i>(reset on)</i> entre l'exécution de requêtes</p>
             <img src="./pictures/ladda/main/localityDBpedia.png"/>
             <p style="margin:0"> La <b>localité</b> n'a <b>pas d'impacte</b> sur la délégation </p>
+            <p style="margin:0"> Délégation à des <b>voisins aléatoires</b> </p>
           </section>
 
           <section class="content-slide">
@@ -917,16 +923,26 @@
               DBpedia 3.8
             </p>
             <p>
-              <b> Requêtes : </b> des 50 premiers clients de l'heure 5 = 1509 requêtes
+              <b> Requêtes : </b> des 50 premiers clients de l'heure 5 = 1509 requêtes,
+              provenant du journal réel USEWOD 2013 [11]
             </p>
             <p>
-              <b> Environnement : </b> un serveur TPF (4 workers) et un cache Web
+              <b> Environnement : </b> un serveur TPF (4 workers) et un cache HTTP
             </p>
             <p>
               <b> Clients : </b> 50 médiateurs Ladda-TPF
             </p>
             <p>
+              <b> Phase d'échange des voisins </b> : toutes les 30 secondes
+            </p>
+            <p>
               <b> Approches : </b> <i>Ladda 2 (L2), Ladda K (LK)</i> et <i>Sans Délégation (SD)</i>
+            </p>
+            <p style="display: inline-block;
+            font-size: 20px;
+            float: left;
+            text-align: left;margin:0; padding:0">
+              [11] <a href="url">https://eprints.soton.ac.uk/379399/</a>
             </p>
           </section>
 
