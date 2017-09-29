@@ -95,9 +95,23 @@
 
     <section class="content-slide">
       <h3> Données RDF </h3>
-      <!-- <img src="./pictures/intro/soccerGraph.svg"/> -->
       <object data="./pictures/intro/soccerGraph.svg">
       </object>
+      <aside class="notes">
+        Le web des données est décentralisé <br>
+        N'importe qui peut contribuer <br>
+        Faits derrière des Urls <br>
+      </aside>
+    </section>
+
+    <section class="content-slide">
+      <h3> Le Web des données est distribué </h3>
+      <figure>
+        <img  height="530px" src="./pictures/intro/lodResize.png"/>
+        <figcaption style="font-size:20px">
+          Diagramme du Linked Open Data cloud du 26 janvier 2017 (1146 jeux de données)
+        </figcaption>
+      </figure>
     </section>
 
     <section class="content-slide">
@@ -114,9 +128,71 @@
           &nbsp ?city <span style="color:#2a76dd">dbpedia-owl:country dbpedia:Spain</span>. <br>
         }
       </p>
+      <aside class="notes">
+        Pr qu'une requête fonctionne il faut l'ensemble des faits <br>
+        Faits épparpillés sur le web <br>
+        Comment faire <br>
+      </aside>
     </section>
 
     <section class="content-slide">
+      <h3>Awsome title</h3>
+      <table>
+        <tr>
+          <td></td>
+          <td><b>Consommateurs de données</b></td>
+          <td><b>Producteurs de données</b></td>
+          <td></td>
+          <td>P</td>
+          <td>D</td>
+          <td>F</td>
+        </tr>
+        <tr>
+          <td style="background-color:#a61c00ff"></td>
+          <td>Crawler</td>
+          <td>Serveur Web</td>
+          <td style="background-color:#6aa84fff"></td>
+          <td>-</td>
+          <td>++</td>
+          <td>++</td>
+        </tr>
+        <tr>
+          <td style="background-color:#ef7c00ff"></td>
+          <td>Serveur SPARQL</td>
+          <td>Serveur FTP</td>
+          <td style="background-color:#6aa84fff"></td>
+          <td>++</td>
+          <td>++</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td style="background-color:#ef7c00ff"></td>
+          <td>Jointures</td>
+          <td>Serveur SPARQL sélectif</td>
+          <td style="background-color:#ef7c00ff"></td>
+          <td>~</td>
+          <td>++</td>
+          <td>++</td>
+        </tr>
+        <tr>
+          <td style="background-color:#6aa84fff"></td>
+          <td>Requête SPARQL</td>
+          <td>Serveur SPARQL</td>
+          <td style="background-color:#a61c00ff"></td>
+          <td>++</td>
+          <td>-</td>
+          <td>++</td>
+        </tr>
+      </table>
+      <p>
+        P = Performance, D = Disponibilité, F = Fraîcheur
+      </p>
+      <p>
+        Toutes ces approches considèrent un seul client et un seul serveur
+      </p>
+    </section>
+
+    <!-- <section class="content-slide">
       <h3> Comment exécuter une requête SPARQL ? </h3>
       <img id="side" src="./pictures/intro/infra_1.png"/>
       <p>
@@ -144,7 +220,7 @@
       <h3>Partager le coût d'exécution grâce à TPF [2]</h3>
       <img id="side" src="./pictures/intro/infra_2.png"/>
       <p>Les clients TPF exécutent des requêtes SPARQL sur des serveurs TPF :</p>
-      <!-- <img src="./pictures/cyclades/main/tpfLogo.png"/ height="110px" style="float:right;"/> -->
+       <img src="./pictures/cyclades/main/tpfLogo.png"/ height="110px" style="float:right;"/>
       <ul>
         <li> <b>Minimise le traitement</b> côté serveur, grâce à des requêtes de fragment </li>
         <li> <b>Jointures</b> exécutées du côté <b>clients</b> </li>
@@ -152,7 +228,7 @@
       <p class="fragment fade-in">
         Les serveurs TPF sont <b>moins performant</b> que les serveurs SPARQL, mais <b>plus disponible</b>
       </p>
-      <!-- <img src="./pictures/cyclades/main/tpfScale.png"/> -->
+       <img src="./pictures/cyclades/main/tpfScale.png"/>
       <my-citation number="2" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
       <aside class="notes">
         Appel serveur TPF en temps constant
@@ -173,7 +249,7 @@
         <li>Capacité de calcul</li>
         <li>Bande passante</li>
       </ul>
-    </section>
+    </section> -->
 
     <section>
       <blockquote>
@@ -189,12 +265,12 @@
       <h3>Contributions </h3>
       <p>
         <b>CyCLaDEs</b> [3]: les consommateurs partagent leur <b>espace disque</b> et construisent
-        un <b>cache décentralisé</b>
+        un <b>cache collaboratif</b>
       </p>
       <p>
         <b>Ladda</b> [4]: les consommateurs partagent leur <b>capacité de calcul</b> et <b>bande
           passante</b> et <b>parallélise</b> l'exécution de leurs requêtes SPARQL, en
-          <b>déléguant</b> des requêtes à des voisins libres
+          faisant de <b>l'équilibrage de charge</b>
       </p>
       <my-citation number="3" author="P. Folz" title="CyCLaDEs: a decentralized cache for triple pattern fragment" conference="Extended Semantic Web (ESWC)" date="2016"></my-citation>
       <my-citation number="4" author="A. Grall" title="Ladda: SPARQL queries in a Fog of Browsers" conference="Extended Semantic Web (ESWC)" date="2017"></my-citation>
@@ -994,7 +1070,7 @@
             </p>
           </section>
 
-          <!-- <section class="content-slide">
+          <section class="content-slide">
             <h3> Est-ce qu'avec la délégation plus de requêtes sont
               exécutées par secondes ? </h3>
             <img src="./pictures/ladda/xp/totalThroughput_Avg.png"/>
@@ -1016,7 +1092,7 @@
             <p id="xp">
               Dès les premières minutes, Ladda exécutent plus de requêtes
             </p>
-          </section> -->
+          </section>
 
           <section class="content-slide">
             <h3> Est-ce la délégation impacte le temps de réponse par clients ?</h3>
