@@ -48,7 +48,7 @@
           <td><b> Esther Pacitti</b>, Professeur, Université de Montpellier</td>
         </tr>
         <tr>
-          <td><b> Examinateur :</b></td>
+          <td><b> Examinateurs :</b></td>
           <td><b>Hubert Naacke</b>, Maître de conférences, Université Paris 6</td>
         </tr>
         <tr>
@@ -202,10 +202,16 @@
     <section class="content-slide">
       <h3>Exploration de nouveaux compromis</h3>
       <img id="side" src="./pictures/intro/multipleClients.svg"/>
-      <p>Considérer <b>plusieurs</b> clients pour exécuter des requêtes SPARQL</p>
-      <p>Faire <b>collaborer</b> ces clients</p>
-      <p>Augmente les <b>ressources</b> du côté clients :</p>
-      <ul>
+      <p class="fragment fade-in" data-fragment-index="0">
+        Considérer <b>plusieurs</b> clients pour exécuter des requêtes SPARQL
+      </p>
+      <p class="fragment fade-in" data-fragment-index="1">
+        Faire <b>collaborer</b> ces clients
+      </p>
+      <p class="fragment fade-in" data-fragment-index="2">
+        Augmente les <b>ressources</b> du côté client :
+      </p>
+      <ul class="fragment fade-in" data-fragment-index="2">
         <li>Espace disque</li>
         <li>Capacité de calcul</li>
         <li>Bande passante</li>
@@ -300,7 +306,19 @@
     </section>
 
     <section class="content-slide">
-      <h3> Triple Pattern Fragment [2]</h3>
+      <h3> Triple Pattern Fragment </h3>
+      <p>Les clients TPF exécutent des requêtes SPARQL sur des serveurs TPF [2] :</p>
+      <img src="./pictures/cyclades/main/tpfLogo.png"/ height="110px" style="float:right;"/>
+      <ul>
+        <li> <b>Minimise le traitement</b> côté serveur, grâce aux fragments </li>
+        <li> <b>Jointures</b> exécutées du côté <b>clients</b> </li>
+      </ul>
+      <img src="./pictures/cyclades/main/tpfScale.png"/>
+      <my-citation number="2" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
+    </section>
+
+    <section class="content-slide">
+      <h3> Triple Pattern Fragment</h3>
       <!-- <p>
         Le médiateur TPF s'exécute dans un <b>navigateur Web</b>
       </p> -->
@@ -798,10 +816,15 @@
 
         <section class="content-slide">
           <h3> Conclusion </h3>
-          <img id="side" src="./pictures/cyclades/main/archCyclades3.png"/>
+          <img height="560px" id="side" src="./pictures/cyclades/main/archCyclades3.png"/>
           <p>
-            CyCLaDEs construit un <b>cache décentralisé collaboratif</b> pour les clients TPF
+            CyCLaDEs construit une <b>fédération</b> de consommateurs de données liées où :
           </p>
+          <ul>
+            <li>les clients sont <b>connectés</b> ;</li>
+            <li>les clients <b>partagent</b> leurs ressources ;</li>
+            <li>les clients construisent un <b>cache décentralisé collaboratif</b>.</li>
+          </ul>
           <p>
             CyCLaDEs <b>réduit</b> le nombre d'appels au <b>serveur</b> dans le contexte
             d'<b>applications Web</b>.
@@ -823,8 +846,51 @@
         </section>
 
           <section class="part-slide">
-            <h3> Ladda : délégation de requêtes dans une fédération de consommateurs
+            <h3> Ladda : équilibrage de charge dans une fédération de consommateurs
               de données liées </h3>
+          </section>
+
+          <section class="content-slide">
+            <h3>Comment exécuter ses requêtes ?</h3>
+            <img id="side" src="./pictures/intro/multipleClients.svg"/>
+            <p>Chaque client à des <b>requêtes</b> à exécuter</p>
+            <p>
+              C1 à un <b>ensemble de requêtes</b> Q1-Q6 à exécuter
+            </p>
+            <p id="question">
+              Est-ce qu'il les exécute lui même ou il délégue à
+              ses voisins ?
+            </p>
+          </section>
+
+          <section class="content-slide">
+            <h3>Equilibrer sa charge</h3>
+            <img id="side" src="./pictures/intro/multipleClients.svg"/>
+            <p>
+              <b>Déléguer</b> des requêtes à des voisins est avantageux si :
+            </p>
+            <span id="ladda1" style="float:left;padding:1em 0 0 0"></span>
+            <script>
+              katex.render("ET(W1@C_{1}) > ET(W1@\\{C_{1}-C_{16}\\})", ladda1);
+            </script>
+            <p id="question" style="margin-top:4em">
+              A quelles conditions cette inégalité est-elle vraie ?
+            </p>
+          </section>
+
+          <section class="content-slide">
+            <h3>Awesome title</h3>
+            <p>
+              Dans TPF une requête SPARQL :
+            </p>
+            <ul>
+              <li>est décomposée en <b>sous-requêtes</b> (TPQ);</li>
+              <li>constitue une charge côté <b>client</b> et côté <b>serveur</b></li>
+            </ul>
+            <p>Les clients accèdent au <b>même</b> serveur</p>
+            <p id="question">
+              Normalement ça ne devrait pas fonctionner
+            </p>
           </section>
 
           <section class="content-slide">
