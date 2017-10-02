@@ -136,20 +136,21 @@
     </section>
 
     <section class="content-slide">
-      <h3>Awsome title</h3>
+      <h3>Interroger le Web des données</h3>
+      <p>Différents <b>compromis</b> selon l'approche</p>
       <table>
         <tr>
           <td></td>
-          <td><b>Consommateurs de données</b></td>
-          <td><b>Producteurs de données</b></td>
+          <td style="text-align:center"><b>Consommateurs de données</b></td>
+          <td style="text-align:center"><b>Producteurs de données</b></td>
           <td></td>
-          <td>P</td>
-          <td>D</td>
-          <td>F</td>
+          <td><b>P</b></td>
+          <td><b>D</b></td>
+          <td><b>F</b></td>
         </tr>
         <tr>
           <td style="background-color:#a61c00ff"></td>
-          <td>Crawler</td>
+          <td>Robot d'indexation</td>
           <td>Serveur Web</td>
           <td style="background-color:#6aa84fff"></td>
           <td>-</td>
@@ -167,7 +168,7 @@
         </tr>
         <tr>
           <td style="background-color:#ef7c00ff"></td>
-          <td>Jointures</td>
+          <td>Jointures des données</td>
           <td>Serveur SPARQL sélectif</td>
           <td style="background-color:#ef7c00ff"></td>
           <td>~</td>
@@ -184,12 +185,31 @@
           <td>++</td>
         </tr>
       </table>
-      <p>
-        P = Performance, D = Disponibilité, F = Fraîcheur
+      <p style="margin:0">
+        <b>P</b> = Performance, <b>D</b> = Disponibilité, <b>F</b> = Fraîcheur
       </p>
-      <p>
-        Toutes ces approches considèrent un seul client et un seul serveur
+      <p style="margin:0">
+        <span style="background-color:#a61c00ff">&nbsp&nbsp&nbsp</span>
+        <span style="background-color:#ef7c00ff">&nbsp&nbsp&nbsp</span>
+        <span style="background-color:#6aa84fff">&nbsp&nbsp&nbsp</span>
+        = Effort à fournir
       </p>
+      <p id="question" class="fragment fade-in" style="magin:0">
+        Toutes ces approches considèrent un <b>seul client</b>
+      </p>
+    </section>
+
+    <section class="content-slide">
+      <h3>Exploration de nouveaux compromis</h3>
+      <img id="side" src="./pictures/intro/multipleClients.svg"/>
+      <p>Considérer <b>plusieurs</b> clients pour exécuter des requêtes SPARQL</p>
+      <p>Faire <b>collaborer</b> ces clients</p>
+      <p>Augmente les <b>ressources</b> du côté clients :</p>
+      <ul>
+        <li>Espace disque</li>
+        <li>Capacité de calcul</li>
+        <li>Bande passante</li>
+      </ul>
     </section>
 
     <!-- <section class="content-slide">
@@ -269,8 +289,7 @@
       </p>
       <p>
         <b>Ladda</b> [4]: les consommateurs partagent leur <b>capacité de calcul</b> et <b>bande
-          passante</b> et <b>parallélise</b> l'exécution de leurs requêtes SPARQL, en
-          faisant de <b>l'équilibrage de charge</b>
+          passante</b> et font de <b>l'équilibrage de charge</b>
       </p>
       <my-citation number="3" author="P. Folz" title="CyCLaDEs: a decentralized cache for triple pattern fragment" conference="Extended Semantic Web (ESWC)" date="2016"></my-citation>
       <my-citation number="4" author="A. Grall" title="Ladda: SPARQL queries in a Fog of Browsers" conference="Extended Semantic Web (ESWC)" date="2017"></my-citation>
