@@ -94,7 +94,7 @@
     </section>
 
     <section class="content-slide">
-      <h3> Données RDF </h3>
+      <h3> Web des données : Url &#8594; faits </h3>
       <object data="./pictures/intro/soccerGraph.svg">
       </object>
       <aside class="notes">
@@ -168,7 +168,7 @@
         </tr>
         <tr>
           <td style="background-color:#ef7c00ff"></td>
-          <td>Jointures des données</td>
+          <td>Clients intelligents</td>
           <td>Serveur SPARQL sélectif</td>
           <td style="background-color:#ef7c00ff"></td>
           <td>~</td>
@@ -194,7 +194,7 @@
         <span style="background-color:#6aa84fff">&nbsp&nbsp&nbsp</span>
         = Effort à fournir
       </p>
-      <p id="question" class="fragment fade-in" style="magin:0">
+      <p id="question" class="fragment fade-in" style="margin:0">
         Toutes ces approches considèrent un <b>seul client</b>
       </p>
     </section>
@@ -851,14 +851,31 @@
           </section>
 
           <section class="content-slide">
+            <h3> Contexte </h3>
+            <img id="side" src="./pictures/ladda/main/archCyclades.svg"/>
+            <p>
+              <b>Fédération</b> de consommateurs de données liées
+            </p>
+            <p>
+              Chaque consommateur de données :
+            </p>
+            <ul>
+              <li> est connecté à nombre fixe de <b>voisins</b> ; </li>
+              <li> est <b> autonome </b> ; </li>
+              <li> n'est <b>pas malicieux</b> ; </li>
+              <li> peut <b>partager ses ressources</b>. </li>
+            </ul>
+          </section>
+
+          <section class="content-slide">
             <h3>Comment exécuter ses requêtes ?</h3>
             <img id="side" src="./pictures/intro/multipleClients.svg"/>
             <p>Chaque client à des <b>requêtes</b> à exécuter</p>
             <p>
-              C1 à un <b>ensemble de requêtes</b> Q1-Q6 à exécuter
+              C1 a un <b>ensemble de requêtes</b> Q1-Q6 à exécuter
             </p>
             <p id="question">
-              Est-ce qu'il les exécute lui même ou il délégue à
+              Est-ce qu'il les exécute lui-même ou il délégue à
               ses voisins ?
             </p>
           </section>
@@ -879,38 +896,31 @@
           </section>
 
           <section class="content-slide">
-            <h3>Awesome title</h3>
+            <h3>Parraléliser l'exécution de requête</h3>
+            <img height="580px" id="side" src="./pictures/ladda/main/loadClientServer.svg"/>
             <p>
               Dans TPF une requête SPARQL :
             </p>
             <ul>
               <li>est décomposée en <b>sous-requêtes</b> (TPQ);</li>
-              <li>constitue une charge côté <b>client</b> et côté <b>serveur</b></li>
+              <li>constitue une <b>charge</b> côté <b>client</b> et côté <b>serveur</b></li>
             </ul>
             <p>Les clients accèdent au <b>même</b> serveur</p>
-            <p id="question">
-              Normalement ça ne devrait pas fonctionner
+            <p id="question" class="fragment fade-in">
+              Normalement paralléliser des requêtes sur le même serveur TPF
+              ne devrait pas fonctionner
             </p>
           </section>
 
           <section class="content-slide">
-            <h3> Contexte </h3>
-            <img id="side" src="./pictures/ladda/main/archCyclades.svg"/>
-            <p>
-              <b>Fédération</b> de consommateurs de données liées
-            </p>
-            <p>
-              Chaque consommateur de données :
-            </p>
-            <ul>
-              <li> est connecté à nombre fixe de <b>voisins</b> ; </li>
-              <li> est <b> autonome </b> ; </li>
-              <li> n'est <b>pas malicieux</b> ; </li>
-              <li> peut <b>partager ses ressources</b>. </li>
-            </ul>
+            <h3>Sauf que le serveur à encore du temps libre</h3>
+            <span class="fragment fade-in" data-fragment-index="0" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" >
+              <img height="580px" src="./pictures/ladda/main/motivatingBis_2.svg"/>
+            </span>
+            <img class="fragment fade-out" data-fragment-index="0" height="580px" src="./pictures/ladda/main/motivatingBis_1.svg"/>
           </section>
 
-          <section class="content-slide">
+          <!-- <section class="content-slide">
             <h3>Exécution de requêtes avec TPF</h3>
             <span class="fragment fade-in" data-fragment-index="1" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" >
               <img height="580px" src="./pictures/ladda/main/motivating_3.svg"/>
@@ -921,43 +931,45 @@
               </span>
             </span>
             <img class="fragment fade-out" data-fragment-index="0" height="580px" src="./pictures/ladda/main/motivating_1.svg"/>
-          </section>
+          </section> -->
 
           <section>
             <blockquote>
-              Est-ce qu'utiliser le temps libre du serveur améliore les performances
-              des clients TPF ?
+              Est-ce que paralléliser les requêtes permet d'aller plus vite ?
             </blockquote>
           </section>
 
           <section class="content-slide">
-            <h3>Comment utiliser le temps libre du serveur ?</h3>
+            <h3>Comment paralléliser les requêtes ?</h3>
             <p>
-              <b> Objectif : </b> Paralléliser l'exécution des requêtes SPARQL
-            </p>
-            <p class="fragment fade-in" data-fragment-index="1">
-              <b>Comment paralléliser :</b>
+              Sur le <b>même client</b> :
             </p>
             <ul>
-              <li class="fragment fade-in" data-fragment-index="1">
-                Sur le <b>même client</b> :
-                <ul>
-                  <li class="fragment fade-in" data-fragment-index="2">Un client peut exécuter <b>plusieurs</b> appels HTTP pour une <b>même</b> requête</li>
-                  <li class="fragment fade-in" data-fragment-index="3">La <b>bande passante</b> d'un client est <b>limitée</b></li>
-                </ul>
+                <li class="fragment fade-in" data-fragment-index="1">
+                  Un client peut exécuter <b>plusieurs</b> appels HTTP en <b>même temps</b>
+                  pour une <b>même</b> requête
+                </li>
+                <li class="fragment fade-in" data-fragment-index="2">
+                  La <b>bande passante</b> d'un client est <b>limitée</b>
+                </li>
+            </ul>
+            <p class="fragment fade-in" data-fragment-index="3">
+              Sur <b>plusieurs clients</b> :
+            </p>
+            <ul>
+              <li class="fragment fade-in" data-fragment-index="4">
+                Un client <b>parallélise ses requêtes</b> sur d'autres clients
               </li>
-              <li class="fragment fade-in" data-fragment-index="4"> <b>Différents clients</b> :</li>
-              <ul>
-                <li class="fragment fade-in" data-fragment-index="5">Un client <b>parallélise ses requêtes</b> sur d'autres clients</li>
-                <li class="fragment fade-in" data-fragment-index="6">A condition qu'ils soient <b>disponibles</b></li>
-              </ul>
+              <li class="fragment fade-in" data-fragment-index="5">
+                A condition qu'ils soient <b>disponibles</b>
+              </li>
             </ul>
             <p class="fragment fade-in" data-fragment-index="7">
               <b>Hypothèse :</b> il existe des clients <b>libres</b> dans la fédération
             </p>
           </section>
 
-          <section class="content-slide">
+          <!-- <section class="content-slide">
             <h3> Existe-t'il des clients libres ? </h3>
             <p> Analyse des journaux réels [11] de DBpedia 3.8 sur 24 heures </p>
             <img height="280px"src="./pictures/ladda/main/queryDistribution.png"/>
@@ -970,7 +982,7 @@
             text-align: left;margin:0; padding:0">
               [11] <a href="url">https://eprints.soton.ac.uk/379399/</a>
             </p>
-          </section>
+          </section> -->
 
           <section class="content-slide">
             <h3> Modèle et problème </h3>
@@ -1180,17 +1192,6 @@
           </section>
 
           <section class="content-slide">
-            <h3> Est-ce la délégation impacte le temps de réponse par clients ?</h3>
-            <img src="./pictures/ladda/xp/localExecutionTimeByClient_QuaterLoadedWithoutAsk2_Avg.png"/>
-            <p id="parameter">
-              Description : 1/4 Chargés, Moyenne sur 3 exécutions
-            </p>
-            <p id="xp">
-              Ladda améliore le temps d'exécution local pour 3 clients
-            </p>
-          </section>
-
-          <section class="content-slide">
             <h3>Est-ce que la parallélisation de requêtes impacte l’utilisation du
               serveur de cache HTTP ?</h3>
               <img src="./pictures/ladda/xp/nbCallsWebCache.png"/>
@@ -1200,6 +1201,17 @@
               <p id="xp">
                 Plus il y a de parallélisation de requêtes, plus le cache est <b>utile</b>
               </p>
+          </section>
+
+          <section class="content-slide">
+            <h3> Est-ce la délégation impacte le temps de réponse par clients ?</h3>
+            <img src="./pictures/ladda/xp/localExecutionTimeByClient_QuaterLoadedWithoutAsk2_Avg.png"/>
+            <p id="parameter">
+              Description : 1/4 Chargés, Moyenne sur 3 exécutions
+            </p>
+            <p id="xp">
+              Ladda améliore le temps d'exécution local pour 3 clients
+            </p>
           </section>
 
           <section class="content-slide">
