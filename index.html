@@ -469,7 +469,7 @@
       </p>
       <ul class="fragment fade-in" data-fragment-index="1">
         <li> Chaque client construit une <b>vue fixe de voisins similaires</b> avec un <b>accès direct</b> </li>
-        <li> Pour chaque appel 1) vérifier le cache local 2) verifier le cache des voisins en
+        <li> Pour chaque appel 1) vérifier le cache local 2) vérifier le cache des voisins en
           <b>parallèle</b> 3) aller au serveur </li>
         </ul>
         <p id="question" class="fragment fade-in" data-fragment-index="2">
@@ -716,7 +716,7 @@
             C1 exécute Q1
           </p>
           <p>
-            Pour chaque fragment, vérifier s'il est :
+            Pour chaque appel HTTP, vérifier s'il est :
           </p>
           <ol>
             <li> Cache local </li>
@@ -899,7 +899,7 @@
 
           <section class="content-slide">
             <h3>Comment exécuter ses requêtes ?</h3>
-            <img id="side" src="./pictures/intro/multipleClients.svg"/>
+            <img id="side" src="./pictures/ladda/main/multipleClientsConnected.svg"/>
             <p>Chaque client à des <b>requêtes</b> à exécuter</p>
             <p>
               C1 a un <b>ensemble de requêtes</b> Q1-Q6 à exécuter
@@ -969,6 +969,31 @@
           </section>
 
           <section class="content-slide">
+            <h3> Modèle et problème </h3>
+            <p>
+              <b>Fédération</b> : consommateurs de données {C<sub>1</sub>, ..., C<sub>n</sub>}
+            </p>
+            <p class="fragment fade-in" data-fragment-index="0">
+              <b>Consommateur de données </b> <i>(C<sub>i</sub>)</i>: <span style="color:#86ba0cff"> Libre </span> &or;
+              <span style="color:#a61c00ff"> Occupé </span>, des voisins <i>(K)</i>, des requêtes en attente <i>(W)</i>
+            </p>
+            <p class="fragment fade-in" data-fragment-index="1">
+              <b> Requête </b> <i>(Q<sub>i</sub>)</i>: identifiant, description, temps d'arrivée <i>(at)</i>,
+              temps d'exécution <i>(et)</i>, temps de réponse <i>(rt)</i>
+            </p>
+            <p class="fragment fade-in" data-fragment-index="2">
+              <b> Allouer </b> : localement &or; déléguer à un voisin <span style="color:#86ba0cff"> Libre </span>
+            </p>
+            <p id="question" class="fragment fade-in" data-fragment-index="3">
+              Comment minimiser le temps de réponse pour les consommateurs de données ?
+            </p>
+            <span id="ladda" style="float:left;padding:0 0 0 0" class="fragment fade-in" data-fragment-index="3"></span>
+            <script>
+            katex.render("\\forall C_i \\in F \\land \\forall Q_i \\in C_i.W~|~ \\Delta = (Q_i.rt -Q_i.at) \\textit{ est minimisé.}", ladda);
+            </script>
+          </section>
+
+          <section class="content-slide">
             <h3>Comment paralléliser les requêtes ?</h3>
             <p>
               Sur le <b>même client</b> :
@@ -1015,31 +1040,6 @@
               [11] <a href="url">https://eprints.soton.ac.uk/379399/</a>
             </p>
           </section> -->
-
-          <section class="content-slide">
-            <h3> Modèle et problème </h3>
-            <p>
-              <b>Fédération</b> : consommateurs de données {C<sub>1</sub>, ..., C<sub>n</sub>}
-            </p>
-            <p class="fragment fade-in" data-fragment-index="0">
-              <b>Consommateur de données </b> <i>(C<sub>i</sub>)</i>: <span style="color:#86ba0cff"> Libre </span> &or;
-              <span style="color:#a61c00ff"> Occupé </span>, des voisins <i>(K)</i>, des requêtes en attente <i>(W)</i>
-            </p>
-            <p class="fragment fade-in" data-fragment-index="1">
-              <b> Requête </b> <i>(Q<sub>i</sub>)</i>: identifiant, description, temps d'arrivée <i>(at)</i>,
-              temps d'exécution <i>(et)</i>, temps de réponse <i>(rt)</i>
-            </p>
-            <p class="fragment fade-in" data-fragment-index="2">
-              <b> Allouer </b> : localement &or; déléguer à un voisin <span style="color:#86ba0cff"> Libre </span>
-            </p>
-            <p id="question" class="fragment fade-in" data-fragment-index="3">
-              Comment minimiser le temps de réponse pour les consommateurs de données ?
-            </p>
-            <span id="ladda" style="float:left;padding:0 0 0 0" class="fragment fade-in" data-fragment-index="3"></span>
-            <script>
-            katex.render("\\forall C_i \\in F \\land \\forall Q_i \\in C_i.W~|~ \\Delta = (Q_i.rt -Q_i.at) \\textit{ est minimisé.}", ladda);
-            </script>
-          </section>
 
           <section class="content-slide">
             <h3>A quels clients allouer des requêtes ?</h3>
