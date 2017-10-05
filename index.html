@@ -117,7 +117,9 @@
 
     <section class="content-slide">
       <h3> Web des données : Url &#8594; faits </h3>
-      <object data="./pictures/intro/soccerGraph.svg">
+      <object data="./pictures/intro/soccerGraph_2.svg" class="fragment fade-in" data-fragment-index="0" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
+      </object>
+      <object data="./pictures/intro/soccerGraph_1.svg" class="fragment fade-out" data-fragment-index="0">
       </object>
       <aside class="notes">
         Le web des données est décentralisé <br>
@@ -127,13 +129,16 @@
     </section>
 
     <section class="content-slide">
-      <h3> Le Web des données est distribué </h3>
+      <h3> Le Web des données est un graphe distribué </h3>
       <figure>
         <img  height="530px" src="./pictures/intro/lodResize.png"/>
         <figcaption style="font-size:20px">
           Diagramme du Linked Open Data cloud du 26 janvier 2017 (1146 jeux de données)
         </figcaption>
       </figure>
+      <aside class="notes">
+        Diff domaines, Diff organisation
+      </aside>
     </section>
 
     <section class="content-slide">
@@ -159,13 +164,14 @@
 
     <section class="content-slide">
       <h3>Interroger le Web des données</h3>
-      <p>Différents <b>compromis</b> selon l'approche</p>
-      <table>
+      <p style="margin:0">Différents <b>compromis</b> selon l'approche</p>
+      <table style="font-size:28px">
         <tr>
           <td></td>
           <td style="text-align:center"><b>Consommateurs de données</b></td>
           <td style="text-align:center"><b>Producteurs de données</b></td>
           <td></td>
+          <td><b>Localisation</b></td>
           <td><b>P</b></td>
           <td><b>D</b></td>
           <td><b>F</b></td>
@@ -175,6 +181,7 @@
           <td>Robot d'indexation</td>
           <td>Serveur Web</td>
           <td style="background-color:#6aa84fff"></td>
+          <td>Tout</td>
           <td>-</td>
           <td>++</td>
           <td>++</td>
@@ -184,6 +191,7 @@
           <td>Serveur SPARQL</td>
           <td>Serveur FTP</td>
           <td style="background-color:#6aa84fff"></td>
+          <td>Données téléchargées</td>
           <td>++</td>
           <td>++</td>
           <td>-</td>
@@ -193,6 +201,7 @@
           <td>Requête SPARQL</td>
           <td>Serveur SPARQL</td>
           <td style="background-color:#a61c00ff"></td>
+          <td>Données aggrégées</td>
           <td>++</td>
           <td>-</td>
           <td>++</td>
@@ -200,14 +209,25 @@
         <tr>
           <td style="background-color:#ef7c00ff"></td>
           <td>Client intelligent</td>
-          <td>Serveur SPARQL sélectif</td>
+          <td>Serveur TPF + opérateur</td>
           <td style="background-color:#ef7c00ff"></td>
+          <td>Données aggrégées</td>
           <td>~</td>
           <td>++</td>
           <td>++</td>
         </tr>
+        <tr class="fragment fade-in">
+          <td style="background-color:#ef7c00ff"></td>
+          <td>Fédération de clients intelligents</td>
+          <td>Serveur TPF + opérateur</td>
+          <td style="background-color:#ef7c00ff"></td>
+          <td>Données aggrégées</td>
+          <td>++</td>
+          <td>++</td>
+          <td>++</td>
+        </tr>
       </table>
-      <p style="margin:0">
+      <p style="margin:0; font-size:30px">
         <b>P</b> = Performance, <b>D</b> = Disponibilité, <b>F</b> = Fraîcheur
       </p>
       <p style="margin:0">
@@ -216,14 +236,11 @@
         <span style="background-color:#6aa84fff">&nbsp&nbsp&nbsp</span>
         = Effort à fournir
       </p>
-      <p id="question" class="fragment fade-in" style="margin:0">
-        Toutes ces approches considèrent un <b>seul client</b>
-      </p>
     </section>
 
     <section class="content-slide">
       <h3>Exploration de nouveaux compromis</h3>
-      <img id="side" src="./pictures/intro/multipleClients.svg"/>
+      <img id="side" src="./pictures/ladda/main/multipleClientsConnected.svg"/>
       <p class="fragment fade-in" data-fragment-index="0">
         Considérer <b>plusieurs</b> clients pour exécuter des requêtes SPARQL
       </p>
@@ -320,7 +337,7 @@
           passante</b> et font de <b>l'équilibrage de charge</b>
       </p>
       <my-citation number="3" author="P. Folz" title="CyCLaDEs: a decentralized cache for triple pattern fragment" conference="Extended Semantic Web (ESWC)" date="2016"></my-citation>
-      <my-citation number="4" author="A. Grall" title="Ladda: SPARQL queries in a Fog of Browsers" conference="Extended Semantic Web (ESWC)" date="2017"></my-citation>
+      <my-citation number="4" author="A. Grall" title="Ladda: SPARQL queries in a Fog of Browsers" conference="Démo Extended Semantic Web (ESWC)" date="2017"></my-citation>
     </section>
 
     <section class="part-slide">
@@ -462,7 +479,7 @@
       <h3> Approche de CyCLaDEs </h3>
       <p>
         <b> Hypothèse :</b> Les clients qui exécutent des <b> requêtes similaires </b> dans le <b> passé </b>
-        exécuteront des <b> requêtes similaires </b> dans le <b> futur </b> [7]
+        exécuteront des <b> requêtes similaires </b> dans le <b> futur </b>
       </p>
       <p class="fragment fade-in" data-fragment-index="1">
         <b> Approche :</b>
@@ -475,7 +492,6 @@
         <p id="question" class="fragment fade-in" data-fragment-index="2">
           Combien d'accès aux caches des voisins peut-on obtenir ?
         </p>
-        <my-citation number="7" author="M. D. Ekstrand" title="Collaborative filtering recommender systems" conference="Foundations and Trends in Human-Computer Interaction" date="2011"></my-citation>
       </section>
 
       <section class="content-slide">
@@ -666,7 +682,7 @@
           </p>
 
           <p>
-            Les profils sont comparés avec le <b>coefficient de similarité Jaccard</b>
+            Les profils sont comparés avec le <b>coefficient de similarité généralisé Jaccard</b>
           </p>
 
           <span id="jaccard" style="float:left;padding:2em 0 0 0"></span>
@@ -764,7 +780,7 @@
         </section>
 
         <section class="content-slide">
-          <h3> Est-ce que le cache distribué passe à l'échelle ? </h3>
+          <h3> Est-ce que le cache décentralisé passe à l'échelle ? </h3>
           <figure style="float:left">
             <img height="320px" src="./pictures/cyclades/xp/bsbm1M_TPF_slides.png"/>
             <figcaption> Sans CyCLaDEs </figcaption>
@@ -917,7 +933,7 @@
             </p>
             <span id="ladda1" style="float:left;padding:1em 0 0 0"></span>
             <script>
-              katex.render("ET(W1@C_{1}) > ET(W1@\\{C_{1}-C_{16}\\})", ladda1);
+              katex.render("RT(W1@C_{1}) > RT(W1@\\{C_{1}-C_{16}\\})", ladda1);
             </script>
             <p id="question" style="margin-top:4em">
               A quelles conditions cette inégalité est-elle vraie ?
@@ -965,6 +981,7 @@
           <section>
             <blockquote>
               Est-ce que paralléliser les requêtes permet d'aller plus vite ?
+              Enlever
             </blockquote>
           </section>
 
@@ -994,7 +1011,7 @@
           </section>
 
           <section class="content-slide">
-            <h3>Comment paralléliser les requêtes ?</h3>
+            <h3>Comment paralléliser les requêtes ? A enlever</h3>
             <p>
               Sur le <b>même client</b> :
             </p>
@@ -1042,7 +1059,7 @@
           </section> -->
 
           <section class="content-slide">
-            <h3>A quels clients allouer des requêtes ?</h3>
+            <h3>A combien de clients allouer des requêtes ?</h3>
             <p>
               Les consommateurs de données accèdent au <b> même </b> serveur TPF
             </p>
