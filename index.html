@@ -347,41 +347,82 @@
     <section class="content-slide">
       <h3>Qu'est-ce qu'un fragment TPF ?</h3>
       <p>
-
+        Fragment des architectes
       </p>
+      <p style="margin-left:1em;">
+        <b>Données</b> correspondants à un triplet (paginé)
+      </p>
+      <p style="margin-left:2em; color:#6B7177">
+        {?person a dbpedia-owl:Architect}
+      </p>
+      <p style="margin-left:1em;">
+        <b>Méta-données</b> nombre total de correspondances
+      </p>
+      <p style="margin-left:2em; color:#6B7177">
+        5 823
+      </p>
+      <p style="margin-left:1em;">
+        <b>Contrôles hypermédia</b> accès à tous les autres fragments
+      </p>
+      <p style="margin-left:2em; color:#6B7177;font-size:24px">
+          first: <a href="http://fragments.dbpedia.org/2016-04/en?predicate=http://www.w3.org/1999/02/22-rdf-syntax-ns#type&object=http://dbpedia.org/ontology/Architect&page=1">http://fragments.dbpedia.org/2016-04/en?predicate=http://www.w3.org/1999/02/22-rdf-syntax-ns#type&object=http://dbpedia.org/ontology/Architect&page=1</a> <br>
+          next: <a href="http://fragments.dbpedia.org/2016-04/en?predicate=http://www.w3.org/1999/02/22-rdf-syntax-ns#type&object=http://dbpedia.org/ontology/Architect&page=2">http://fragments.dbpedia.org/2016-04/en?predicate=http://www.w3.org/1999/02/22-rdf-syntax-ns#type&object=http://dbpedia.org/ontology/Architect&page=2</a><br>
+      </p>
+      <my-citation number="2" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
     </section>
 
     <section class="content-slide">
-      <h3>Triple Pattern Fragment</h3>
-      <div class="wrapper">
-        <div class="right">
-          <p id="query" style="font-size: 32px;">
-            <b>SELECT</b> ?author ?book <br>
-            <b>WHERE</b> { <br>
-            &nbsp ?book rdf:label dbo:Book; <b>#tp1</b> <br>
-            &nbsp dbo:author ?author } &nbsp &nbsp &nbsp &nbsp <b>#tp2</b> <br>
-            <b>LIMIT</b> 100
-          </p>
-        </div>
-        <div class="left">
-          <p>
-            Exécution d'une requête SPARQL avec TPF [2] :
-          </p>
-          <ol>
-            <li>Décomposer en triplet</li>
-            <li>Cardinalité pour chaque triplet :</li>
-            <ul>
-              <li>tp1 = 76639</li>
-              <li><b>tp2 = 58787</b></li>
-            </ul>
-          </ol>
-        </div>
-      </div>
-      <p>
-        <ol start="3">
-          <li></li>
-        </ol>
-      </p>
+      <h3>Exécuter une requête avec TPF</h3>
+      <span class="fragment fade-in" data-fragment-index="0" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0">
+        <p style="font-size:30px">
+          ?person a dbpedia-owl:Architect.
+        </p>
+        <p style="font-size:30px">
+          ?person dbpedia-owl:birthPlace <b>dbpedia:Athens</b>.
+        </p>
+        <p style="font-size:30px">
+          <b>dbpedia:Athens</b> dc:subject dbpedia:Category:Capitals_in_Europe. <b>59</b>
+        </p>
+        <p style="margin-left:1em; color:#6B7177; font-size:28px">
+          <b>dbpedia:Athens dcterms:subject dbpedia:Capitals_in_Europe.</b>
+          dbpedia:Belfast dcterms:subject dbpedia:Capitals_in_Europe.
+          dbpedia:Belgrade dcterms:subject dbpedia:Capitals_in_Europe.
+          dbpedia:Berlin dcterms:subject dbpedia:Capitals_in_Europe.
+        </p>
+      </span>
+      <span class="fragment fade-out" data-fragment-index="0">
+        <p id="query" style="font-size:28px">
+          <b>SELECT</b> ?person ?city <br>
+          <b>WHERE</b> { <br>
+            &nbsp; ?person a dbpedia-owl:Architect. &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<b>#tp1</b> <br>
+            &nbsp; ?person dbpedia-owl:birthPlace ?city. &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>#tp2</b> <br>
+            &nbsp; ?city dc:subject dbpedia:Category:Capitals_in_Europe. <b>#tp3</b> <br>
+          }
+        </p>
+        <p>
+          ?person a dbpedia-owl:Architect. <b>5 823</b>
+        </p>
+        <p style="margin-left:1em; color:#6B7177">
+          100 premiers triplets
+        </p>
+        <p>
+          ?person dbpedia-owl:birthPlace ?city. <b>1 137 061</b>
+        </p>
+        <p style="margin-left:1em; color:#6B7177">
+          100 premiers triplets
+        </p>
+        <p>
+          ?city dc:subject dbpedia:Category:Capitals_in_Europe. <b>59</b>
+        </p>
+        <p style="margin-left:1em; color:#6B7177">
+          100 premiers triplets
+        </p>
+      </span>
+      <my-citation number="2" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
     </section>
 
     <!-- <section class="content-slide">
@@ -408,7 +449,7 @@
         <li> Les fragments sont suceptibles d'être <b>réutilisés</b> localement ou à travers les clients</li>
       </ul>
       <img src="./pictures/cyclades/main/tpfScale.png"/>
-        <my-citation number="2" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
+      <my-citation number="2" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
     </section>
 
     <section class="content-slide">
