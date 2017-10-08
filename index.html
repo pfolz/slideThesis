@@ -1264,7 +1264,7 @@
               C1 a un <b>ensemble de requêtes</b> Q1-Q6 à exécuter
             </p>
             <p id="question">
-              Est-ce C1 les exécute lui-même ou avec ses voisins ?
+              Est-ce que C1 les exécute lui-même ou avec ses voisins ?
             </p>
           </section>
 
@@ -1430,25 +1430,39 @@
             <p class="fragment fade-in" data-fragment-index="3" id="question">
               Quelle est la valeur de <i>k</i> ?
             </p>
-            <p class="fragment fade-in" data-fragment-index="4" id="question">
+            <!-- <p class="fragment fade-in" data-fragment-index="4" id="question">
               Faut-il choisir <i>k</i> voisins aléatoires ou similaires ?
-            </p>
+            </p> -->
           </section>
 
           <section class="content-slide">
             <h3>Limite de parallélisation</h3>
             <p style="margin:0">Allocation de 1509 requêtes des journaux réels de DBpedia de manière optimale LPT [12]</p>
-            <img height="280px" src="./pictures/ladda/main/gainParallelizationOptimal.png"/>
+            <img height="280px" src="./pictures/ladda/main/gainParallelizationOptimal_slides.png"/>
             <p style="margin:0"> La parallélisation <b>réduit</b> le temps de réponse </p>
             <p style="margin:0"> Paralléliser au-delà d'un certain seuil <b>ne réduit plus </b> le temps de réponse, <i>k</i> = 21 </p>
             <my-citation number="12" author="M. Pinedo" title="Theory, Algorithms, and Systems (3nd ed.)" conference="Springer Science and Business Media" date="2008"></my-citation>
           </section>
 
           <section class="content-slide">
+            <h3>A quels voisins déléguer ses requêtes ?</h3>
+            <p>
+              Chaque client a un <b>cache local</b> :
+            </p>
+            <ul>
+              <li><b>utile</b> pour la délégation ?</li>
+              <li><b>négatif</b> pour le client qui exécute la requête déléguée ?</li>
+            </ul>
+            <p id="question">
+              Faut-il choisir <i>k</i> voisins aléatoires ou similaires ?
+            </p>
+          </section>
+
+          <section class="content-slide">
             <h3>Est-ce que le cache local est réutilisé entre 2 requêtes ?</h3>
             <p style="margin:0"> Exécution de 1509 requêtes sans <i>(reset off)</i> et
               avec effacement du cache <i>(reset on)</i> entre l'exécution de requêtes</p>
-            <img src="./pictures/ladda/main/localityDBpedia.png"/>
+            <img src="./pictures/ladda/main/localityDBpedia_slides.png"/>
             <p style="margin:0"> La <b>localité</b> n'a <b>pas d'impacte</b> sur la délégation </p>
             <p style="margin:0"> Délégation à des <b>voisins aléatoires</b> </p>
           </section>
