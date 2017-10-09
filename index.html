@@ -840,9 +840,9 @@
       <section class="content-slide">
         <h3> Approche de TPF </h3>
         <p>
-          <img id="side" src="./pictures/cyclades/main/archTpf.png" />
+          <img id="side" src="./pictures/cyclades/main/archTpf.svg" />
           Beaucoup de clients accèdent au serveur TPF de manière concurrente, mais
-          les <b>clients ne collaborent pas</b>.
+          les <b>clients ne collaborent pas</b>
         </p>
       </section>
 
@@ -884,7 +884,7 @@
           <li> C3 n'est pas <b> similaire </b> à C6 </li>
         </ul>
         <p class="fragment fade-in" data-fragment-index="2">
-          Nécessite un second réseau superposer pour gérer la <b> similarité </b>
+          Nécessite un second réseau superposé pour gérer la <b> similarité </b>
           comme proposé dans Gossple [7]
         </p>
         <my-citation number="7" author="M. Bertier" title="The gossple anonymous social network" conference="11th International Middleware Conference" date="2010"></my-citation>
@@ -897,8 +897,8 @@
           Réseau superposé de similarité (CON) :
         </p>
         <ul>
-          <li> Chaque nœud à un <b> profil </b> basé sur l'historique des requêtes
-            qu'il a exécutées </li>
+          <li> Chaque nœud a un <b> profil </b> basé sur l'historique des requêtes
+            qu'il a exécuté </li>
           </ul>
           <p class="fragment fade-in" data-fragment-index="1">
             Les phases d'échange de voisins permettent d'obtenir des voisins <b>plus similaires</b>
@@ -1097,7 +1097,7 @@
           <p>
             <b> Requêtes : </b>
             <span style="color:#6B7177;">
-              Chaque <b>client</b> a un <b>emsemble de 25 requêtes</b> générées à partir
+              Chaque <b>client</b> a un <b>emsemble de 25 requêtes</b> généré à partir
               de <b>12 modèles</b>
             </span>
           </p>
@@ -1148,7 +1148,7 @@
           </p>
           <p id="xp" style="margin:0">
             BSBM 10M : <b>cache local</b> peut contenir <b>0,01%</b> du jeux de données.
-            Le <b>cache distribué</b> peut contenir <b>0,09%</b>.
+            Le <b>cache décentralisé</b> peut contenir <b>0,09%</b>.
           </p>
           <aside class="notes">
             Cache local <br>
@@ -1264,7 +1264,7 @@
               C1 a un <b>ensemble de requêtes</b> Q1-Q6 à exécuter
             </p>
             <p id="question">
-              Est-ce que C1 les exécute lui-même ou avec ses voisins ?
+              Est-ce que C1 les exécute seul ou avec ses voisins ?
             </p>
           </section>
 
@@ -1291,7 +1291,7 @@
             </p>
             <ul>
               <li>est décomposée en <b>sous-requêtes</b> (TPQ);</li>
-              <li>constitue une <b>charge</b> côté <b>client</b> et côté <b>serveur</b></li>
+              <li>constitue une <b>charge</b> côté <b>client</b> et côté <b>serveur</b>.</li>
             </ul>
             <p>Les clients accèdent au <b>même</b> serveur</p>
             <p id="question" class="fragment fade-in">
@@ -1306,7 +1306,7 @@
               <div class="left">
                 <img src="./pictures/ladda/main/motivatingExampleBis_1.svg"/>
               </div>
-              <div class="right" class="fragment fade-in">
+              <div class="right fragment fade-in">
                 <img src="./pictures/ladda/main/motivatingExampleBis_2.svg"/>
               </div>
             </div>
@@ -1358,7 +1358,7 @@
             </p>
             <span id="ladda" style="float:left;padding:0 0 0 0" class="fragment fade-in" data-fragment-index="3"></span>
             <script>
-            katex.render("\\forall C_i \\in F \\land \\forall Q_i \\in C_i.W~|~ \\Delta = (Q_i.rt -Q_i.at) \\textit{ est minimisé.}", ladda);
+            katex.render("\\forall C_i \\in F \\land \\forall Q_i \\in C_i.W~|~ \\Delta = (Q_i.rt -Q_i.at) \\textit{ est minimisé}", ladda);
             </script>
           </section>
 
@@ -1451,7 +1451,7 @@
             </p>
             <ul>
               <li><b>utile</b> pour la délégation ?</li>
-              <li><b>négatif</b> pour le client qui exécute la requête déléguée ?</li>
+              <li><b>impacte</b> pour le client qui exécute la requête déléguée ?</li>
             </ul>
             <p id="question">
               Faut-il choisir <i>k</i> voisins aléatoires ou similaires ?
@@ -1561,7 +1561,7 @@
               <b> Clients : </b> 50 clients Ladda-TPF
             </p>
             <p>
-              <b> Phase d'échange des voisins </b> : toutes les 30 secondes
+              <b> Echange des voisins </b> : toutes les 30 secondes
             </p>
             <p>
               <b> Approches : </b> <i>Ladda 2 (L2), Ladda K (LK)</i> et <i>Sans Délégation (SD)</i>
@@ -1626,13 +1626,13 @@
 
           <section class="content-slide">
             <h3> Est-ce qu'avec la délégation plus de requêtes sont
-              exécutées par secondes ? </h3>
+              exécutées par minutes ? </h3>
             <img src="./pictures/ladda/xp/nbExecQueries_AllLoaded_1_slides.png"/>
             <p id="parameter">
               Description : Tous Chargé, 1 seul exécution
             </p>
             <p id="xp">
-              Dès les premières minutes, Ladda exécutent plus de requêtes
+              Dès les premières minutes, Ladda exécute plus de requêtes
             </p>
           </section>
 
@@ -1684,6 +1684,7 @@
 
           <section class="content-slide">
             <h3> Conclusion</h3>
+            <img id="side" src="./pictures/ladda/main/multipleClientsConnected.svg"/>
             <p>
               Ladda <b>partage</b> les capacités d'<b>exécution de requêtes SPARQL</b> des
               consommateurs de la fédération
@@ -1699,6 +1700,7 @@
 
           <section class="content-slide">
             <h3> Perspectives</h3>
+            <img id="side" src="./pictures/ladda/main/multipleClientsConnected.svg"/>
             <p>
               Ladda fait du parallélisme <b>inter-requêtes</b>
             </p>
@@ -1754,7 +1756,7 @@
               <ul>
                 <li> TPF <b>stocke</b> des fragments <i>partiels</i> et <i>complets</i>
                 <li> Matérialiser des fragments <b>complets </b></li>
-                <li> Une communauté peut stocker les fragments les plus <b>populaire</b></li>
+                <li> Une communauté peut stocker les fragments les plus <b>populaires</b></li>
               </ul>
             </p>
           </section>
