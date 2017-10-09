@@ -10,6 +10,13 @@
   <link rel="import" href="./lib/script/myCitation.html">
   <script src="./plugin/katex/katex.min.js"></script>
   <link rel="stylesheet" href="./plugin/katex/katex.min.css">
+  <script>
+  	var link = document.createElement( 'link' );
+  	link.rel = 'stylesheet';
+  	link.type = 'text/css';
+  	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+  	document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
   <!--Add support for earlier versions of Internet Explorer -->
   <!--[if lt IE 9]>
   <script src="lib/js/html5shiv.js"></script>
@@ -65,7 +72,7 @@
         </tr>
         <tr>
           <td><b> Co-encadrante :</b></td>
-          <td><b>Hala Skaf-Molli</b>, Maître de conférences, Universté de Nantes</td>
+          <td><b>Hala Skaf-Molli</b>, Maître de conférences, Université de Nantes</td>
         </tr>
       </table>
       <img src="./pictures/firstPage/ls2n.png" height="80px">
@@ -116,10 +123,48 @@
     </section> -->
 
     <section class="content-slide">
+      <h3>Différences entres les approches</h3>
+      <table>
+        <tr>
+          <td>Google</td>
+          <td>Web Sémantique</td>
+        </tr>
+        <tr>
+          <td>
+            URL &#8594; Document <br>
+            <a href="https://fr.wikipedia.org/wiki/Football"> https://fr.wikipedia.org/wiki/Football </a> <br>
+            <img src="./pictures/intro/wikipediaSoccer.png"/> <br>
+            Requête &#8594; langage naturel
+          </td>
+          <td>
+            URL &#8594; Faits <br>
+            <a href="http://dbpedia.org/page/David_A%C3%B1%C3%B3n"> http://dbpedia.org/page/David_Añón </a> <br>
+            <img width="3500px" src="./pictures/intro/davidAnon.png"/> <br>
+            Requête &#8594; SPARQL
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="content-slide">
+      <a href="http://dbpedia.org/page/David_A%C3%B1%C3%B3n"> http://dbpedia.org/page/David_Añón </a>
+      <p id="query" style="font-size:20px">
+        &lt;http://dbpedia.org/resource/David_A\u00F1\u00F3n>	&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	&lt;http://www.wikidata.org/entity/Q937857> . <br>
+        &lt;http://dbpedia.org/resource/David_A\u00F1\u00F3n>	&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	&lt;http://www.wikidata.org/entity/Q215627> . <br>
+        &lt;http://dbpedia.org/resource/David_A\u00F1\u00F3n>	&lt;http://www.w3.org/2002/07/owl#sameAs>	&lt;http://dbpedia.org/resource/David_A\u00F1\u00F3n> . <br>
+        &lt;http://dbpedia.org/resource/David_A\u00F1\u00F3n>	&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	&lt;http://dbpedia.org/class/yago/WikicatSpanishFootballers> . <br>
+        &lt;http://dbpedia.org/resource/David_A\u00F1\u00F3n>	&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	&lt;http://dbpedia.org/class/yago/WikicatTerceraDivisi\u00F3nFootballers> . <br>
+        &lt;http://dbpedia.org/resource/David_A\u00F1\u00F3n>	&lt;http://dbpedia.org/ontology/position>	&lt;http://dbpedia.org/resource/Forward_(association_football)> . <br>
+        &lt;http://dbpedia.org/resource/David_A\u00F1\u00F3n>	&lt;http://dbpedia.org/ontology/team>	&lt;http://dbpedia.org/resource/Albacete_Balompi\u00E9> . <br>
+        &lt;http://dbpedia.org/resource/David_A\u00F1\u00F3n>	&lt;http://dbpedia.org/ontology/team>	&lt;http://dbpedia.org/resource/Monta\u00F1eros_CF> . <br>
+        &lt;http://dbpedia.org/resource/David_A\u00F1\u00F3n>	&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	&lt;http://dbpedia.org/class/yago/Organism100004475> . <br>
+        <b>&lt;http://dbpedia.org/resource/David_A\u00F1\u00F3n>	&lt;http://dbpedia.org/ontology/birthPlace>	&lt;http://dbpedia.org/resource/A_Coru\u00F1a> .</b><br>
+      </p>
+    </section>
+
+    <section class="content-slide">
       <h3> Web des données : Url &#8594; faits </h3>
-      <object data="./pictures/intro/soccerGraph_2.svg" class="fragment fade-in" data-fragment-index="0" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
-      </object>
-      <object data="./pictures/intro/soccerGraph_1.svg" class="fragment fade-out" data-fragment-index="0">
+      <object data="./pictures/intro/soccerGraph_2.svg">
       </object>
       <aside class="notes">
         Le web des données est décentralisé <br>
@@ -131,7 +176,7 @@
     <section class="content-slide">
       <h3> Le Web des données est un graphe distribué </h3>
       <figure>
-        <img  height="530px" src="./pictures/intro/lodResize.png"/>
+        <img  height="530px" src="./pictures/intro/lodCloudZoom.png"/>
         <figcaption style="font-size:20px">
           Diagramme du Linked Open Data cloud du 26 janvier 2017 (1 146 jeux de données)
         </figcaption>
@@ -165,31 +210,31 @@
     <section class="content-slide">
       <h3>Interroger le Web des données</h3>
       <p style="margin:0">Différents <b>compromis</b> selon l'approche</p>
-      <span class="fragment fade-in" data-fragment-index="3" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
+      <span class="fragment fade-in" data-fragment-index="2" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
         <table style="font-size:26px">
           <tr>
             <td></td>
             <td style="text-align:center"><b>Consommateurs de données</b></td>
             <td style="text-align:center"><b>Producteurs de données</b></td>
             <td></td>
-            <td><b>Localisation</b></td>
+            <td><b>Périmètre</b></td>
             <td><b>P</b></td>
             <td><b>D</b></td>
             <td><b>F</b></td>
           </tr>
           <tr>
             <td style="background-color:#a61c00ff"></td>
-            <td>Robot d'indexation <b>(&sigma;,&#8904;,&pi;)</b></td>
+            <td>Link traversal (&sigma;,&#8904;,&pi;)</td>
             <td>Serveur Web</td>
             <td style="background-color:#6aa84fff"></td>
-            <td>Tout</td>
+            <td>Atteignable par la requête</td>
             <td>-</td>
             <td>++</td>
             <td>++</td>
           </tr>
           <tr>
             <td style="background-color:#ef7c00ff"></td>
-            <td>Serveur SPARQL <b>(&sigma;,&#8904;,&pi;)</b></td>
+            <td>Serveur SPARQL (&sigma;,&#8904;,&pi;)</td>
             <td>Serveur FTP</td>
             <td style="background-color:#6aa84fff"></td>
             <td>Données téléchargées</td>
@@ -199,101 +244,25 @@
           </tr>
           <tr>
             <td style="background-color:#6aa84fff"></td>
-            <td>Requête SPARQL</td>
-            <td>Serveur SPARQL <b>(&sigma;,&#8904;,&pi;)</b></td>
+            <td style="text-align:center;"> / </td>
+            <td>Serveur SPARQL (&sigma;,&#8904;,&pi;)</td>
             <td style="background-color:#a61c00ff"></td>
-            <td>Données aggrégées</td>
+            <td>Données sur le serveur</td>
             <td>++</td>
             <td>-</td>
             <td>++</td>
           </tr>
           <tr>
             <td style="background-color:#ef7c00ff"></td>
-            <td>Client intelligent (&sigma;,<b>&#8904;,&pi;)</b></td>
-            <td>Serveur TPF <b>(&sigma;</b>,&#8904;,&pi;)</td>
+            <td>Client intelligent (&#8904;,&pi;)</td>
+            <td>Serveur TPF (&sigma;)</td>
             <td style="background-color:#ef7c00ff"></td>
-            <td>Données aggrégées</td>
+            <td>Données sur le serveur</td>
             <td>~</td>
             <td>++</td>
             <td>++</td>
           </tr>
-          <tr>
-            <td style="background-color:#ef7c00ff"></td>
-            <td>Fédération de clients intelligents (&sigma;,<b>&#8904;,&pi;)</b></td>
-            <td>Serveur TPF <b>(&sigma;</b>,&#8904;,&pi;)</td>
-            <td style="background-color:#ef7c00ff"></td>
-            <td>Données aggrégées</td>
-            <td>++</td>
-            <td>++</td>
-            <td>++</td>
-          </tr>
         </table>
-      </span>
-      <span class="fragment fade-in" data-fragment-index="2" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
-        <span class="fragment fade-out" data-fragment-index="3" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
-          <table style="font-size:26px">
-            <tr>
-              <td></td>
-              <td style="text-align:center"><b>Consommateurs de données</b></td>
-              <td style="text-align:center"><b>Producteurs de données</b></td>
-              <td></td>
-              <td><b>Localisation</b></td>
-              <td><b>P</b></td>
-              <td><b>D</b></td>
-              <td><b>F</b></td>
-            </tr>
-            <tr>
-              <td style="background-color:#a61c00ff"></td>
-              <td>Robot d'indexation <b>(&sigma;,&#8904;,&pi;)</b></td>
-              <td>Serveur Web</td>
-              <td style="background-color:#6aa84fff"></td>
-              <td>Tout</td>
-              <td>-</td>
-              <td>++</td>
-              <td>++</td>
-            </tr>
-            <tr>
-              <td style="background-color:#ef7c00ff"></td>
-              <td>Serveur SPARQL <b>(&sigma;,&#8904;,&pi;)</b></td>
-              <td>Serveur FTP</td>
-              <td style="background-color:#6aa84fff"></td>
-              <td>Données téléchargées</td>
-              <td>++</td>
-              <td>++</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td style="background-color:#6aa84fff"></td>
-              <td>Requête SPARQL</td>
-              <td>Serveur SPARQL <b>(&sigma;,&#8904;,&pi;)</b></td>
-              <td style="background-color:#a61c00ff"></td>
-              <td>Données aggrégées</td>
-              <td>++</td>
-              <td>-</td>
-              <td>++</td>
-            </tr>
-            <tr>
-              <td style="background-color:#ef7c00ff"></td>
-              <td>Client intelligent (&sigma;,<b>&#8904;,&pi;)</b></td>
-              <td>Serveur TPF <b>(&sigma;</b>,&#8904;,&pi;)</td>
-              <td style="background-color:#ef7c00ff"></td>
-              <td>Données aggrégées</td>
-              <td>~</td>
-              <td>++</td>
-              <td>++</td>
-            </tr>
-            <tr>
-              <td style="background-color:#d9d9d9ff"></td>
-              <td style="color:#d9d9d9ff">Fédération de clients intelligents (&sigma;,<b>&#8904;,&pi;)</b></td>
-              <td style="color:#d9d9d9ff">Serveur TPF <b>(&sigma;</b>,&#8904;,&pi;)</td>
-              <td style="background-color:#d9d9d9ff"></td>
-              <td style="color:#d9d9d9ff">Données aggrégées</td>
-              <td style="color:#d9d9d9ff">++</td>
-              <td style="color:#d9d9d9ff">++</td>
-              <td style="color:#d9d9d9ff">++</td>
-            </tr>
-          </table>
-        </span>
       </span>
       <span class="fragment fade-in" data-fragment-index="1" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
         <span class="fragment fade-out" data-fragment-index="2" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
@@ -303,24 +272,24 @@
               <td style="text-align:center"><b>Consommateurs de données</b></td>
               <td style="text-align:center"><b>Producteurs de données</b></td>
               <td></td>
-              <td><b>Localisation</b></td>
+              <td><b>Périmètre</b></td>
               <td><b>P</b></td>
               <td><b>D</b></td>
               <td><b>F</b></td>
             </tr>
             <tr>
               <td style="background-color:#a61c00ff"></td>
-              <td>Robot d'indexation <b>(&sigma;,&#8904;,&pi;)</b></td>
+              <td>Link traversal (&sigma;,&#8904;,&pi;)</td>
               <td>Serveur Web</td>
               <td style="background-color:#6aa84fff"></td>
-              <td>Tout</td>
+              <td>Atteignable par la requête</td>
               <td>-</td>
               <td>++</td>
               <td>++</td>
             </tr>
             <tr>
               <td style="background-color:#ef7c00ff"></td>
-              <td>Serveur SPARQL <b>(&sigma;,&#8904;,&pi;)</b></td>
+              <td>Serveur SPARQL (&sigma;,&#8904;,&pi;)</td>
               <td>Serveur FTP</td>
               <td style="background-color:#6aa84fff"></td>
               <td>Données téléchargées</td>
@@ -330,31 +299,21 @@
             </tr>
             <tr>
               <td style="background-color:#6aa84fff"></td>
-              <td>Requête SPARQL</td>
-              <td>Serveur SPARQL <b>(&sigma;,&#8904;,&pi;)</b></td>
+              <td style="text-align:center;"> / </td>
+              <td>Serveur SPARQL (&sigma;,&#8904;,&pi;)</td>
               <td style="background-color:#a61c00ff"></td>
-              <td>Données aggrégées</td>
+              <td>Données sur le serveur</td>
               <td>++</td>
               <td>-</td>
               <td>++</td>
             </tr>
             <tr>
               <td style="background-color:#d9d9d9ff"></td>
-              <td style="color:#d9d9d9ff">Client intelligent (&sigma;,<b>&#8904;,&pi;)</b></td>
-              <td style="color:#d9d9d9ff">Serveur TPF <b>(&sigma;</b>,&#8904;,&pi;)</td>
+              <td style="color:#d9d9d9ff">Client intelligent (&#8904;,&pi;)</td>
+              <td style="color:#d9d9d9ff">Serveur TPF (&sigma;)</td>
               <td style="background-color:#d9d9d9ff"></td>
-              <td style="color:#d9d9d9ff">Données aggrégées</td>
+              <td style="color:#d9d9d9ff">Données sur le serveur</td>
               <td style="color:#d9d9d9ff">~</td>
-              <td style="color:#d9d9d9ff">++</td>
-              <td style="color:#d9d9d9ff">++</td>
-            </tr>
-            <tr>
-              <td style="background-color:#d9d9d9ff"></td>
-              <td style="color:#d9d9d9ff">Fédération de clients intelligents (&sigma;,<b>&#8904;,&pi;)</b></td>
-              <td style="color:#d9d9d9ff">Serveur TPF <b>(&sigma;</b>,&#8904;,&pi;)</td>
-              <td style="background-color:#d9d9d9ff"></td>
-              <td style="color:#d9d9d9ff">Données aggrégées</td>
-              <td style="color:#d9d9d9ff">++</td>
               <td style="color:#d9d9d9ff">++</td>
               <td style="color:#d9d9d9ff">++</td>
             </tr>
@@ -369,24 +328,24 @@
               <td style="text-align:center"><b>Consommateurs de données</b></td>
               <td style="text-align:center"><b>Producteurs de données</b></td>
               <td></td>
-              <td><b>Localisation</b></td>
+              <td><b>Périmètre</b></td>
               <td><b>P</b></td>
               <td><b>D</b></td>
               <td><b>F</b></td>
             </tr>
             <tr>
               <td style="background-color:#a61c00ff"></td>
-              <td>Robot d'indexation <b>(&sigma;,&#8904;,&pi;)</b></td>
+              <td>Link traversal (&sigma;,&#8904;,&pi;)</td>
               <td>Serveur Web</td>
               <td style="background-color:#6aa84fff"></td>
-              <td>Tout</td>
+              <td>Atteignable par la requête</td>
               <td>-</td>
               <td>++</td>
               <td>++</td>
             </tr>
             <tr>
               <td style="background-color:#ef7c00ff"></td>
-              <td>Serveur SPARQL <b>(&sigma;,&#8904;,&pi;)</b></td>
+              <td>Serveur SPARQL (&sigma;,&#8904;,&pi;)</td>
               <td>Serveur FTP</td>
               <td style="background-color:#6aa84fff"></td>
               <td>Données téléchargées</td>
@@ -396,31 +355,21 @@
             </tr>
             <tr>
               <td style="background-color:#d9d9d9ff"></td>
-              <td style="color:#d9d9d9ff">Requête SPARQL</td>
-              <td style="color:#d9d9d9ff">Serveur SPARQL <b>(&sigma;,&#8904;,&pi;)</b></td>
+              <td style="color:#d9d9d9ff; text-align:center">/</td>
+              <td style="color:#d9d9d9ff">Serveur SPARQL (&sigma;,&#8904;,&pi;)</td>
               <td style="background-color:#d9d9d9ff"></td>
-              <td style="color:#d9d9d9ff">Données aggrégées</td>
+              <td style="color:#d9d9d9ff">Données sur le serveur</td>
               <td style="color:#d9d9d9ff">++</td>
               <td style="color:#d9d9d9ff">-</td>
               <td style="color:#d9d9d9ff">++</td>
             </tr>
             <tr>
               <td style="background-color:#d9d9d9ff"></td>
-              <td style="color:#d9d9d9ff">Client intelligent (&sigma;,<b>&#8904;,&pi;)</b></td>
-              <td style="color:#d9d9d9ff">Serveur TPF <b>(&sigma;</b>,&#8904;,&pi;)</td>
+              <td style="color:#d9d9d9ff">Client intelligent (&#8904;,&pi;)</td>
+              <td style="color:#d9d9d9ff">Serveur TPF (&sigma;)</td>
               <td style="background-color:#d9d9d9ff"></td>
-              <td style="color:#d9d9d9ff">Données aggrégées</td>
+              <td style="color:#d9d9d9ff">Données sur le serveur</td>
               <td style="color:#d9d9d9ff">~</td>
-              <td style="color:#d9d9d9ff">++</td>
-              <td style="color:#d9d9d9ff">++</td>
-            </tr>
-            <tr>
-              <td style="background-color:#d9d9d9ff"></td>
-              <td style="color:#d9d9d9ff">Fédération de clients intelligents (&sigma;,<b>&#8904;,&pi;)</b></td>
-              <td style="color:#d9d9d9ff">Serveur TPF <b>(&sigma;</b>,&#8904;,&pi;)</td>
-              <td style="background-color:#d9d9d9ff"></td>
-              <td style="color:#d9d9d9ff">Données aggrégées</td>
-              <td style="color:#d9d9d9ff">++</td>
               <td style="color:#d9d9d9ff">++</td>
               <td style="color:#d9d9d9ff">++</td>
             </tr>
@@ -433,24 +382,24 @@
           <td style="text-align:center"><b>Consommateurs de données</b></td>
           <td style="text-align:center"><b>Producteurs de données</b></td>
           <td></td>
-          <td><b>Localisation</b></td>
+          <td><b>Perimètre</b></td>
           <td><b>P</b></td>
           <td><b>D</b></td>
           <td><b>F</b></td>
         </tr>
         <tr>
           <td style="background-color:#a61c00ff"></td>
-          <td>Robot d'indexation <b>(&sigma;,&#8904;,&pi;)</b></td>
+          <td>Link traversal (&sigma;,&#8904;,&pi;)</td>
           <td>Serveur Web</td>
           <td style="background-color:#6aa84fff"></td>
-          <td>Tout</td>
+          <td>Atteignable par la requête</td>
           <td>-</td>
           <td>++</td>
           <td>++</td>
         </tr>
         <tr>
           <td style="background-color:#d9d9d9ff"></td>
-          <td style="color:#d9d9d9ff">Serveur SPARQL <b>(&sigma;,&#8904;,&pi;)</b></td>
+          <td style="color:#d9d9d9ff">Serveur SPARQL (&sigma;,&#8904;,&pi;)</td>
           <td style="color:#d9d9d9ff">Serveur FTP</td>
           <td style="background-color:#d9d9d9ff"></td>
           <td style="color:#d9d9d9ff">Données téléchargées</td>
@@ -460,31 +409,21 @@
         </tr>
         <tr>
           <td style="background-color:#d9d9d9ff"></td>
-          <td style="color:#d9d9d9ff">Requête SPARQL</td>
-          <td style="color:#d9d9d9ff">Serveur SPARQL <b>(&sigma;,&#8904;,&pi;)</b></td>
+          <td style="color:#d9d9d9ff; text-align:center">/</td>
+          <td style="color:#d9d9d9ff">Serveur SPARQL (&sigma;,&#8904;,&pi;)</td>
           <td style="background-color:#d9d9d9ff"></td>
-          <td style="color:#d9d9d9ff">Données aggrégées</td>
+          <td style="color:#d9d9d9ff">Données sur le serveur</td>
           <td style="color:#d9d9d9ff">++</td>
           <td style="color:#d9d9d9ff">-</td>
           <td style="color:#d9d9d9ff">++</td>
         </tr>
         <tr>
           <td style="background-color:#d9d9d9ff"></td>
-          <td style="color:#d9d9d9ff">Client intelligent (&sigma;,<b>&#8904;,&pi;)</b></td>
-          <td style="color:#d9d9d9ff">Serveur TPF <b>(&sigma;</b>,&#8904;,&pi;)</td>
+          <td style="color:#d9d9d9ff">Client intelligent (&#8904;,&pi;)</td>
+          <td style="color:#d9d9d9ff">Serveur TPF (&sigma;)</td>
           <td style="background-color:#d9d9d9ff"></td>
-          <td style="color:#d9d9d9ff">Données aggrégées</td>
+          <td style="color:#d9d9d9ff">Données sur le serveur</td>
           <td style="color:#d9d9d9ff">~</td>
-          <td style="color:#d9d9d9ff">++</td>
-          <td style="color:#d9d9d9ff">++</td>
-        </tr>
-        <tr>
-          <td style="background-color:#d9d9d9ff"></td>
-          <td style="color:#d9d9d9ff">Fédération de clients intelligents (&sigma;,<b>&#8904;,&pi;)</b></td>
-          <td style="color:#d9d9d9ff">Serveur TPF <b>(&sigma;</b>,&#8904;,&pi;)</td>
-          <td style="background-color:#d9d9d9ff"></td>
-          <td style="color:#d9d9d9ff">Données aggrégées</td>
-          <td style="color:#d9d9d9ff">++</td>
           <td style="color:#d9d9d9ff">++</td>
           <td style="color:#d9d9d9ff">++</td>
         </tr>
@@ -501,8 +440,87 @@
     </section>
 
     <section class="content-slide">
+      <h3>Fédération de clients intelligents</h3>
+      <p style="margin:0">Différents <b>compromis</b> selon l'approche</p>
+      <table style="font-size:26px">
+        <tr>
+          <td></td>
+          <td style="text-align:center"><b>Consommateurs de données</b></td>
+          <td style="text-align:center"><b>Producteurs de données</b></td>
+          <td></td>
+          <td><b>Périmètre</b></td>
+          <td><b>P</b></td>
+          <td><b>D</b></td>
+          <td><b>F</b></td>
+        </tr>
+        <tr>
+          <td style="background-color:#a61c00ff"></td>
+          <td>Link traversal (&sigma;,&#8904;,&pi;)</td>
+          <td>Serveur Web</td>
+          <td style="background-color:#6aa84fff"></td>
+          <td>Atteignable par la requête</td>
+          <td>-</td>
+          <td>++</td>
+          <td>++</td>
+        </tr>
+        <tr>
+          <td style="background-color:#ef7c00ff"></td>
+          <td>Serveur SPARQL (&sigma;,&#8904;,&pi;)</td>
+          <td>Serveur FTP</td>
+          <td style="background-color:#6aa84fff"></td>
+          <td>Données téléchargées</td>
+          <td>++</td>
+          <td>++</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td style="background-color:#6aa84fff"></td>
+          <td style="text-align:center;"> / </td>
+          <td>Serveur SPARQL (&sigma;,&#8904;,&pi;)</td>
+          <td style="background-color:#a61c00ff"></td>
+          <td>Données sur le serveur</td>
+          <td>++</td>
+          <td>-</td>
+          <td>++</td>
+        </tr>
+        <tr>
+          <td style="background-color:#ef7c00ff;border-bottom:6px solid;"></td>
+          <td style="border-bottom:6px solid;">Client intelligent (&#8904;,&pi;)</td>
+          <td style="border-bottom:6px solid;">Serveur TPF (&sigma;)</td>
+          <td style="background-color:#ef7c00ff;border-bottom:6px solid;"></td>
+          <td style="border-bottom:6px solid;">Données sur le serveur</td>
+          <td style="border-bottom:6px solid;">~</td>
+          <td style="border-bottom:6px solid;">++</td>
+          <td style="border-bottom:6px solid;">++</td>
+        </tr>
+        <tr>
+          <td style="background-color:#ef7c00ff"></td>
+          <td>Fédération de clients intelligents (&#8904;,&pi;)</td>
+          <td>Serveur TPF <b>(&sigma;</b>,&#8904;,&pi;)</td>
+          <td style="background-color:#ef7c00ff"></td>
+          <td>Données sur le serveur</td>
+          <td>++</td>
+          <td>++</td>
+          <td>++</td>
+        </tr>
+      </table>
+      <p style="margin:0; font-size:30px">
+        <b>P</b> = Performance, <b>D</b> = Disponibilité, <b>F</b> = Fraîcheur
+      </p>
+      <p style="margin:0">
+        <span style="background-color:#a61c00ff">&nbsp&nbsp&nbsp</span>
+        <span style="background-color:#ef7c00ff">&nbsp&nbsp&nbsp</span>
+        <span style="background-color:#6aa84fff">&nbsp&nbsp&nbsp</span>
+        = Effort à fournir
+      </p>
+    </section>
+
+    <section class="content-slide">
       <h3>Exploration de nouveaux compromis</h3>
-      <img id="side" src="./pictures/ladda/main/multipleClientsConnected.svg"/>
+      <span class="fragment fade-in" data-fragment-index="1" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0">
+        <img id="side" src="./pictures/intro/multipleClientsConnected.svg"/>
+      </span>
+      <img id="side" class="fragment fade-out" data-fragment-index="1" src="./pictures/intro/multipleClients.svg"/>
       <p class="fragment fade-in" data-fragment-index="0">
         Considérer <b>plusieurs</b> clients pour exécuter des requêtes SPARQL
       </p>
@@ -1779,6 +1797,10 @@
               slideNumber: true,
               // Push each slide change to the browser history
               history: true,
+              // Vertical centering of slides
+              center: true,
+              // Transition style
+              //transition: 'none',
 
               dependencies: [
                 { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
