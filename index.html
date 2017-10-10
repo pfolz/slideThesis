@@ -496,10 +496,10 @@
         <tr>
           <td style="background-color:#ef7c00ff"></td>
           <td>Fédération de clients intelligents (&#8904;,&pi;)</td>
-          <td>Serveur TPF <b>(&sigma;</b>,&#8904;,&pi;)</td>
+          <td>Serveur TPF (&sigma;)</td>
           <td style="background-color:#ef7c00ff"></td>
           <td>Données sur le serveur</td>
-          <td>++</td>
+          <td>+</td>
           <td>++</td>
           <td>++</td>
         </tr>
@@ -623,6 +623,82 @@
     </section>
 
     <section class="content-slide">
+      <h3>Fédération de clients intelligents</h3>
+      <p style="margin:0">Différents <b>compromis</b> selon l'approche</p>
+      <table style="font-size:26px">
+        <tr>
+          <td></td>
+          <td style="text-align:center"><b>Consommateurs de données</b></td>
+          <td style="text-align:center"><b>Producteurs de données</b></td>
+          <td></td>
+          <td><b>Périmètre</b></td>
+          <td><b>P</b></td>
+          <td><b>D</b></td>
+          <td><b>F</b></td>
+        </tr>
+        <tr>
+          <td style="background-color:#d9d9d9ff"></td>
+          <td style="color:#d9d9d9ff">Link traversal (&sigma;,&#8904;,&pi;)</td>
+          <td style="color:#d9d9d9ff">Serveur Web</td>
+          <td style="background-color:#d9d9d9ff"></td>
+          <td style="color:#d9d9d9ff">Atteignable par la requête</td>
+          <td style="color:#d9d9d9ff">-</td>
+          <td style="color:#d9d9d9ff">++</td>
+          <td style="color:#d9d9d9ff">++</td>
+        </tr>
+        <tr>
+          <td style="background-color:#d9d9d9ff"></td>
+          <td style="color:#d9d9d9ff">Serveur SPARQL (&sigma;,&#8904;,&pi;)</td>
+          <td style="color:#d9d9d9ff">Serveur FTP</td>
+          <td style="background-color:#d9d9d9ff"></td>
+          <td style="color:#d9d9d9ff">Données téléchargées</td>
+          <td style="color:#d9d9d9ff">++</td>
+          <td style="color:#d9d9d9ff">++</td>
+          <td style="color:#d9d9d9ff">-</td>
+        </tr>
+        <tr>
+          <td style="background-color:#d9d9d9ff"></td>
+          <td style="text-align:center;color:#d9d9d9ff"> / </td>
+          <td style="color:#d9d9d9ff">Serveur SPARQL (&sigma;,&#8904;,&pi;)</td>
+          <td style="background-color:#d9d9d9ff"></td>
+          <td style="color:#d9d9d9ff">Données sur le serveur</td>
+          <td style="color:#d9d9d9ff">++</td>
+          <td style="color:#d9d9d9ff">-</td>
+          <td style="color:#d9d9d9ff">++</td>
+        </tr>
+        <tr>
+          <td style="background-color:#d9d9d9ff;border-bottom:6px solid;"></td>
+          <td style="border-bottom:6px solid;color:#d9d9d9ff; border-color:#46494D;">Client intelligent (&#8904;,&pi;)</td>
+          <td style="border-bottom:6px solid;color:#d9d9d9ff;border-color:#46494D;">Serveur TPF (&sigma;)</td>
+          <td style="background-color:#d9d9d9ff;border-bottom:6px solid;"></td>
+          <td style="border-bottom:6px solid;color:#d9d9d9ff;border-color:#46494D;">Données sur le serveur</td>
+          <td style="border-bottom:6px solid;color:#d9d9d9ff;border-color:#46494D;">~</td>
+          <td style="border-bottom:6px solid;color:#d9d9d9ff;border-color:#46494D;">++</td>
+          <td style="border-bottom:6px solid;color:#d9d9d9ff;border-color:#46494D;">++</td>
+        </tr>
+        <tr>
+          <td style="background-color:#ef7c00ff"></td>
+          <td>Fédération de clients intelligents (&#8904;,&pi;)</td>
+          <td>Serveur TPF (&sigma;)</td>
+          <td style="background-color:#ef7c00ff"></td>
+          <td>Données sur le serveur</td>
+          <td>+</td>
+          <td>++</td>
+          <td>++</td>
+        </tr>
+      </table>
+      <p style="margin:0; font-size:30px">
+        <b>P</b> = Performance, <b>D</b> = Disponibilité, <b>F</b> = Fraîcheur
+      </p>
+      <p style="margin:0">
+        <span style="background-color:#a61c00ff">&nbsp&nbsp&nbsp</span>
+        <span style="background-color:#ef7c00ff">&nbsp&nbsp&nbsp</span>
+        <span style="background-color:#6aa84fff">&nbsp&nbsp&nbsp</span>
+        = Effort à fournir
+      </p>
+    </section>
+
+    <!-- <section class="content-slide">
       <h3>Qu'est-ce qu'un fragment TPF ?</h3>
       <p>
         Fragment des architectes :
@@ -704,7 +780,7 @@
         </p>
       </span>
       <my-citation number="2" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
-    </section>
+    </section> -->
 
     <!-- <section class="content-slide">
       <h3> Triple Pattern Fragment </h3>
@@ -719,6 +795,28 @@
     </section> -->
 
     <section class="content-slide">
+      <h3>Le client TPF décompose la requête SPARQL en appels HTTP</h3>
+      <p id="query" style="font-size:28px">
+        <b>SELECT</b> ?clubName ?playerName <br>
+        <b>WHERE</b> { <br>
+          &nbsp ?club <span style="color:#2a76dd">a dbpedia-owl:SoccerClub</span>; <br>
+            &nbsp &nbsp &nbsp <span style="color:#2a76dd">dbpedia-owl:ground</span> ?city; <br>
+            &nbsp &nbsp &nbsp <span style="color:#2a76dd">rdfs:label</span> ?clubName. <br>
+          &nbsp ?player <span style="color:#2a76dd">dbpedia-owl:team</span> ?club; <br>
+            &nbsp &nbsp &nbsp <span style="color:#2a76dd">dbpedia-owl:birthPlace</span> ?city; <br>
+            &nbsp &nbsp &nbsp <span style="color:#2a76dd">rdfs:label</span> ?playerName. <br>
+          &nbsp ?city <span style="color:#2a76dd">dbpedia-owl:country dbpedia:Spain</span>. <br>
+        }
+      </p>
+      <p>
+        Génère : 45 489 appels HTTP
+      </p>
+      <p>
+        Un appel HTTP renvoie un <b>fragment</b>
+      </p>
+    </section>
+
+    <section class="content-slide">
       <h3> Triple Pattern Fragment</h3>
       <!-- <p>
         Le médiateur TPF s'exécute dans un <b>navigateur Web</b>
@@ -730,7 +828,7 @@
         <li> Les fragments sont susceptibles d'être <b>réutilisés</b> localement ou à travers les clients</li>
       </ul>
       <img src="./pictures/cyclades/main/tpfScale.png"/>
-      <my-citation number="2" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th Internation Semantic Web Conference (ISWC)" date="2014"></my-citation>
+      <my-citation number="2" author="R. Verborgh" title="Querying Datasets on the Web with High Availability" conference="13th International Semantic Web Conference (ISWC)" date="2014"></my-citation>
     </section>
 
     <section class="content-slide">
@@ -739,28 +837,32 @@
         <div class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0" data-fragment-index="1">
           <p>
             <img id="side" src="./pictures/cyclades/main/globalArchQuery_3.svg" height="492px"/>
-            18 669 Appels HTTP
+            45 489 Appels HTTP
           </p>
           <table style="font-size: 25px">
             <tr>
               <td> 0 </td>
-              <td> ?city <b>http://purl.org/dc/terms/subjec</b> http:...:Capitals_in_Europe </td>
+              <td> ?city <b>http://dbpedia.org/ontology/country</b> http:...:Spain </td>
             </tr>
             <tr>
               <td> 1 </td>
-              <td> ?person <b>http://www.w3.org/1999/02/22-rdf-syntax-ns</b> http:.../Architect </td>
+              <td> ?player <b>http://dbpedia.org/ontology/birthPlace</b> ?city </td>
             </tr>
             <tr>
               <td> 2 </td>
-              <td> ?person <b>http://dbpedia.org/ontology/birthPlace</b> ?city </td>
+              <td> ?player <b>http://www.w3.org/2000/01/rdf-schema#label</b> ?playerName </td>
             </tr>
             <tr>
               <td> 3 </td>
-              <td> ?person <b>http://dbpedia.org/ontology/birthPlace</b> http:...Amsterdam </td>
+              <td> ?club <b>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</b> http:...SoccerClub </td>
             </tr>
             <tr>
-              <td> 4 </td>
-              <td> ?person <b>http://dbpedia.org/ontology/birthPlace</b> http:...Andorra_la_Vella </td>
+              <td> </td>
+              <td> ... </td>
+            </tr>
+            <tr>
+              <td>272</td>
+              <td> ?player <b>http://dbpedia.org/ontology/birthPlace</b> http:...ressource/24 </td>
             </tr>
           </table>
         </div>
@@ -852,7 +954,7 @@
           <b>parallèle</b> 3) aller au serveur </li>
         </ul>
         <p id="question" class="fragment fade-in" data-fragment-index="2">
-          Combien d'accès aux caches des voisins peut-on obtenir ?
+          Combien de cache-hit peut-on obtenir dans le cache des voisins ?
         </p>
       </section>
 
@@ -1207,7 +1309,7 @@
             <figcaption> Taille du profil = 30 </figcaption>
           </figure>
           <p id="parameter">
-            Paramètres : 2 BSBM 1M, 50 clients par jeu de données, cache = 1000
+            Paramètres : 2 BSBM 1M, 50 clients par jeu de données, cache = 1000, RPS(6), CON(15)
           </p>
           <p id="xp">
             Dans le réseau superposé CON, CyCLaDEs contruit deux communautés distinctes :
@@ -1247,7 +1349,7 @@
             Explorer d'<b>autres</b> mesures de <b>similarité</b> :
           </p>
           <ul>
-            <li>distance géographique ;</li>
+            <li>latence réseau ;</li>
             <li>confiance ;</li>
             <li>etc.</li>
           </ul>
@@ -1315,7 +1417,7 @@
             <p>Les clients accèdent au <b>même</b> serveur</p>
             <p id="question" class="fragment fade-in">
               Normalement, paralléliser des requêtes sur le même serveur TPF
-              ne devrait pas fonctionner
+              ne devrait rien changer
             </p>
           </section>
 
@@ -1331,10 +1433,10 @@
             </div>
           </section>
 
-          <section class="content-slide">
+          <!-- <section class="content-slide">
             <h3>Mais il y a une limite</h3>
             <img height="580px" src="./pictures/ladda/main/motivatingExampleBis_3.svg"/>
-          </section>
+          </section> -->
 
           <!-- <section class="content-slide">
             <h3>Exécution de requêtes avec TPF</h3>
@@ -1460,7 +1562,7 @@
             <img height="280px" src="./pictures/ladda/main/gainParallelizationOptimal_slides.png"/>
             <p style="margin:0"> La parallélisation <b>réduit</b> le temps de réponse </p>
             <p style="margin:0"> Paralléliser au-delà d'un certain seuil <b>ne réduit plus </b> le temps de réponse, <i>k</i> = 21 </p>
-            <my-citation number="8" author="M. Pinedo" title="Theory, Algorithms, and Systems (3nd ed.)" conference="Springer Science and Business Media" date="2008"></my-citation>
+            <my-citation number="8" author="M. Pinedo" title="Theory, Algorithms, and Systems (3rd ed.)" conference="Springer Science and Business Media" date="2008"></my-citation>
           </section>
 
           <section class="content-slide">
