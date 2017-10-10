@@ -1588,7 +1588,7 @@
             <p style="margin:0"> Délégation à des <b>voisins aléatoires</b> </p>
           </section>
 
-          <section class="content-slide">
+          <!-- <section class="content-slide">
             <h3>Algorithme d'allocation de requêtes</h3>
             <span class="fragment fade-in" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="4">
               <img src="./pictures/ladda/main/algoLadda_6.svg"/>
@@ -1616,6 +1616,33 @@
             <span class="fragment fade-out" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;" data-fragment-index="0">
               <img src="./pictures/ladda/main/algoLadda_1.svg"/>
             </span>
+          </section> -->
+
+          <section class="content-slide">
+            <h3>Propriétés de l'algorithme d'allocation de requêtes</h3>
+              <p>
+                Les <b>requêtes</b> d'un <b>client</b> sont <b>prioritaire</b> par
+                rapport aux <b>requêtes déléguées</b>
+              </p>
+              <p class="fragment fade-in" data-fragment-index="0">
+                On tente d'<b>allouer des requêtes</b> quand :
+              </p>
+              <ul class="fragment fade-in" data-fragment-index="0">
+                <li>une <b>requête</b> s'est <b>terminée</b> et a <b>réussie</b> ;</li>
+                <li>le client <b>reçoit</b> une de ses <b>requêtes</b>.</li>
+              </ul>
+              <p style="margin-left:1em;"  class="fragment fade-in" data-fragment-index="1">
+                &rarr; <b>Evite</b> la <b>famine</b>
+              </p>
+              <p style="margin-left:1em;"  class="fragment fade-in" data-fragment-index="1">
+                &rarr; <b>Evite</b> d'<b>inonder</b> ses voisins
+              </p>
+              <p class="fragment fade-in" data-fragment-index="2">
+                <b>Pas de phase de sondage</b> des clients pour savoir leur <b>statut</b>
+              </p>
+              <p style="margin-left:1em;"  class="fragment fade-in" data-fragment-index="3">
+                &rarr; <b>Gain</b> de <b>temps</b>
+              </p>
           </section>
 
           <section class="content-slide">
@@ -1701,20 +1728,20 @@
           <section class="content-slide">
             <h3> Expériences </h3>
             <p><b> Configurations : </b></p>
-            <p> Supposons une fédération de 6 médiateurs avec des requêtes </p>
+            <p> Supposons une fédération de 6 clients avec des requêtes </p>
             <table>
               <tr>
                 <td style="padding: 0em 0em 0em 0em;">
-                  <img width="400px" src="./pictures/ladda/xp/config_1.png"/>
-                </td>
-                <td style="padding: 0em 0em 0em 0em;">
-                  <img width="400px" src="./pictures/ladda/xp/config_2.png"/>
+                  <img width="400px" src="./pictures/ladda/xp/config_4.png"/>
                 </td>
                 <td style="padding: 0em 0em 0em 0em;">
                   <img width="400px" src="./pictures/ladda/xp/config_3.png"/>
                 </td>
                 <td style="padding: 0em 0em 0em 0em;">
-                  <img width="400px" src="./pictures/ladda/xp/config_4.png"/>
+                  <img width="400px" src="./pictures/ladda/xp/config_2.png"/>
+                </td>
+                <td style="padding: 0em 0em 0em 0em;">
+                  <img width="400px" src="./pictures/ladda/xp/config_1.png"/>
                 </td>
               </tr>
             </table>
@@ -1725,7 +1752,7 @@
               global d'exécution ? </h3>
             <img src="./pictures/ladda/xp/globalExecutionTime_Avg_slides.png"/>
             <p id="parameter">
-              Description : Moyenne de 3 exécutions
+              Description : Moyenne de 3 exécutions. Paramètre : K = 21
             </p>
             <p id="xp">
               En parallélisant les requêtes, <i>Ladda 2</i> et <i>Ladda K</i> réduisent le temps
@@ -1762,7 +1789,7 @@
               serveur de cache HTTP ?</h3>
               <img src="./pictures/ladda/xp/nbCallsWebCache_slides.png"/>
               <p id="parameter">
-                Description : après le tour d'initialisation
+                Description : après le tour d'initialisation. Paramètre : taille du cache = 1 Go
               </p>
               <p id="xp">
                 Plus les requêtes sont parallélisées, plus le cache est <b>utile</b>
@@ -1773,10 +1800,11 @@
             <h3> Est-ce que la délégation impacte le temps de réponse par clients ?</h3>
             <img src="./pictures/ladda/xp/localExecutionTimeByClient_QuaterLoadedWithoutAsk2_Avg_slides.png"/>
             <p id="parameter">
-              Description : 1/4 Chargés, Moyenne sur 3 exécutions
+              Description : 1/4 Chargés, moyenne sur 3 exécutions
             </p>
             <p id="xp">
-              Ladda améliore le temps d'exécution local pour 3 clients
+              Ladda améliore le temps de réponse local pour 3 clients, <br>
+              identifiants : 8, 12 et 50
             </p>
           </section>
 
@@ -1800,7 +1828,13 @@
           </section>
 
           <section class="content-slide">
-            <img src="./pictures/ladda/xp/lada-screen-f.png"/>
+            <h3>Exécution seul</h3>
+            <img src="./pictures/ladda/xp/demo_1.svg"/>
+          </section>
+
+          <section class="content-slide">
+            <h3>Exécution avec des voisins</h3>
+            <img src="./pictures/ladda/xp/demo_2.png"/>
           </section>
 
           <section class="content-slide">
@@ -1814,8 +1848,18 @@
               Ladda permet de <b>paralléliser</b> l'exécution de requêtes en <b>déléguant</b> des
               requêtes à des voisins <b>libres</b>
             </p>
-            <p>
+            <!-- <p>
               Ladda <b>réduit</b> le temps global d'exécution de la fédération
+            </p> -->
+            <p>
+              Ladda <b>décentralise</b> l'exécution des requêtes
+            </p>
+            <span id="ladda3" style="float:left;padding:1em 0 0 0"></span>
+            <script>
+              katex.render("RT(W1@C_{1}) > RT(W1@\\{C_{1}-C_{16}\\})", ladda3);
+            </script>
+            <p id="question" style="margin-top:4em">
+              A quelles conditions cette inégalité est-elle vraie ?
             </p>
           </section>
 
