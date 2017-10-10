@@ -822,25 +822,55 @@
     </section> -->
 
     <section class="content-slide">
-      <h3>Le client TPF décompose la requête SPARQL en appels HTTP</h3>
-      <p id="query" style="font-size:28px">
+      <h3>Exécution de requêtes du côté du serveur TPF</h3>
+      <p>
+        Le serveur TPF est interrogé avec des requêtes de triplets
+      </p>
+      <ul>
+        <li>Exemple : {?club a dbpedia-owl:SoccerClub}</li>
+      </ul>
+      <p>
+        Le serveur TPF renvoie des <b>pages de fragments</b>
+      </p>
+      <ul>
+        <li>Contient 100 triplets correspondant au triplet demandé</li>
+        <li>Combien de triplets au total correspondent au triplet demandés</li>
+        <li>Des liens pour naviguer entre les pages</li>
+      </ul>
+    </section>
+
+    <section class="content-slide">
+      <h3>Exécution de requêtes du côté du client TPF</h3>
+      <p id="query" style="font-size:22px">
         <b>SELECT</b> ?clubName ?playerName <br>
         <b>WHERE</b> { <br>
-          &nbsp ?club <span style="color:#2a76dd">a dbpedia-owl:SoccerClub</span>; <br>
-            &nbsp &nbsp &nbsp <span style="color:#2a76dd">dbpedia-owl:ground</span> ?city; <br>
-            &nbsp &nbsp &nbsp <span style="color:#2a76dd">rdfs:label</span> ?clubName. <br>
-          &nbsp ?player <span style="color:#2a76dd">dbpedia-owl:team</span> ?club; <br>
-            &nbsp &nbsp &nbsp <span style="color:#2a76dd">dbpedia-owl:birthPlace</span> ?city; <br>
-            &nbsp &nbsp &nbsp <span style="color:#2a76dd">rdfs:label</span> ?playerName. <br>
-          &nbsp ?city <span style="color:#2a76dd">dbpedia-owl:country dbpedia:Spain</span>. <br>
+          &nbsp ?club <span style="color:#2a76dd">a dbpedia-owl:SoccerClub</span>; <b>#tp1</b><br>
+            &nbsp &nbsp &nbsp <span style="color:#2a76dd">dbpedia-owl:ground</span> ?city; <b>#tp2</b><br>
+            &nbsp &nbsp &nbsp <span style="color:#2a76dd">rdfs:label</span> ?clubName. <b>#tp3</b><br>
+          &nbsp ?player <span style="color:#2a76dd">dbpedia-owl:team</span> ?club; <b>#tp4</b><br>
+            &nbsp &nbsp &nbsp <span style="color:#2a76dd">dbpedia-owl:birthPlace</span> ?city; <b>#tp5</b><br>
+            &nbsp &nbsp &nbsp <span style="color:#2a76dd">rdfs:label</span> ?playerName. <b>#tp6</b><br>
+          &nbsp ?city <span style="color:#2a76dd">dbpedia-owl:country dbpedia:Spain</span>. <b>#tp7</b><br>
         }
       </p>
-      <p>
+      <ol>
+        <li class="fragment fade-in" data-fragment-index="0">
+          <b>Décompose</b> la requête en un ensemble de <b>requêtes de triplets</b>
+          &rarr; genère des appels HTTP (45 489 appels HTTP)
+        </li>
+        <li class="fragment fade-in" data-fragment-index="1">
+          Stocke les <b>fragments</b> des requêtes de triplets localement
+        </li>
+        <li class="fragment fade-in" data-fragment-index="2">
+          Effectue les opérations de <b>jointure</b> et de <b>projection</b> sur sa <b>base locale</b>
+        </li>
+      </ol>
+      <!-- <p>
         Génère : 45 489 appels HTTP
       </p>
       <p>
         Un appel HTTP renvoie un <b>fragment</b>
-      </p>
+      </p> -->
     </section>
 
     <section class="content-slide">
