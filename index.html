@@ -1420,13 +1420,13 @@
 
           <section class="content-slide">
             <h3>Equilibrer sa charge</h3>
-            <img id="side" src="./pictures/ladda/main/multipleClientsConnected.svg"/>
+            <img id="side" width="350px" src="./pictures/ladda/main/multipleClientsConnected.svg"/>
             <p>
               <b>Déléguer</b> des requêtes à des voisins est avantageux si :
             </p>
             <span id="ladda1" style="float:left;padding:1em 0 0 0"></span>
             <script>
-              katex.render("RT(W1@C_{1}) > RT(W1@\\{C_{1}-C_{16}\\})", ladda1);
+              katex.render("RT(W1@C_{1}) > RT(W1@\\{C_{1},...,C_{16}\\})", ladda1);
             </script>
             <p id="question" style="margin-top:4em">
               A quelles conditions cette inégalité est-elle vraie ?
@@ -1490,7 +1490,7 @@
           <section class="content-slide">
             <h3> Modèle et problème </h3>
             <p>
-              <b>Fédération</b> : consommateurs de données {C<sub>1</sub>, ..., C<sub>n</sub>}
+              <b>Fédération</b> (F) : consommateurs de données {C<sub>1</sub>, ..., C<sub>n</sub>}
             </p>
             <p class="fragment fade-in" data-fragment-index="0">
               <b>Consommateur de données </b> <i>(C<sub>i</sub>)</i> : <span style="color:#86ba0cff"> Libre </span> ou
@@ -1650,21 +1650,21 @@
           <section class="content-slide">
             <h3>Propriétés de l'algorithme d'allocation de requêtes</h3>
               <p>
-                Les <b>requêtes</b> d'un <b>client</b> sont <b>prioritaire</b> par
+                Les <b>requêtes</b> d'un <b>client</b> sont <b>prioritaires</b> par
                 rapport aux <b>requêtes déléguées</b>
               </p>
               <p class="fragment fade-in" data-fragment-index="0">
                 On tente d'<b>allouer des requêtes</b> quand :
               </p>
               <ul class="fragment fade-in" data-fragment-index="0">
-                <li>une <b>requête</b> s'est <b>terminée</b> et a <b>réussie</b> ;</li>
+                <li>une <b>requête</b> est <b>terminée</b> et a <b>réussie</b> ;</li>
                 <li>le client <b>reçoit</b> une de ses <b>requêtes</b>.</li>
               </ul>
               <p style="margin-left:1em;"  class="fragment fade-in" data-fragment-index="1">
-                &rarr; <b>Evite</b> la <b>famine</b>
+                &rarr; <b>Évite</b> la <b>famine</b>
               </p>
               <p style="margin-left:1em;"  class="fragment fade-in" data-fragment-index="1">
-                &rarr; <b>Evite</b> d'<b>inonder</b> ses voisins
+                &rarr; <b>Évite</b> d'<b>inonder</b> ses voisins
               </p>
               <p class="fragment fade-in" data-fragment-index="2">
                 <b>Pas de phase de sondage</b> des clients pour savoir leur <b>statut</b>
@@ -1815,7 +1815,7 @@
 
           <section class="content-slide">
             <h3>Est-ce que la parallélisation de requêtes impacte l’utilisation du
-              serveur de cache HTTP ?</h3>
+              cache HTTP ?</h3>
               <img src="./pictures/ladda/xp/nbCallsWebCache_slides.png"/>
               <p id="parameter">
                 Description : après le tour d'initialisation. Paramètre : taille du cache = 1 Go
@@ -1885,7 +1885,7 @@
             </p>
             <span id="ladda3" style="float:left;padding:1em 0 0 0"></span>
             <script>
-              katex.render("RT(W1@C_{1}) > RT(W1@\\{C_{1}-C_{16}\\})", ladda3);
+              katex.render("RT(W1@C_{1}) > RT(W1@\\{C_{1},...,C_{16}\\})", ladda3);
             </script>
             <p id="question" style="margin-top:4em">
               A quelles conditions cette inégalité est-elle vraie ?
