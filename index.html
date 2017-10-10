@@ -48,7 +48,7 @@
         </tr>-->
         <tr>
           <td><b> Rapporteurs :</b></td>
-          <td><b>Catherine Faron Zucker</b>, Maître de conférences/Hdr, Sophia Antipolis</td>
+          <td><b>Catherine Faron Zucker</b>, Maître de conférences/HDR, Sophia Antipolis</td>
         </tr>
         <tr>
           <td></td>
@@ -72,7 +72,7 @@
         </tr>
         <tr>
           <td><b> Co-encadrante :</b></td>
-          <td><b>Hala Skaf-Molli</b>, Maître de conférences, Université de Nantes</td>
+          <td><b>Hala Skaf-Molli</b>, Maître de conférences/HDR, Université de Nantes</td>
         </tr>
       </table>
       <img src="./pictures/firstPage/ls2n.png" height="80px">
@@ -207,7 +207,7 @@
       <figure>
         <img  height="530px" src="./pictures/intro/lodCloudZoom.png"/>
         <figcaption style="font-size:20px">
-          Diagramme du Linked Open Data cloud du 26 janvier 2017 (1 146 jeux de données)
+          À la date du 26 janvier 2017 le diagramme de Linked Open Data cloud contient 1 146 jeux de données
         </figcaption>
       </figure>
       <aside class="notes">
@@ -239,13 +239,23 @@
     <section class="content-slide">
       <h3>Interroger le Web des données</h3>
       <p style="margin:0">Différents <b>compromis</b> selon l'approche</p>
+      <p style="margin:0; font-size:24px">
+        <b>P</b> = Performance, <b>D</b> = Disponibilité, <b>F</b> = Fraîcheur
+      </p>
+      <p style="margin:0; font-size:24px">
+        <span style="background-color:#a61c00ff">&nbsp&nbsp&nbsp</span>
+        <span style="background-color:#ef7c00ff">&nbsp&nbsp&nbsp</span>
+        <span style="background-color:#6aa84fff">&nbsp&nbsp&nbsp</span>
+        = Effort à fournir
+      </p>
       <span class="fragment fade-in" data-fragment-index="2" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
         <table style="font-size:26px">
           <tr>
             <td></td>
             <td style="text-align:center"><b>Consommateurs de données</b></td>
-            <td style="text-align:center"><b>Producteurs de données</b></td>
             <td></td>
+            <td style="text-align:center"><b>Producteurs de données</b></td>
+
             <td><b>Périmètre</b></td>
             <td><b>P</b></td>
             <td><b>D</b></td>
@@ -254,8 +264,9 @@
           <tr>
             <td style="background-color:#a61c00ff"></td>
             <td>Link traversal (&sigma;,&#8904;,&pi;)</td>
-            <td>Serveur Web</td>
             <td style="background-color:#6aa84fff"></td>
+            <td style="border-right: 4px solid">Serveur Web</td>
+
             <td>Atteignable par la requête</td>
             <td>-</td>
             <td>++</td>
@@ -264,8 +275,9 @@
           <tr>
             <td style="background-color:#ef7c00ff"></td>
             <td>Serveur SPARQL (&sigma;,&#8904;,&pi;)</td>
-            <td>Serveur FTP</td>
             <td style="background-color:#6aa84fff"></td>
+            <td style="border-right: 4px solid">Serveur FTP</td>
+
             <td>Données téléchargées</td>
             <td>++</td>
             <td>++</td>
@@ -274,8 +286,9 @@
           <tr>
             <td style="background-color:#6aa84fff"></td>
             <td style="text-align:center;"> / </td>
-            <td>Serveur SPARQL (&sigma;,&#8904;,&pi;)</td>
             <td style="background-color:#a61c00ff"></td>
+            <td style="border-right: 4px solid">Serveur SPARQL (&sigma;,&#8904;,&pi;)</td>
+
             <td>Données sur le serveur</td>
             <td>++</td>
             <td>-</td>
@@ -284,8 +297,9 @@
           <tr>
             <td style="background-color:#ef7c00ff"></td>
             <td>Client intelligent (&#8904;,&pi;)</td>
-            <td>Serveur TPF (&sigma;)</td>
-            <td style="background-color:#ef7c00ff"></td>
+              <td style="background-color:#ef7c00ff"></td>
+            <td style="border-right: 4px solid">Serveur TPF (&sigma;)</td>
+
             <td>Données sur le serveur</td>
             <td>~</td>
             <td>++</td>
@@ -457,15 +471,7 @@
           <td style="color:#d9d9d9ff">++</td>
         </tr>
       </table>
-      <p style="margin:0; font-size:30px">
-        <b>P</b> = Performance, <b>D</b> = Disponibilité, <b>F</b> = Fraîcheur
-      </p>
-      <p style="margin:0">
-        <span style="background-color:#a61c00ff">&nbsp&nbsp&nbsp</span>
-        <span style="background-color:#ef7c00ff">&nbsp&nbsp&nbsp</span>
-        <span style="background-color:#6aa84fff">&nbsp&nbsp&nbsp</span>
-        = Effort à fournir
-      </p>
+
     </section>
 
     <section class="content-slide">
@@ -643,8 +649,8 @@
         <b>Ladda</b> [2]: les consommateurs partagent leur <b>capacité de calcul</b> et <b>bande
           passante</b> pour <b>équilibrer leur charge</b>
       </p>
-      <my-citation number="1" author="P. Folz" title="CyCLaDEs: a decentralized cache for triple pattern fragment" conference="Extended Semantic Web (ESWC)" date="2016"></my-citation>
-      <my-citation number="2" author="A. Grall" title="Ladda: SPARQL queries in a Fog of Browsers (Démo)" conference="Extended Semantic Web (ESWC)" date="2017"></my-citation>
+      <my-citation number="1" author="P. Folz" title="CyCLaDEs: a decentralized cache for triple pattern fragment" conference="Extended Semantic Web Conference" date="2016"></my-citation>
+      <my-citation number="2" author="A. Grall" title="Ladda: SPARQL queries in a Fog of Browsers (Démo)" conference="Extended Semantic Web Conference" date="2017"></my-citation>
     </section>
 
     <section class="part-slide">
@@ -965,7 +971,7 @@
       <p id="question">
         Et si on utilisait les caches comportementaux pour des historiques de requêtes ?
       </p>
-      <my-citation number="4" author="D. Frey" title="Behavioral cache for web content" conference="Ditributed Applications and Interoperable System" date="2014"></my-citation>
+      <my-citation number="4" author="D. Frey" title="Behavioral cache for web content" conference="Distributed Applications and Interoperable System" date="2014"></my-citation>
     </section>
 
     <section class="content-slide">
@@ -1291,7 +1297,7 @@
         </section>
 
         <section class="content-slide">
-          <h3> Est-ce que la taille du jeux de données impacte le cache décentralisé ? </h3>
+          <h3> Est-ce que la taille du jeu de données impacte le cache décentralisé ? </h3>
           <img height="380px" src="./pictures/cyclades/xp/bsbmX_Cyclades_slides.png"/>
           <p id="parameter" style="margin:0">
             Paramètres : 10 clients, cache = 1000, RPS = 4, CON = 9
@@ -1434,10 +1440,10 @@
           </section>
 
           <section class="content-slide">
-            <h3>Parraléliser l'exécution de requêtes</h3>
+            <h3>Paralléliser l'exécution de requêtes</h3>
             <img height="580px" id="side" src="./pictures/ladda/main/loadClientServer.svg"/>
             <p>
-              Dans TPF une requête SPARQL :
+              Dans TPF, une requête SPARQL :
             </p>
             <ul>
               <li>est décomposée en <b>sous-requêtes</b> (TPQ);</li>
@@ -1446,7 +1452,7 @@
             <p>Les clients accèdent au <b>même</b> serveur</p>
             <p id="question" class="fragment fade-in">
               Normalement, paralléliser des requêtes sur le même serveur TPF
-              ne devrait rien changer
+              ne devrait pas changer le temps de réponse
             </p>
           </section>
 
@@ -1590,7 +1596,8 @@
             <p style="margin:0">Allocation de 1 509 requêtes des journaux réels de DBpedia de manière optimale LPT [8]</p>
             <img height="280px" src="./pictures/ladda/main/gainParallelizationOptimal_slides.png"/>
             <p style="margin:0"> La parallélisation <b>réduit</b> le temps de réponse </p>
-            <p style="margin:0"> Paralléliser au-delà d'un certain seuil <b>ne réduit plus </b> le temps de réponse, <i>k</i> = 21 </p>
+            <p style="margin:0"> Paralléliser au-delà d'un certain seuil <b>ne réduit plus </b> le temps de réponse, <i>k</i> = 21
+            dans notre contexte </p>
             <my-citation number="8" author="M. Pinedo" title="Theory, Algorithms, and Systems (3rd ed.)" conference="Springer Science and Business Media" date="2008"></my-citation>
           </section>
 
@@ -1667,9 +1674,7 @@
                 &rarr; <b>Évite</b> d'<b>inonder</b> ses voisins
               </p>
               <p class="fragment fade-in" data-fragment-index="2">
-                <b>Pas de phase de sondage</b> des clients pour savoir leur <b>statut</b>
-              </p>
-              <p style="margin-left:1em;"  class="fragment fade-in" data-fragment-index="3">
+                <b>Pas de phase de sondage</b> des clients pour connaître leur <b>statut</b>
                 &rarr; <b>Gain</b> de <b>temps</b>
               </p>
           </section>
@@ -1791,7 +1796,7 @@
 
           <section class="content-slide">
             <h3> Est-ce que la délégation augmente le nombre de requêtes
-              exécutées par secondes ? </h3>
+              exécutées par seconde ? </h3>
             <img src="./pictures/ladda/xp/totalThroughput_Avg_slides.png"/>
             <p id="parameter">
               Description : Moyenne de 3 exécutions
@@ -1802,11 +1807,11 @@
           </section>
 
           <section class="content-slide">
-            <h3> Est-ce que la délégation augment le nombre de requêtes
-              exécutées par minutes ? </h3>
+            <h3> Est-ce que la délégation augmente le nombre de requêtes
+              exécutées par minute ? </h3>
             <img src="./pictures/ladda/xp/nbExecQueries_AllLoaded_1_slides.png"/>
             <p id="parameter">
-              Description : Tous Chargé, 1 seul exécution
+              Description : Tous Chargé, une seule exécution
             </p>
             <p id="xp">
               Dès les premières minutes, Ladda exécute plus de requêtes
@@ -1814,7 +1819,7 @@
           </section>
 
           <section class="content-slide">
-            <h3>Est-ce que la parallélisation de requêtes impacte l’utilisation du
+            <h3>Est-ce que la parallélisation des requêtes impacte l’utilisation du
               cache HTTP ?</h3>
               <img src="./pictures/ladda/xp/nbCallsWebCache_slides.png"/>
               <p id="parameter">
@@ -1826,7 +1831,7 @@
           </section>
 
           <section class="content-slide">
-            <h3> Est-ce que la délégation impacte le temps de réponse par clients ?</h3>
+            <h3> Est-ce que la délégation impacte le temps de réponse par client ?</h3>
             <img src="./pictures/ladda/xp/localExecutionTimeByClient_QuaterLoadedWithoutAsk2_Avg_slides.png"/>
             <p id="parameter">
               Description : 1/4 Chargés, moyenne sur 3 exécutions
@@ -1857,7 +1862,7 @@
           </section>
 
           <section class="content-slide">
-            <h3>Exécution seul</h3>
+            <h3>Exécution seule</h3>
             <img src="./pictures/ladda/xp/demo_1.png"/>
           </section>
 
@@ -1868,7 +1873,7 @@
 
           <section class="content-slide">
             <h3> Conclusion</h3>
-            <img id="side" src="./pictures/ladda/main/multipleClientsConnected.svg"/>
+            <img height="350px" id="side" src="./pictures/ladda/main/multipleClientsConnected.svg"/>
             <p>
               Ladda <b>partage</b> les capacités d'<b>exécution de requêtes SPARQL</b> des
               consommateurs de la fédération
