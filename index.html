@@ -280,14 +280,14 @@
             <td>-</td>
           </tr>
           <tr>
-            <td style="background-color:#6aa84fff"></td>
-            <td style="text-align:center;border-right:4px solid"> / </td>
-            <td style="background-color:#a61c00ff"></td>
-            <td style="border-right:4px solid">Serveur SPARQL (&sigma;,&#8904;,&pi;)</td>
-            <td style="border-right:4px solid">Données sur le serveur</td>
-            <td>++</td>
-            <td>-</td>
-            <td>++</td>
+            <td style="background-color:#6aa84fff;border-bottom:2px solid"></td>
+            <td style="text-align:center;border-right:4px solid;border-bottom:2px solid"> / </td>
+            <td style="background-color:#a61c00ff;border-bottom:2px solid"></td>
+            <td style="border-right:4px solid;border-bottom:2px solid">Serveur SPARQL (&sigma;,&#8904;,&pi;)</td>
+            <td style="border-right:4px solid;border-bottom:2px solid">Données sur le serveur</td>
+            <td style="border-bottom:2px solid">++</td>
+            <td style="border-bottom:2px solid">-</td>
+            <td style="border-bottom:2px solid">++</td>
           </tr>
           <tr>
             <td style="background-color:#ef7c00ff"></td>
@@ -521,24 +521,24 @@
           <td>++</td>
         </tr>
         <tr>
-          <td style="background-color:#ef7c00ff;border-bottom:8px solid"></td>
-          <td style="border-right:4px solid;border-bottom:8px solid"> Client intelligent (&#8904;,&pi;)</td>
-          <td style="background-color:#ef7c00ff;border-bottom:8px solid"></td>
-          <td style="border-right: 4px solid;border-bottom:8px solid">Serveur TPF (&sigma;)</td>
-          <td style="border-right:4px solid;border-bottom:8px solid">Données sur le serveur</td>
-          <td style="border-bottom:8px solid">~</td>
-          <td style="border-bottom:8px solid">++</td>
-          <td style="border-bottom:8px solid">++</td>
+          <td style="background-color:#ef7c00ff;border-bottom:8px solid; border-bottom-color:#2a76dd"></td>
+          <td style="border-right:4px solid;border-bottom:8px solid; border-bottom-color:#2a76dd"> Client intelligent (&#8904;,&pi;)</td>
+          <td style="background-color:#ef7c00ff;border-bottom:8px solid; border-bottom-color:#2a76dd"></td>
+          <td style="border-right: 4px solid;border-bottom:8px solid; border-bottom-color:#2a76dd">Serveur TPF (&sigma;)</td>
+          <td style="border-right:4px solid;border-bottom:8px solid; border-bottom-color:#2a76dd">Données sur le serveur</td>
+          <td style="border-bottom:8px solid; border-bottom-color:#2a76dd">~</td>
+          <td style="border-bottom:8px solid; border-bottom-color:#2a76dd">++</td>
+          <td style="border-bottom:8px solid; border-bottom-color:#2a76dd">++</td>
         </tr>
         <tr>
-          <td style="background-color:#ef7c00ff"></td>
-          <td style="border-right:4px solid">Fédération de clients intelligents (&#8904;,&pi;)</td>
-          <td style="background-color:#ef7c00ff"></td>
-          <td style="border-right:4px solid">Serveur TPF (&sigma;)</td>
-          <td style="border-right:4px solid">Données sur le serveur</td>
-          <td>+</td>
-          <td>++</td>
-          <td>++</td>
+          <td style="background-color:#ef7c00ff;border-left:8px solid; border-left-color:#2a76dd; border-bottom:8px solid; border-bottom-color:#2a76dd;"></td>
+          <td style="border-right:4px solid; border-bottom:8px solid; border-bottom-color:#2a76dd;">Fédération de clients intelligents (&#8904;,&pi;)</td>
+          <td style="background-color:#ef7c00ff; border-bottom:8px solid; border-bottom-color:#2a76dd;"></td>
+          <td style="border-right:4px solid; border-bottom:8px solid; border-bottom-color:#2a76dd;">Serveur TPF (&sigma;)</td>
+          <td style="border-right:4px solid; border-bottom:8px solid; border-bottom-color:#2a76dd;">Données sur le serveur</td>
+          <td style="border-bottom:8px solid; border-bottom-color:#2a76dd;">+</td>
+          <td style="border-bottom:8px solid; border-bottom-color:#2a76dd;">++</td>
+          <td style="border-right:8px solid; border-right-color:#2a76dd; border-bottom:8px solid; border-bottom-color:#2a76dd;">++</td>
         </tr>
       </table>
     </section>
@@ -864,6 +864,9 @@
         <li class="fragment fade-in" data-fragment-index="2">
           Effectue les opérations de <b>jointure</b> et de <b>projection</b> sur sa <b>base locale</b>
         </li>
+        <aside class="notes">
+          TPF repose sur des technos Web
+        </aside>
       </ol>
       <!-- <p>
         Génère : 45 489 appels HTTP
@@ -1812,8 +1815,13 @@
             <h3> Est-ce que la délégation réduit le temps
               global d'exécution ? </h3>
 
-              <span class="fragment fade-in" data-fragment-index="3" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
-                <img src="./pictures/ladda/xp/globalExecutionTime_Avg_slides_4.svg"/>
+              <span class="fragment fade-in" data-fragment-index="4" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
+                <img src="./pictures/ladda/xp/globalExecutionTime_Avg_slides_5.svg"/>
+              </span>
+              <span class="fragment fade-out" data-fragment-index="4" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
+                <span class="fragment fade-in" data-fragment-index="3" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
+                  <img src="./pictures/ladda/xp/globalExecutionTime_Avg_slides_4.svg"/>
+                </span>
               </span>
               <span class="fragment fade-out" data-fragment-index="3" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
                 <span class="fragment fade-in" data-fragment-index="2" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
@@ -1843,8 +1851,13 @@
           <section class="content-slide">
             <h3> Est-ce que la délégation augmente le nombre de requêtes
               exécutées par seconde ? </h3>
-              <span class="fragment fade-in" data-fragment-index="3" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
-                <img src="./pictures/ladda/xp/totalThroughput_Avg_4.svg"/>
+              <span class="fragment fade-in" data-fragment-index="4" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
+                <img src="./pictures/ladda/xp/totalThroughput_Avg_5.svg"/>
+              </span>
+                <span class="fragment fade-out" data-fragment-index="4" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
+                <span class="fragment fade-in" data-fragment-index="3" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
+                  <img src="./pictures/ladda/xp/totalThroughput_Avg_4.svg"/>
+                </span>
               </span>
               <span class="fragment fade-out" data-fragment-index="3" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
                 <span class="fragment fade-in" data-fragment-index="2" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
@@ -1926,7 +1939,7 @@
             <p>
               Vidéo : <a href="https://www.youtube.com/watch?v=YQsVgJHV5nw">https://www.youtube.com/watch?v=YQsVgJHV5nw</a>
             </p>
-            <my-citation number="2" author="A. Grall" title="Ladda: SPARQL queries in a Fog of Browsers (Démo)" conference="Extended Semantic Web (ESWC)" date="2017"></my-citation>
+            <my-citation number="2" author="A. Grall" title="Ladda: SPARQL queries in a Fog of Browsers (Démo)" conference="Extended Semantic Web Conference (ESWC)" date="2017"></my-citation>
           </section>
 
           <section class="content-slide">
